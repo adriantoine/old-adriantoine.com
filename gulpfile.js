@@ -67,6 +67,12 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('./dist/css/fonts/'));
 });
 
+// Static
+gulp.task('static', function() {
+  gulp.src('./src/static/**/*', {base: './src/static'})
+    .pipe(gulp.dest('./dist/'));
+});
+
 // Fonts
 gulp.task('img', function() {
   gulp.src('src/img/**/*')
@@ -90,4 +96,4 @@ gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['webpack']);
 });
 
-gulp.task('default', ['hbs', 'css', 'fonts', 'img', 'webpack']);
+gulp.task('default', ['hbs', 'css', 'fonts', 'static', 'img', 'webpack']);

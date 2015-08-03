@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "gulp",
-    "deploy": "git subtree push --prefix dist origin gh-pages"
+    "deploy": "./deploy.sh"
   },
   "author": "Adrien Antoine",
   "license": "ISC",
