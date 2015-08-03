@@ -1,0 +1,42 @@
+{{#extend "layout"}}
+
+{{#content "pageTitle"}}CV{{/content}}
+
+{{#content "main"}}
+
+<div class="site-cv">
+
+  <div class="site-width-wrapper">
+
+    <section class="cv-section experience-section">
+
+      <h2>Experience</h2>
+
+      {{> cv/experience/sportlobster }}
+      {{> cv/experience/bookatable }}
+      {{> cv/experience/qatarlyst }}
+      {{> cv/experience/amadeus }}
+      {{> cv/experience/a2dms }}
+      {{> cv/experience/infotel }}
+
+    </section>
+
+    <section class="cv-section formation-section">
+
+      <h2>Formation</h2>
+
+      {{> cv/formation/masters }}
+      {{> cv/formation/electrical }}
+      {{> cv/formation/bac }}
+
+    </section>
+
+    {{> cv/interests }}
+
+  </div>
+
+</div>
+
+{{/content}}
+
+{{/extend}}

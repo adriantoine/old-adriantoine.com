@@ -1,0 +1,67 @@
+
+// Home page styles
+// ------------------------------------
+
+// Current state block
+.current-state {
+    @extend %thick-font;
+    width: 100%;
+    font-size: $h2-size;
+    padding: 1em;
+    text-align: center;
+    background-image: url(/img/hero-bg.jpg);
+    background-size: cover;
+    color: $brand-white;
+}
+
+// Social links at the bottom
+.social-links {
+
+    font-size: 2em;
+    margin-top: 1em;
+
+    li {
+        display: inline-block;
+    }
+
+    a {
+        $icon-size: 1.7em;
+        text-decoration: none;
+        color: $brand-white;
+        display: inline-block;
+        width: $icon-size;
+        height: $icon-size;
+        line-height: $icon-size;
+    }
+
+    .facebook {
+        background-color: #3b5998;
+    }
+    .twitter {
+        background-color: #55acee;
+    }
+    .github {
+        background-color: #333;
+    }
+    .tumblr {
+        background-color: #35465c;
+    }
+    .linkedin {
+        background-color: #0976b4;
+    }
+    .google-plus {
+        background-color: #dd4b39;
+    }
+}
+
+// Credits in the footer
+.credits {
+    font-size: .5em;
+}
+
+.company-logo {
+    background: url(../img/bio.png) no-repeat;
+    height: 4em;
+    background-position: center;
+    margin-top: 0.5em;
+}

@@ -1,0 +1,55 @@
+
+// Susy 3-column layout
+// ------------------------------------
+$home-layout: (
+    width: 100%,
+    columns: 3,
+    column-width: 33.33%,
+    gutters: 1/10,
+);
+
+
+// Tiles on the home page using Susy grids
+// ------------------------------------
+.home-tiles {
+
+    @include container($home-layout);
+    margin-top: 3em;
+    text-align: center;
+    font-size: 1.2em;
+
+    .left-col, .center-col, .right-col {
+        @include span(1 of $home-layout);
+    }
+
+    .tile {
+        margin-bottom: 2em;
+    }
+
+    .icon {
+        $icon-size: 7em;
+        width: $icon-size;
+        height: $icon-size - 1;
+        margin: auto;
+    }
+
+    .text {
+        margin-top: 1em;
+    }
+
+    svg {
+        width: 100%;
+        height: 100%;
+
+        // Have to reduce the icon size here because it looks a bit bigger
+        .tile-company & {
+            height: 90%;
+        }
+    }
+
+    svg, svg path {
+        fill: $brand-black;
+    }
+
+}
+

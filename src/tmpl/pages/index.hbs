@@ -1,0 +1,71 @@
+
+{{#extend "layout"}}
+
+{{#content "pageTitle"}}Home{{/content}}
+
+{{#content "main"}}
+
+  <h1>Adrien Antoine, front end developer</h1>
+
+  <div class="current-state">
+    <div class="site-width-wrapper">
+      {{md "tmpl/partials/home/hero" }}
+    </div>
+  </div>
+
+  <div class="home-tiles">
+
+    <div class="site-width-wrapper">
+
+      <div class="left-col">
+        <div class="tile">
+
+          <div class="icon">
+            {{> icons/computer }}
+          </div>
+
+          <div class="text">
+            {{md "tmpl/partials/home/paragraphs/computer" }}
+          </div>
+
+        </div>
+      </div>
+
+      <div class="center-col">
+        <div class="tile tile-company">
+          <div class="icon">
+            {{> icons/building }}
+          </div>
+
+          <div class="text">
+            {{md "tmpl/partials/home/paragraphs/building" }}
+          </div>
+
+        </div>
+      </div>
+
+      <div class="right-col">
+        <div class="tile">
+          <div class="icon">
+            {{> icons/code }}
+          </div>
+
+          <div class="text">
+            {{md "tmpl/partials/home/paragraphs/code" }}
+          </div>
+
+        </div>
+
+    </div>
+
+    <div class="cf"></div>
+
+  </div>
+
+  {{> social-links }}
+
+  {{> home/credits }}
+
+{{/content}}
+
+{{/extend}}

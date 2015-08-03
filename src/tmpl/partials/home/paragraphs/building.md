@@ -1,0 +1,1 @@
+b_3 years of experience_b as a front end developer, great experience of o_Agile environments_o and g_large scale applications_g

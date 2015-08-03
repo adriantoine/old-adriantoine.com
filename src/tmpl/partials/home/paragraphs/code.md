@@ -1,0 +1,1 @@
+Commercial experience with b_Backbone_b, g_Marionette_g, b_RequireJS_b, o_Jasmine_o, g_SASS_g, currently learning b_React/Flux_b and o_Node.js_o

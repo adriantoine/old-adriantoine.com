@@ -1,0 +1,45 @@
+
+
+// Abstract class to render thick font
+// ------------------------------------
+%thick-font {
+    font-family: $header-font;
+    letter-spacing: -1px;
+    font-weight: 900;
+}
+
+
+// Highlight text in colors
+// ------------------------------------
+.highlight-blue {
+    color: $brand-blue;
+}
+.highlight-orange {
+    color: $brand-orange;
+}
+.highlight-green {
+    color: $brand-green;
+}
+
+
+// Wrapper used to set a maximum width
+// ------------------------------------
+.site-width-wrapper {
+    max-width: $site-max-width;
+    margin: auto;
+}
+
+
+// Cleafix (http://nicolasgallagher.com/micro-clearfix-hack/)
+// ------------------------------------
+.cf:before,
+.cf:after {
+    content: " ";
+    display: table;
+}
+.cf:after {
+    clear: both;
+}
+.cf {
+    *zoom: 1;
+}

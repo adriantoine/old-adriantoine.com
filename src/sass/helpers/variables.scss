@@ -1,0 +1,51 @@
+
+// Libraries vars
+// ------------------------------------
+
+// Susy default options
+$susy: (
+    columns: 12,
+    gutters: 1/4,
+    column-width: 8%,
+    gutter-position: inside-static
+);
+
+// Font Awesome font path
+$fa-font-path: "fonts";
+
+
+// My vars
+// ------------------------------------
+
+// Font sizes
+$h1-size: 3.998em;
+$h2-size: 2.827em;
+$h3-size: 1.999em;
+$h4-size: 1.414em;
+
+// Font families
+$body-font: 'Open Sans', Arial, sans-serif;
+$header-font: 'Raleway', sans-serif;
+
+// Colors
+$brand-black: #1F1F1F;
+$brand-grey: #8A8A8A;
+$brand-lightgrey: #EBEBEB;
+$brand-white: #fff;
+$brand-beige: #EDF0E1;
+$brand-blue:  #009ED3;
+$brand-orange: #E95C0D;
+$brand-red: #e74c3c;
+$brand-green: #48A770;
+
+// Layout sizes
+$header-height: 4em;
+$header-border-height: 0.313em;
+$site-max-width: 65rem;
+
+// General breakpoints
+$no-subtitle-bp: 21.250em;
+$xsmall-font-bp: 35em;
+$small-font-bp: 40em;
+$column-bp: 50em;
+$big-font-bp: 80em;
