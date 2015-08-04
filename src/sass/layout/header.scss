@@ -3,7 +3,8 @@
 // ------------------------------------
  .site-head {
 
-    position: relative;
+    position: fixed;
+    width: 100%;
     height: $header-height;
     background-color: $brand-black;
     color: $brand-blue;

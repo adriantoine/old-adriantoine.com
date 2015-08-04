@@ -1,18 +1,24 @@
 
-var $ = require('jquery');
+var $ = require('jquery'),
+    Pjax = require('pjax');
 
 $(function() {
 
     $('#menu-link').on('click', function() {
 
-        $('body').addClass('left-menu-open');
+        $('body').addClass('has-left-menu-open');
 
         setTimeout(function() {
             $('.wrapper').one('click', function() {
-                $('body').removeClass('left-menu-open');
+                $('body').removeClass('has-left-menu-open');
             });
         }, 500);
 
     });
 
+});
+
+new Pjax({
+  elements: 'a.is-internal-link',
+  selectors: ['.site-body']
 });

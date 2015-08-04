@@ -47,7 +47,7 @@
 
         transition: all 0.3s ease-in-out;
 
-        .left-menu-open & {
+        .has-left-menu-open & {
             visibility: visible;
             transform: translate(15em);
         }
@@ -80,7 +80,7 @@
         transition: opacity 500ms, width 0.1s 500ms, height 0.1s 500ms;
     }
 
-    .left-menu-open & {
+    .has-left-menu-open & {
         transform: translate(15em);
 
         &::after {
@@ -98,4 +98,5 @@
 .site-body {
     width: 100%;
     margin-bottom: 5em;
+    padding-top: $header-height;
 }

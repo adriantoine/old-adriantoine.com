@@ -28,6 +28,7 @@
     "webpack": "^1.10.5"
   },
   "dependencies": {
-    "jquery": "^2.1.4"
+    "jquery": "^2.1.4",
+    "pjax": "0.1.4"
   }
 }
