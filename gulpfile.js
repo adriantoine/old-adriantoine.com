@@ -10,6 +10,7 @@ var gulp = require('gulp'),
     ext = require('gulp-ext-replace'),
     sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
+    sitemap = require('gulp-sitemap'),
 
     postcss = require('gulp-postcss'),
     cssnano = require('cssnano'),
@@ -33,6 +34,7 @@ gulp.task('hbs', function() {
   return gulp.src('src/tmpl/pages/**/*.hbs')
     .pipe(handlebars(siteConfig, options))
     .pipe(ext('.html'))
+
     .pipe(gulp.dest('dist'));
 
 });
@@ -98,6 +100,15 @@ gulp.task('connect', function() {
   });
 });
 
+// Sitemap task
+gulp.task('sitemap', function () {
+  gulp.src('dist/**/*.html')
+    .pipe(sitemap({
+        siteUrl: 'http://adriantoine.com'
+    }))
+    .pipe(gulp.dest('dist'));
+});
+
 // Watch tasks
 gulp.task('watch', function() {
   gulp.watch('src/sass/**/*.scss', ['css']);
@@ -105,5 +116,5 @@ gulp.task('watch', function() {
   gulp.watch('src/js/**/*.js', ['webpack']);
 });
 
-gulp.task('default', ['hbs', 'css', 'fonts', 'static', 'img', 'webpack']);
+gulp.task('default', ['hbs', 'css', 'fonts', 'static', 'img', 'webpack', 'sitemap']);
 gulp.task('server', ['connect', 'watch']);

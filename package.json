@@ -21,6 +21,7 @@
     "gulp-ext-replace": "^0.2.0",
     "gulp-imagemin": "^2.3.0",
     "gulp-sass": "^2.0.4",
+    "gulp-sitemap": "^2.2.0",
     "gulp-util": "^3.0.6",
     "handlebars": "^3.0.3",
     "handlebars-layouts": "^3.1.0",
