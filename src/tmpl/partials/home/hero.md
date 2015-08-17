@@ -1,1 +1,1 @@
-CURRENTLY LOOKING FOR A b_CONTRACTING POSITION_b AS A o_FRONT END DEVELOPER_o IN g_LONDON, UK_g WITH A RATE OF b_£400/day_b. AVAILABLE <span class="highlight-green">ASAP</span>.
+Currently looking for a b_contracting position_b as a o_front-end developer_o in g_London, UK_g with a raote of b_£400/day_b. Available <span class="highlight-green">ASAP</span>.

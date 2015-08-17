@@ -4,31 +4,31 @@
 
 // General page
 .site-blog-posts {
-    margin: 0 2em;
+  margin: 0 2em;
 }
 
 
 // Blog post list
 .blog-posts {
-    margin-top: 3em;
+  margin-top: 3em;
 }
 
 
 // A single post
 .post {
-    margin-bottom: 2em;
+  margin-bottom: 2em;
 }
 
 // Post title
 .post__title {
-    margin: 0;
+  margin: 0;
 
-    a {
-        text-decoration: none;
-        &:hover {
-            text-decoration: none;
-        }
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
     }
+  }
 }
 
 
@@ -37,14 +37,14 @@
 
 // Article
 .blog-article {
-    margin: 0 2em;
+  margin: 0 2em;
 
-    p {
-        text-align: justify;
-    }
+  p {
+    text-align: justify;
+  }
 }
 
 // Article content
 .article-content {
-    margin-bottom: 5em;
+  margin-bottom: 5em;
 }

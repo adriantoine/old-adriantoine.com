@@ -3,29 +3,29 @@
 // ------------------------------------
  .site-head {
 
-    position: fixed;
-    width: 100%;
-    height: $header-height;
-    background-color: $brand-black;
-    color: $brand-blue;
-    overflow: hidden;
-    border-bottom: $header-border-height solid $brand-blue;
-    padding: 0 2em;
+  position: fixed;
+  width: 100%;
+  height: $header-height;
+  background-color: $brand-black;
+  color: $brand-blue;
+  overflow: hidden;
+  border-bottom: $header-border-height solid $brand-blue;
+  padding: 0 2em;
 
-    @media only screen and (max-width: $desktop-breakpoint) {
-        text-align: right;
-    }
+  @media only screen and (max-width: $desktop-breakpoint) {
+    text-align: right;
+  }
 
-    @media only screen and (max-width: $mobile-breakpoint) {
-        text-align: center;
-    }
+  @media only screen and (max-width: $mobile-breakpoint) {
+    text-align: center;
+  }
 
-    .site-width-wrapper {
-        position: relative;
-        height: $header-height - $header-border-height;
-        max-width: $site-max-width;
-        margin: auto;
-    }
+  .site-width-wrapper {
+    position: relative;
+    height: $header-height - $header-border-height;
+    max-width: $site-max-width;
+    margin: auto;
+  }
 
 }
 
@@ -34,15 +34,15 @@
 // ------------------------------------
 .site-head__title {
 
-    @extend %thick-font;
-    font-size: $h3-size;
-    line-height: 2em;
-    text-decoration: none;
-    color: $brand-white;
+  @include thick-font;
+  font-size: $h3-size;
+  line-height: 2em;
+  text-decoration: none;
+  color: $brand-white;
 
-    &:hover {
-        color: $brand-white;
-    }
+  &:hover {
+    color: $brand-white;
+  }
 
 }
 
@@ -51,14 +51,14 @@
 // ------------------------------------
 .site-head__subtitle {
 
-    font-family: $header-font;
-    font-size: $h4-size;
-    font-weight: 100;
-    margin-left: .5em;
+  font-family: $header-font;
+  font-size: $h4-size;
+  font-weight: 100;
+  margin-left: .5em;
 
-    @media only screen and (max-width: $mobile-breakpoint) {
-        display: none;
-    }
+  @media only screen and (max-width: $mobile-breakpoint) {
+    display: none;
+  }
 
 }
 
@@ -67,29 +67,29 @@
 // ------------------------------------
 .site-head__hamburger {
 
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 4em - $header-border-height;
-    width: 4em - $header-border-height;
-    line-height: 4em - $header-border-height;
-    cursor: pointer;
-    text-align: center;
-    z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 4em - $header-border-height;
+  width: 4em - $header-border-height;
+  line-height: 4em - $header-border-height;
+  cursor: pointer;
+  text-align: center;
+  z-index: 1;
 
-    i {
-        font-size: 2em;
-        line-height: 1.9;
-    }
+  i {
+    font-size: 2em;
+    line-height: 1.9;
+  }
 
-    @media only screen and (min-width: $desktop-breakpoint) {
-        display: none;
-    }
+  @media only screen and (min-width: $desktop-breakpoint) {
+    display: none;
+  }
 
-    &:hover {
-        background-color: lighten($brand-black, 10%);
-        color: $brand-white;
-    }
+  &:hover {
+    background-color: lighten($brand-black, 10%);
+    color: $brand-white;
+  }
 
 }
 
@@ -97,32 +97,32 @@
 // Menu on the top right
 // ------------------------------------
 .site-head__menu {
-    @extend %thick-font;
-    font-size: $h4-size;
-    position: absolute;
-    bottom: 0;
-    right: 0;
+  @include thick-font;
+  font-size: $h4-size;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 
-    ul {
-        margin: .4em .5em;
+  ul {
+    margin: .4em .5em;
+  }
+
+  li {
+    display: inline-block;
+    margin-right: .5em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $brand-grey;
+
+    &.selected, &:hover {
+      color: $brand-white;
     }
+  }
 
-    li {
-        display: inline-block;
-        margin-right: .5em;
-    }
-
-    a {
-        text-decoration: none;
-        color: $brand-grey;
-
-        &.selected, &:hover {
-            color: $brand-white;
-        }
-    }
-
-    @media only screen and (max-width: $desktop-breakpoint) {
-        display: none;
-    }
+  @media only screen and (max-width: $desktop-breakpoint) {
+    display: none;
+  }
 
 }

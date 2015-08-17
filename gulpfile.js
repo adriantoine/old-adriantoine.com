@@ -101,7 +101,7 @@ gulp.task('connect', function() {
 // Watch tasks
 gulp.task('watch', function() {
   gulp.watch('src/sass/**/*.scss', ['css']);
-  gulp.watch('src/tmpl/**/*.hbs', ['hbs']);
+  gulp.watch('src/tmpl/**/*.{hbs,md}', ['hbs']);
   gulp.watch('src/js/**/*.js', ['webpack']);
 });
 
