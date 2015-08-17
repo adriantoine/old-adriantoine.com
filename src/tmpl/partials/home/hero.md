@@ -1,1 +1,1 @@
-Currently looking for a b_contracting position_b as a o_front-end developer_o in g_London, UK_g with a raote of b_£400/day_b. Available <span class="highlight-green">ASAP</span>.
+Currently looking for a b_contracting position_b as a o_front-end developer_o in g_London, UK_g with a rate of b_£400/day_b. Available <span class="highlight-green">ASAP</span>.

@@ -34,7 +34,9 @@
 // ------------------------------------
 .site-head__title {
 
-  @include thick-font;
+  font-family: $big-font;
+  letter-spacing: -0.01em;
+  font-weight: $font-heavy;
   font-size: $h3-size;
   line-height: 2em;
   text-decoration: none;
@@ -51,9 +53,8 @@
 // ------------------------------------
 .site-head__subtitle {
 
-  font-family: $header-font;
   font-size: $h4-size;
-  font-weight: 100;
+  font-weight: $font-light;
   margin-left: .5em;
 
   @media only screen and (max-width: $mobile-breakpoint) {
@@ -97,7 +98,7 @@
 // Menu on the top right
 // ------------------------------------
 .site-head__menu {
-  @include thick-font;
+  font-weight: $font-heavy;
   font-size: $h4-size;
   position: absolute;
   bottom: 0;

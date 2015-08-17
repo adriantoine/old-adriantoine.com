@@ -1,14 +1,4 @@
 
-
-// Miin class to include thick font
-// ------------------------------------
-@mixin thick-font() {
-    font-family: $header-font;
-    letter-spacing: -1px;
-    font-weight: 900;
-}
-
-
 // Highlight text in colors
 // ------------------------------------
 .highlight-blue {

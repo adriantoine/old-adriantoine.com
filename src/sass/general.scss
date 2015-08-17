@@ -40,7 +40,7 @@ html, body {
 
 h1 {
 
-  @include thick-font;
+  font-weight: $font-heavy;
   font-size: $h1-size;
   display: none;
 
@@ -51,20 +51,20 @@ h1 {
 }
 
 h2 {
-  @include thick-font;
+  font-weight: $font-heavy;
   font-size: $h2-size;
   margin-bottom: .2em;
 }
 h3 {
-  @include thick-font;
+  font-weight: $font-heavy;
   font-size: $h3-size;
   margin-bottom: .1em;
-  font-weight: 600;
+  font-weight: $font-bold;
 }
 h4 {
-  @include thick-font;
+  font-weight: $font-heavy;
   font-size: $h4-size;
-  font-weight: 600;
+  font-weight: $font-bold;
 }
 
 

@@ -4,7 +4,9 @@
 
 // Current state block
 .current-state {
-  @include thick-font;
+  font-family: $big-font;
+  letter-spacing: -0.01em;
+  font-weight: $font-heavy;
   width: 100%;
   font-size: $h2-size;
   text-transform: uppercase;

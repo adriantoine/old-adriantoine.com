@@ -13,7 +13,7 @@
   }
 
   a {
-    @include thick-font;
+    font-weight: $font-heavy;
     font-size: $h4-size;
     text-decoration: none;
     color: $brand-white;
