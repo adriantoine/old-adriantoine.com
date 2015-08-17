@@ -13,6 +13,8 @@
   "author": "Adrien Antoine",
   "license": "ISC",
   "devDependencies": {
+    "cssfmt": "^0.8.2",
+    "cssnano": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-compile-handlebars": "^0.5.0",
     "gulp-connect": "^2.2.0",
@@ -24,6 +26,7 @@
     "handlebars-layouts": "^3.1.0",
     "js-yaml": "^3.3.1",
     "marked": "^0.3.4",
+    "postcss": "^4.1.16",
     "susy": "^2.2.5",
     "webpack": "^1.10.5"
   },

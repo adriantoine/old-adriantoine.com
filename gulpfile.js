@@ -11,6 +11,9 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
 
+    postcss = require('gulp-postcss'),
+    cssnano = require('cssnano'),
+
     webpack = require('webpack'),
     connect = require('gulp-connect'),
 
@@ -36,10 +39,14 @@ gulp.task('hbs', function() {
 
 // CSS task
 gulp.task('css', function() {
+
   gulp.src('src/sass/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(connect.reload())
-    .pipe(gulp.dest('dist/css'));
+    .pipe(postcss([
+        cssnano()
+      ]))
+    .pipe(gulp.dest('dist/css'))
+    .pipe(connect.reload());
 });
 
 // Webpack task
@@ -47,15 +54,19 @@ gulp.task('webpack', function(callback) {
   webpack({
     entry: './src/js/main.js',
     output: {
-        path: './dist/js/',
-        filename: 'main.js'
-    }
+      path: './dist/js/',
+      filename: 'main.js'
+    },
+    plugins: [new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
+    })]
   }, function(err, stats){
     if(err) throw new gutil.PluginError("webpack:build", err);
     gutil.log("[webpack:build]", stats.toString({
       colors: true
     }));
-    connect.reload();
     callback();
   });
 });
@@ -63,7 +74,6 @@ gulp.task('webpack', function(callback) {
 // Fonts
 gulp.task('fonts', function() {
   gulp.src('./src/fonts/**/*', {base: './src/fonts'})
-    .pipe(connect.reload())
     .pipe(gulp.dest('./dist/css/fonts/'));
 });
 
@@ -77,12 +87,11 @@ gulp.task('static', function() {
 gulp.task('img', function() {
   gulp.src('src/img/**/*')
     .pipe(imagemin())
-    .pipe(connect.reload())
     .pipe(gulp.dest('dist/img'));
 });
 
 // Server task
-gulp.task('server', function() {
+gulp.task('connect', function() {
   connect.server({
     root: 'dist',
     livereload: true
@@ -97,3 +106,4 @@ gulp.task('watch', function() {
 });
 
 gulp.task('default', ['hbs', 'css', 'fonts', 'static', 'img', 'webpack']);
+gulp.task('server', ['connect', 'watch']);

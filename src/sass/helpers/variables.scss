@@ -44,8 +44,8 @@ $header-border-height: 0.313em;
 $site-max-width: 65rem;
 
 // General breakpoints
-$no-subtitle-bp: 21.250em;
-$xsmall-font-bp: 35em;
-$small-font-bp: 40em;
-$column-bp: 50em;
-$big-font-bp: 80em;
+$mobile-breakpoint: 21.250em;
+$phablet-breakpoint: 35em;
+$tablet-breakpoint: 40em;
+$desktop-breakpoint: 50em;
+$wide-breakpoint: 80em;
