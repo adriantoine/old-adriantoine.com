@@ -1,6 +1,6 @@
 
+import Bloql from '../../../bloql/client';
 import React, { Component } from 'react';
-import Relay from 'react-relay';
 import PostItem from '../PostItem/PostItem';
 
 class PostsList extends Component {
@@ -17,17 +17,4 @@ class PostsList extends Component {
 
 }
 
-export default Relay.createContainer(PostsList, {
-  fragments: {
-    posts: () => Relay.QL`
-      fragment on PostConnection {
-        edges {
-          node {
-            id,
-            ${PostItem.getFragment('post')}
-          }
-        }
-      }
-    `,
-  },
-});
+export default Bloql.PostsList(PostsList, PostItem);

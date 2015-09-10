@@ -7,7 +7,9 @@ import metaParser from 'gray-matter';
 import MarkdownIt from 'markdown-it';
 const md = new MarkdownIt();
 
-import {postsPath} from './../config';
+import appRoot from 'app-root-path';
+
+import { getPostsPath } from '../../config';
 
 export class Blog extends Object {}
 export class Post extends Object {}
@@ -33,7 +35,7 @@ const getPost = function (filename) {
 
   let content;
 
-  content = fs.readFileSync(path.join(__dirname, '../', postsPath, filename + '.md'), 'utf8');
+  content = fs.readFileSync(path.join(appRoot.path, getPostsPath(), filename + '.md'), 'utf8');
 
   const parsed = metaParser(content);
 
@@ -48,7 +50,7 @@ export const getPostList = function (filters) {
 
   let retPostList = [];
 
-  const postList = fs.readdirSync(path.join(__dirname, '../', postsPath));
+  const postList = fs.readdirSync(path.join(appRoot.path, getPostsPath()));
   for (var i = postList.length - 1; i >= 0; i--) {
     let postName = postList[i];
 

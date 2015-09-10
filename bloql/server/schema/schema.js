@@ -4,8 +4,8 @@ import {
   GraphQLSchema,
 } from 'graphql/type';
 
-import { getBlog } from './schema/database';
-import { blogType, node } from './schema/types';
+import { getBlog } from './database';
+import { blogType, node } from './types';
 
 var Root = new GraphQLObjectType({
   name: 'Root',

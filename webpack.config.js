@@ -1,6 +1,7 @@
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var bloqlConfig = require('./bloql/config');
 
 var path = require('path');
 
@@ -22,7 +23,7 @@ module.exports = {
         exclude: /node_modules/,
         query: {
           stage: 0,
-          plugins: ['./build/babelRelayPlugin']
+          plugins: [bloqlConfig.getWebpackPluginPath()]
         }
       },
       {
@@ -57,7 +58,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('style.css', { allChunks: true }),
     new webpack.ProvidePlugin({
-      'fetch': 'imports?this=>global!exports?global.fetch!whatwg-fetch'
+      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
     })
   ]
 };

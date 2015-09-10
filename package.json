@@ -6,17 +6,18 @@
   "scripts": {
     "build-dev": "webpack --progress --colors --watch",
     "dev": "npm run build-dev & nodemon index.js",
-    "update-schema": "babel-node ./scripts/updateSchema.js",
+    "update-schema": "babel-node ./bloql/server/scripts/updateSchema.js",
     "lint": "eslint src"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adriantoine/bill-unattended-test.git"
+    "url": "git@github.com:adriantoine/adriantoine.com.git"
   },
   "author": "Adrien Antoine",
   "license": "ISC",
   "homepage": "https://github.com/adriantoine/adriantoine.com#readme",
   "dependencies": {
+    "app-root-path": "^1.0.0",
     "autoprefixer-core": "^5.1.11",
     "babel": "^5.8.23",
     "babel-loader": "^5.0.0",

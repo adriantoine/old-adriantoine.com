@@ -1,6 +1,7 @@
 
+import Bloql from '../../../bloql/client';
+
 import React, { Component } from 'react';
-import Relay from 'react-relay';
 
 class PostItem extends Component {
 
@@ -14,18 +15,4 @@ class PostItem extends Component {
 
 }
 
-export default Relay.createContainer(PostItem, {
-  fragments: {
-    post: () => Relay.QL`
-      fragment on Post {
-        meta {
-          title
-          slug
-          date
-          categories
-          tags
-        }
-      }
-    `,
-  },
-});
+export default Bloql.Post(PostItem);

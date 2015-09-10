@@ -3,12 +3,11 @@ import 'babel/polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { RootContainer } from 'react-relay';
 import Blog from './components/Blog';
-import HomeRoutes from './routes/HomeRoutes';
+import Bloql from '../bloql/client';
 
 ReactDOM.render(
-  <RootContainer Component={ Blog } route={ new HomeRoutes() } />,
+  <Bloql.Root Component={ Blog } />,
   document.getElementById('app')
 );
 
