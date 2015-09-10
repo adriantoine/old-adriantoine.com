@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+
+  "plugins": [
+    "react"
+  ],
+
+  "ecmaFeatures": {
+    "jsx": true
+  },
+
+  "env": {
+    "node": true,
+    "browser": true,
+    "es6": true
+  },
+
+  "globals": {
+    "Relay": true
+  },
+
+  "rules": {
+    "react/jsx-uses-react": 1,
+    "no-unused-expressions": 1,
+    "no-unused-vars": 1,
+    "no-undef": 1,
+    "strict": 0,
+  }
+
+}
