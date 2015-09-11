@@ -1,5 +1,5 @@
 
-import Bloql from '../../../bloql/client';
+import Bloql from 'bloql/client';
 import React, { Component } from 'react';
 import PostItem from '../PostItem/PostItem';
 

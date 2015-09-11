@@ -3,12 +3,11 @@ import 'babel/polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Blog from './components/Blog';
-import Bloql from '../bloql/client';
+import Bloql from 'bloql/client';
+
+import PostsList from './components/PostsList/PostsList';
 
 ReactDOM.render(
-  <Bloql.Root Component={ Blog } />,
+  <Bloql PostsList={ PostsList } />,
   document.getElementById('app')
 );
-
-export default Blog;

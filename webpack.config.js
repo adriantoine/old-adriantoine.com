@@ -1,7 +1,6 @@
 
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
-var bloqlConfig = require('./bloql/config');
 
 var path = require('path');
 
@@ -20,11 +19,7 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
-        exclude: /node_modules/,
-        query: {
-          stage: 0,
-          plugins: [bloqlConfig.getWebpackPluginPath()]
-        }
+        exclude: /node_modules/
       },
       {
         test: /\.js$/,

@@ -2,7 +2,7 @@
 // Very simple server to serve static files on Heroku
 
 import express from 'express';
-import { express as bloql } from './bloql/middleware';
+import { express as bloql } from 'bloql/middleware';
 
 const app = express();
 
