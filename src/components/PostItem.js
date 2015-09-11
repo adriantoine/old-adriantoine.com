@@ -1,5 +1,5 @@
 
-import Bloql from 'bloql/client';
+import { createPostItem } from 'bloql/client';
 
 import React, { Component } from 'react';
 
@@ -15,4 +15,4 @@ class PostItem extends Component {
 
 }
 
-export default Bloql.Post(PostItem);
+export default createPostItem(PostItem);

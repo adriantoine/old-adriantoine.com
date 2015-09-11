@@ -3,11 +3,10 @@ import 'babel/polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Bloql from 'bloql/client';
 
-import PostsList from './components/PostsList/PostsList';
+import PostList from './components/PostList';
 
 ReactDOM.render(
-  <Bloql PostsList={ PostsList } />,
+  <PostList />,
   document.getElementById('app')
 );

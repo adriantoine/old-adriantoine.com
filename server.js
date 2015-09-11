@@ -2,13 +2,14 @@
 // Very simple server to serve static files on Heroku
 
 import express from 'express';
-import { express as bloql } from 'bloql/middleware';
+import { express as bloql } from 'bloql/server';
 
 const app = express();
 
 let port = process.env.PORT || 3001;
 
-app.use('/graphql', bloql({ pretty: true, postsPath: 'posts' }));
+bloql(app, { pretty: true, postsPath: 'posts' });
+
 app.use(express.static('public'));
 
 app.listen(port, () => {

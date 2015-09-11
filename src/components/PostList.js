@@ -1,13 +1,13 @@
 
-import Bloql from 'bloql/client';
+import { createPostList } from 'bloql/client';
 import React, { Component } from 'react';
-import PostItem from '../PostItem/PostItem';
+import PostItem from './PostItem';
 
-class PostsList extends Component {
+class PostList extends Component {
 
   render() {
     return (
-      <ul className="PostsList">
+      <ul className="PostList">
         {this.props.posts.edges.map(edge =>
           <PostItem key={ edge.node.id } post={ edge.node } />
         )}
@@ -17,4 +17,4 @@ class PostsList extends Component {
 
 }
 
-export default Bloql.PostsList(PostsList, PostItem);
+export default createPostList(PostList, PostItem);
