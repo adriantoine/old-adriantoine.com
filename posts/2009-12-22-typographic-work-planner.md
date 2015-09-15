@@ -1,9 +1,8 @@
 ---
 comments: true
-date: 2009-12-22
+date: 2009-12-22 11:17:25
 slug: typographic-work-planner
 title: Typographic work planner
-wordpress_id: 49
 categories:
 - Web Development
 tags:

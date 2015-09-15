@@ -5,6 +5,10 @@ import PostItem from './PostItem';
 
 class PostList extends Component {
 
+  static postCount = 20;
+  // static date = '2010-03-02';
+  static tags = ['CSS'];
+
   render() {
     return (
       <ul className="PostList">
@@ -17,4 +21,4 @@ class PostList extends Component {
 
 }
 
-export default createPostList(PostList, PostItem);
+export default createPostList(PostList);

@@ -1,9 +1,7 @@
 
-import { createPostItem } from 'bloql/client';
-
 import React, { Component } from 'react';
 
-class PostItem extends Component {
+export default class PostItem extends Component {
 
   render() {
     return (
@@ -14,5 +12,3 @@ class PostItem extends Component {
   }
 
 }
-
-export default createPostItem(PostItem);

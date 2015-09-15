@@ -19,6 +19,13 @@ module.exports = {
       {
         test: /\.js$/,
         loader: 'babel',
+        query: {
+          stage: 0,
+          optional: [
+            'optimisation.react.constantElements',
+            'optimisation.react.inlineElements'
+          ]
+        },
         exclude: /node_modules/
       },
       {
