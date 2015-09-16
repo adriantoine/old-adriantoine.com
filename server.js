@@ -9,7 +9,11 @@ const app = express();
 
 let port = process.env.PORT || 3001;
 
-bloql(app, { pretty: true, postsPath: path.join(__dirname, 'posts') });
+bloql(app, {
+  pretty: true,
+  postsPath: path.join(__dirname, 'posts'),
+  database: require('bloql-markdown-file-database')
+});
 
 app.use(express.static('public'));
 
