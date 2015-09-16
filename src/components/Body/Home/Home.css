@@ -1,0 +1,63 @@
+
+@import 'styles/variables.css';
+
+.Home {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-70%);
+  @media (--desktop) {
+    transform: translateY(-60%);
+  }
+  @media (--mobile) {
+    transform: translateY(-50%);
+  }
+  padding: 0 2em;
+}
+
+.Home-hero {
+  font-family: var(--big-font);
+  letter-spacing: -0.01em;
+  width: 100%;
+  text-transform: uppercase;
+  padding: 0 0 1em;
+  text-align: center;
+  background-size: cover;
+  color: var(--white);
+}
+
+.Home-hero-title {
+  font-weight: var(--font-black);
+  font-size: var(--h2-size);
+}
+
+.Home-hero-description {
+  font-size: var(--h3-size);
+  line-height: 1.4;
+  margin-top: 1em;
+  b, a {
+    font-weight: var(--font-heavy);
+  }
+}
+
+
+.Home-buttons {
+  font-size: 1.5em;
+  font-weight: var(--font-bold);
+  text-align: center;
+  margin-top: 1em;
+  lost-utility: clearfix;
+
+  .Button {
+    min-width: auto;
+    lost-column: 1/4;
+    margin-bottom: 1em;
+
+    @media (--desktop) {
+      lost-column: 1/2;
+    }
+    @media (--mobile) {
+      lost-column: 1;
+    }
+  }
+}

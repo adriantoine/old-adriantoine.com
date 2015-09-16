@@ -1,0 +1,43 @@
+
+:root {
+
+  /* Font sizes */
+  --h1-size: 3.998em;
+  --h2-size: 2.827em;
+  --h3-size: 1.999em;
+  --h4-size: 1.414em;
+
+  /* Font weights */
+  --font-light: 300;
+  --font-normal: 400;
+  --font-bold: 500;
+  --font-heavy: 700;
+  --font-black: 900;
+
+  /* Font families */
+  --body-font: 'Roboto', sans-serif;
+  --big-font: 'Raleway', sans-serif;
+
+  /* Colors */
+  --black: #1F1F1F;
+  --grey: #8A8A8A;
+  --lightgrey: #EBEBEB;
+  --white: #fff;
+  --beige: #EDF0E1;
+  --blue:  #009ED3;
+  --orange: #E95C0D;
+  --red: #e74c3c;
+  --green: #48A770;
+
+  /* Layout sizes */
+  --header-height: 4em;
+  --header-border-height: 0.313em;
+  --site-max-width: 65rem;
+
+}
+
+@custom-media --mobile only screen and (max-width: 21.250em);
+@custom-media --phablet only screen and (max-width: 35em);
+@custom-media --tablet only screen and (max-width: 40em);
+@custom-media --desktop only screen and (max-width: 50em);
+@custom-media --wide only screen and (min-width: 80em);

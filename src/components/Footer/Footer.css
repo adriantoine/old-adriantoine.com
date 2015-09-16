@@ -1,0 +1,19 @@
+
+@import "styles/variables.css";
+
+.Footer {
+  text-align: center;
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding-bottom: 2em;
+}
+
+.Footer-socialLinks {
+  font-size: 2.5em;
+  margin-top: 1em;
+}
+.Footer-credits {
+  font-size: .7em;
+}

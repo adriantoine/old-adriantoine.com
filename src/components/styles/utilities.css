@@ -1,0 +1,29 @@
+
+@import "styles/variables.css";
+
+/* Wrapper used to set a maximum width */
+.u-site-width {
+  lost-center: var(--site-max-width);
+  lost-utility: clearfix;
+}
+
+/* Blue text */
+.u-blue {
+  color: var(--blue);
+}
+
+/* Styles for the warning message to people using old versions of IE */
+.outdated-warning {
+  text-align: center;
+  padding: 1em;
+  background-color: var(--red);
+  color: var(--white);
+
+  a {
+    color: color(var(--blue) lightness(30%));
+
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}

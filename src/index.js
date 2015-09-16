@@ -4,10 +4,10 @@ import 'babel/polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import PostList from './components/PostList';
+import App from './components/App';
 
 ReactDOM.render(
-  <PostList />,
+  <App />,
   document.getElementById('app')
 );
 

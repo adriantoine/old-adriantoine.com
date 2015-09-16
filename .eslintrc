@@ -37,7 +37,6 @@ rules:
   handle-callback-err: [2, error]
   indent: [2, 2, SwitchCase: 1]
   key-spacing: [2, {beforeColon: false, afterColon: true}]
-  max-len: [2, 160, 4, ignorePattern: "^(\\s*var\\s.+=\\s*require\\s*\\(|import )"]
   new-parens: 2
   no-alert: 2
   no-array-constructor: 2

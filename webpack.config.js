@@ -49,7 +49,12 @@ module.exports = {
     }),
     require('postcss-nested'),
     require('postcss-css-variables'),
+    require('postcss-color-function'),
+    require('postcss-calc'),
+    require('postcss-custom-media'),
     require('postcss-extend'),
+    require('postcss-svg')({paths: ['./src/components/icons']}),
+    require('lost'),
     require('cssnano'),
     require('autoprefixer-core')
   ],

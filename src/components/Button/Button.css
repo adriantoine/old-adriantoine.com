@@ -1,0 +1,20 @@
+
+@import 'styles/variables.css';
+
+.Button {
+  color: var(--white);
+  border: .2em solid var(--white);
+  display: inline-block;
+  padding: .7em 0;
+  min-width: 8em;
+  text-align: center;
+  cursor: pointer;
+
+  transition: background-color 200ms, color 200ms;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--black);
+    text-decoration: none;
+  }
+}
