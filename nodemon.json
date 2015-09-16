@@ -1,3 +1,7 @@
 {
-  "ignore": ["node_modules/**/*", "public/**/*", "src/**/*"]
+  "ignore": ["node_modules/**/*", "public/**/*", "src/**/*"],
+  "watch": [
+    "*.*",
+    "../bloql/dist/server/"
+  ]
 }

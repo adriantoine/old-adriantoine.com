@@ -6,8 +6,8 @@ import PostItem from './PostItem';
 class PostList extends Component {
 
   static postCount = 20;
-  // static date = '2010-03-02';
-  static tags = ['CSS'];
+  static startDate = '2010-03-02';
+  static endDate = '2010-08-10';
 
   render() {
     return (

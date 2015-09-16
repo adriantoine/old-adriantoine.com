@@ -18,7 +18,7 @@ module.exports = {
     loaders: [
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         query: {
           stage: 0,
           optional: [
@@ -30,7 +30,8 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'eslint'
+        loader: 'eslint-loader',
+        exclude: [/node_modules/, /bloql/]
       },
       {
         test: /\.css$/,
@@ -54,7 +55,10 @@ module.exports = {
   ],
 
   resolve: {
-    modulesDirectories: ['node_modules', 'src/components']
+    fallback: path.join(__dirname, 'node_modules'),
+  },
+  resolveLoader: {
+    fallback: path.join(__dirname, 'node_modules')
   },
 
   plugins: [

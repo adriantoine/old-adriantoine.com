@@ -16,7 +16,7 @@
   "license": "ISC",
   "homepage": "https://github.com/adriantoine/adriantoine.com#readme",
   "dependencies": {
-    "bloql": "0.5.0",
+    "bloql": "^0.5.1",
     "express": "^4.13.3",
     "extract-text-webpack-plugin": "^0.8.1",
     "react": "^0.14.0-beta3",
