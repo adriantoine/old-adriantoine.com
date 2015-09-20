@@ -1,19 +1,21 @@
 
 import { createPostList } from 'bloql/client';
 import React, { Component } from 'react';
-import PostItem from './PostItem';
+import { Link } from 'react-router';
+
+import './PostList.css';
 
 class PostList extends Component {
 
-  static postCount = 20;
-  static startDate = '2010-03-02';
-  static endDate = '2010-08-10';
+  static postCount = 10;
 
   render() {
     return (
       <ul className="PostList">
         {this.props.posts.edges.map(edge =>
-          <PostItem key={ edge.node.id } post={ edge.node } />
+          <li className="PostItem">
+            <Link to={'/blog/post/' + edge.node.meta.slug}>{ edge.node.meta.title }</Link>
+          </li>
         )}
       </ul>
     );

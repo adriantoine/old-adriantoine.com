@@ -1,0 +1,26 @@
+
+@import "../styles/variables.css";
+
+.Menu {
+  z-index: 100;
+  position: relative;
+
+  @media(--medium-up) {
+    display: none;
+  }
+}
+
+.Menu-icon {
+  background: svg("ei#navicon", "[fill]: white") no-repeat;
+  position: absolute;
+  height: 5em;
+  width: 5em;
+  top: 0;
+  right: 0;
+  background-size: contain;
+  cursor: pointer;
+}
+
+.Menu-list {
+  display: none;
+}

@@ -53,7 +53,7 @@ module.exports = {
     require('postcss-calc'),
     require('postcss-custom-media'),
     require('postcss-extend'),
-    require('postcss-svg')({paths: ['./src/components/icons']}),
+    require('postcss-svg')({paths: ['./src/icons', './node_modules/material-design-icons'], defaults: '[fill]: #1F1F1F'}),
     require('lost'),
     require('cssnano'),
     require('autoprefixer-core')

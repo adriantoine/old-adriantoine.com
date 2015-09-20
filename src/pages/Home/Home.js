@@ -1,8 +1,6 @@
 
 import React, { Component } from 'react';
-
-import Button from '../../Button/Button';
-import { Link } from 'react-router';
+import Button from '../../components/Button/Button';
 
 import './Home.css';
 
@@ -10,7 +8,7 @@ export default class Body extends Component {
 
   render() {
     return (
-      <div className="Home">
+      <div className="Home Page">
 
         <h1>Adrien Antoine, front end developer</h1>
 
@@ -23,10 +21,10 @@ export default class Body extends Component {
           </div>
 
           <div className="Home-buttons">
-            <Link className="Button" to="about-me">About Me</Link>
-            <Button>Portfolio</Button>
-            <Button>Blog</Button>
-            <Button>CV</Button>
+            <Button className="Button" to="/about-me">About Me</Button>
+            <Button className="Button" to="/portfolio">Portfolio</Button>
+            <Button className="Button" to="/blog">Blog</Button>
+            <Button className="Button" to="/cv">CV</Button>
           </div>
 
         </div>

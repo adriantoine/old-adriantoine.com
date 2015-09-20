@@ -1,5 +1,5 @@
 
-@import "styles/variables.css";
+@import "../styles/variables.css";
 
 /*Header of the site */
 
@@ -11,20 +11,19 @@
   color: var(--blue);
   overflow: hidden;
   padding: 0 2em;
+  background-color: var(--black);
+  border-bottom: var(--header-border-height) solid var(--blue);
 
   .u-site-width {
     position: relative;
     height: calc(var(--header-height) - var(--header-border-height));
   }
 
-  @media (--desktop) {
-    text-align: right;
-  }
+}
 
-  @media (--mobile) {
-    text-align: center;
-  }
-
+.Header--no-background {
+  background-color: transparent;
+  border: 0;
 }
 
 
@@ -39,9 +38,15 @@
   line-height: 2em;
   text-decoration: none;
   color: var(--white);
+  display: inline-block;
 
   &:hover {
-    color: var(--white);
+    text-decoration: none;
+  }
+
+  margin-top: .3em;
+  @media (--medium-up) {
+    margin-top: .1em;
   }
 
 }
@@ -51,46 +56,15 @@
 
 .Header-subtitle {
 
-  font-size: var(--h4-size);
   font-weight: var(--font-light);
   margin-left: .5em;
-
-  @media (--mobile) {
-    display: none;
-  }
-
-}
-
-
-/* Hamburger icon opening the left sliding menu */
-
-.Header-hamburger {
-
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: calc(4em - var(--header-border-height));
-  width: calc(4em - var(--header-border-height));
-  line-height: calc(4em - var(--header-border-height));
-  cursor: pointer;
-  text-align: center;
-  z-index: 1;
-
-  i {
-    font-size: 2em;
-    line-height: 1.9;
-  }
-
-  &:hover {
-    background-color: lighten(var(--black), 10%);
-    color: var(--white);
-  }
+  font-size: var(--h4-size);
 
   display: none;
-  @media (--desktop) {
-    display: block;
-  }
 
+  @media (--large-up) {
+    display: inline;
+  }
 }
 
 
@@ -103,27 +77,28 @@
   bottom: 0;
   right: 0;
 
-  ul {
-    margin: .4em .5em;
+  display: none;
+  @media (--medium-up) {
+    display: inline;
   }
 
-  li {
-    display: inline-block;
-    margin-right: .5em;
-  }
+}
 
-  a {
+.Header-menu-list {
+  margin: .4em .5em;
+}
+
+.Header-menu-item {
+  display: inline-block;
+  margin-right: .5em;
+}
+
+.Header-menu-link {
+  text-decoration: none;
+  color: var(--grey);
+
+  &.is-active, &:hover {
+    color: var(--white);
     text-decoration: none;
-    color: var(--grey);
-
-    &.selected, &:hover {
-      color: var(--white);
-      text-decoration: none;
-    }
   }
-
-  @media (--desktop) {
-    display: none;
-  }
-
 }

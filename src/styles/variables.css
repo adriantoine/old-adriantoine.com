@@ -36,8 +36,15 @@
 
 }
 
-@custom-media --mobile only screen and (max-width: 21.250em);
-@custom-media --phablet only screen and (max-width: 35em);
-@custom-media --tablet only screen and (max-width: 40em);
-@custom-media --desktop only screen and (max-width: 50em);
-@custom-media --wide only screen and (min-width: 80em);
+@custom-media --small-only only screen and (max-width: 40em);
+
+@custom-media --medium-up   only screen and (min-width: 40.063em);
+@custom-media --medium-only only screen and (min-width: 40.063em) and (max-width: 45em);
+
+@custom-media --large-up   only screen and (min-width: 45.063em);
+@custom-media --large-only only screen and (min-width: 45.063em) and (max-width: 64em);
+
+@custom-media --xlarge-up   only screen and (min-width: 64.063em);
+@custom-media --xlarge-only only screen and (min-width: 64.063em) and (max-width: 78em);
+
+@custom-media --xxlarge-up   only screen and (min-width: 78.063em);

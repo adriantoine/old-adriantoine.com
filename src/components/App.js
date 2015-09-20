@@ -1,20 +1,24 @@
 
 import React, { Component } from 'react';
+import cn from 'classnames';
 
+import Menu from './Menu/Menu';
 import Header from './Header/Header';
 import Footer from './Footer/Footer';
-import Body from './Body/Body';
 
-import './styles/base.css';
+import '../styles/base.css';
 import './App.css';
 
 export default class App extends Component {
 
   render() {
+    const isHome = this.props.location.pathname === '/home';
+
     return (
-      <div className="App">
+      <div className={cn('App', {'App--no-background-image': !isHome})}>
+        <Menu/>
         <Header/>
-        <Body/>
+        {this.props.children}
         <Footer/>
       </div>
     );

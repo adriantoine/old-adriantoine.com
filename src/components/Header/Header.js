@@ -1,30 +1,46 @@
 
 import React, { Component } from 'react';
+import { Link } from 'react-router';
+import cn from 'classnames';
 
 import './Header.css';
 
-export default class Header extends Component {
-
+class HeaderMenuLink extends Component {
   render() {
     return (
-      <header className="Header">
+      <li className="Header-menu-item">
+        <Link className="Header-menu-link" activeClassName="is-active" to={this.props.to}>
+          {this.props.children}
+        </Link>
+      </li>
+    );
+  }
+}
 
-        <div id="menu-link" className="Header-hamburger">
-          <i className="icon icon-bars"></i>
-        </div>
+export default class Header extends Component {
+
+  static contextTypes = {
+    location: React.PropTypes.object
+  };
+
+  render() {
+    const isHome = this.context.location.pathname === '/home';
+
+    return (
+      <header className={cn('Header', {'Header--no-background': isHome})}>
 
         <div className="u-site-width">
 
-          <a className="Header-title" href="/">Adrien Antoine</a>
+          <Link className="Header-title" to="/">Adrien Antoine</Link>
           <span className="Header-subtitle">front end developer</span>
 
           <nav className="Header-menu">
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/">About Me</a></li>
-              <li><a href="/">Portfolio</a></li>
-              <li><a href="/">Blog</a></li>
-              <li><a href="/">CV</a></li>
+            <ul className="Header-menu-list">
+              <HeaderMenuLink to="/home">Home</HeaderMenuLink>
+              <HeaderMenuLink to="/about-me">About Me</HeaderMenuLink>
+              <HeaderMenuLink to="/portfolio">Portfolio</HeaderMenuLink>
+              <HeaderMenuLink to="/blog">Blog</HeaderMenuLink>
+              <HeaderMenuLink to="/cv">CV</HeaderMenuLink>
             </ul>
           </nav>
 

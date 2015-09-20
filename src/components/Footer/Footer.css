@@ -1,13 +1,16 @@
 
-@import "styles/variables.css";
+@import "../styles/variables.css";
 
 .Footer {
   text-align: center;
-  color: var(--white);
-  position: absolute;
-  bottom: 0;
   width: 100%;
   padding-bottom: 2em;
+}
+
+.Footer--fixed {
+  position: absolute;
+  bottom: 0;
+  color: var(--white);
 }
 
 .Footer-socialLinks {

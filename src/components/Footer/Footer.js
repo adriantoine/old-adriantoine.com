@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import cn from 'classnames';
 
 import SocialLink from '../SocialLink/SocialLink';
 
@@ -7,9 +8,14 @@ import './Footer.css';
 
 export default class Footer extends Component {
 
+  static contextTypes = {
+    location: React.PropTypes.object
+  };
+
   render() {
+    const isHome = this.context.location.pathname === '/home';
     return (
-      <footer className="Footer">
+      <footer className={cn('Footer', {'Footer--fixed': isHome})}>
         <div className="Footer-socialLinks">
           <div className="u-site-width">
             <SocialLink icon="facebook" link="https://www.facebook.com/alshten"/>

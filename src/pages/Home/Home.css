@@ -1,17 +1,11 @@
 
-@import 'styles/variables.css';
+@import '../styles/variables.css';
 
 .Home {
   position: absolute;
   width: 100%;
   top: 50%;
-  transform: translateY(-70%);
-  @media (--desktop) {
-    transform: translateY(-60%);
-  }
-  @media (--mobile) {
-    transform: translateY(-50%);
-  }
+  transform: translateY(-60%);
   padding: 0 2em;
 }
 
@@ -50,14 +44,14 @@
 
   .Button {
     min-width: auto;
-    lost-column: 1/4;
     margin-bottom: 1em;
+    lost-column: 1;
 
-    @media (--desktop) {
+    @media (--medium-up) {
       lost-column: 1/2;
     }
-    @media (--mobile) {
-      lost-column: 1;
+    @media (--xlarge-up) {
+      lost-column: 1/4;
     }
   }
 }
