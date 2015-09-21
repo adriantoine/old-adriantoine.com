@@ -17,7 +17,21 @@ export class Blog extends Component {
   render() {
     return (
       <div className="Blog Page">
-        {this.props.children || <PostList/>}
+        {this.props.children || (
+
+          <div className="Blog-home">
+
+            <div className="Hero">
+              <h1>Blog</h1>
+            </div>
+
+            <div className="u-site-width">
+              <PostList/>
+            </div>
+
+          </div>
+
+        )}
       </div>
     );
   }

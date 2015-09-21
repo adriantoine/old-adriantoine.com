@@ -10,8 +10,6 @@ export default class Body extends Component {
     return (
       <div className="Home Page">
 
-        <h1>Adrien Antoine, front end developer</h1>
-
         <div className="u-site-width">
           <div className="Home-hero">
             <div className="Home-hero-title">Hi, My name is <span className="u-blue">Adrien Antoine</span></div>
@@ -21,10 +19,9 @@ export default class Body extends Component {
           </div>
 
           <div className="Home-buttons">
-            <Button className="Button" to="/about-me">About Me</Button>
-            <Button className="Button" to="/portfolio">Portfolio</Button>
-            <Button className="Button" to="/blog">Blog</Button>
-            <Button className="Button" to="/cv">CV</Button>
+            <Button to="/about-me">About Me</Button>
+            <Button to="/portfolio">Portfolio</Button>
+            <Button to="/blog">Blog</Button>
           </div>
 
         </div>

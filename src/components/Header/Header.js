@@ -40,7 +40,6 @@ export default class Header extends Component {
               <HeaderMenuLink to="/about-me">About Me</HeaderMenuLink>
               <HeaderMenuLink to="/portfolio">Portfolio</HeaderMenuLink>
               <HeaderMenuLink to="/blog">Blog</HeaderMenuLink>
-              <HeaderMenuLink to="/cv">CV</HeaderMenuLink>
             </ul>
           </nav>
 

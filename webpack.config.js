@@ -55,6 +55,7 @@ module.exports = {
     require('postcss-extend'),
     require('postcss-svg')({paths: ['./src/icons', './node_modules/material-design-icons'], defaults: '[fill]: #1F1F1F'}),
     require('lost'),
+    require('postcss-responsive-type'),
     require('cssnano'),
     require('autoprefixer-core')
   ],

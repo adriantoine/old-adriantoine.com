@@ -27,9 +27,9 @@ export default class Footer extends Component {
           </div>
         </div>
 
-        <ul className="Footer-credits">
-          <li>Website entirely made by myself, you can look at the code on <a href="https://github.com/adriantoine/adriantoine.com">GitHub</a>, by the way, it is responsive :) </li>
-        </ul>
+        <div className="Footer-credits">
+          Website entirely made by myself, you can look at the code on <a href="https://github.com/adriantoine/adriantoine.com">GitHub</a>, by the way, it is responsive :)
+        </div>
       </footer>
     );
   }

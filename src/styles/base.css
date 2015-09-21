@@ -1,9 +1,12 @@
 
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Raleway:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Raleway:400,700,900|Andada:400,700|Roboto+Mono:400,700);
 
 @import "normalize.css";
+@import "../styles/github.css";
 @import "../styles/variables.css";
 @import "../styles/utilities.css";
+
+/* General styles applied to the whole page */
 
 html {
   box-sizing: border-box;
@@ -12,7 +15,10 @@ html {
   box-sizing: inherit;
 }
 
-/* General styles applied to the whole page */
+html {
+  font-size: responsive 10.80px 17.6px;
+  font-range: 320px 1248px;
+}
 
 html, body {
 
@@ -29,61 +35,32 @@ html, body {
   height: 100%;
   overflow: hidden;
 
-  font-size: 0.83em;
-  @media (--medium-up) {
-    font-size: 0.85em;
-  }
-  @media (--large-up) {
-    font-size: 0.9em;
-  }
-  @media (--xlarge-up) {
-    font-size: 1em;
-  }
-  @media (--xxlarge-up) {
-    font-size: 1.1em;
-  }
-
 }
 
 
 /* Heading styles */
 
+h1, h2, h3, h4 {
+  font-weight: var(--font-bold);
+  letter-spacing: -.04em;
+}
+
 h1 {
-
-  font-weight: var(--font-heavy);
   font-size: var(--h1-size);
-  display: none;
-
-  .page--post & {
-    display: block;
-  }
-
 }
 
 h2 {
-  font-weight: var(--font-heavy);
   font-size: var(--h2-size);
-  margin-bottom: .2em;
 }
 h3 {
-  font-weight: var(--font-heavy);
   font-size: var(--h3-size);
-  margin-bottom: .1em;
-  font-weight: var(--font-bold);
 }
 h4 {
-  font-weight: var(--font-heavy);
   font-size: var(--h4-size);
-  font-weight: var(--font-bold);
 }
 
 
 /* Base styles */
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
 
 a {
   color: var(--blue);
@@ -98,4 +75,12 @@ hr {
   border: 1px solid var(--lightgrey);
   margin: 2em 0;
   border-bottom-width: 0;
+}
+
+pre, code {
+  font-family: var(--monospace-font);
+}
+
+.emoji {
+  height: 1em;
 }

@@ -23,4 +23,6 @@
 
 .Menu-list {
   display: none;
+  list-style-type: none;
+  padding: 0;
 }

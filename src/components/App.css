@@ -2,7 +2,8 @@
 @import '../styles/variables.css';
 
 .App {
-  background-image: url(/img/hero-bg.jpg);
+  background: url(/img/home.jpg) no-repeat center center fixed;
+  background-size: cover;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -19,4 +20,22 @@
   width: 100%;
   margin-bottom: 5em;
   padding-top: var(--header-height);
+}
+
+.Hero {
+  color: var(--white);
+  background: url(/img/coding.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: var(--big-font);
+  letter-spacing: -0.01em;
+  padding: 0.01em;
+  text-align: center;
+
+  h1 {
+    font-weight: var(--font-heavy);
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: var(--h2-size);
+  }
 }

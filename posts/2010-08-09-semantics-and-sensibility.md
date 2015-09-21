@@ -20,19 +20,21 @@ with some code examples:
 ## Insemantic code
 
 The following code is just plain wrong, it’s insemantic, using the wrong elements for the wrong job:
-
-    <div class="nav-link"><a href="/">Home</a></div>
-    <div class="nav-link"><a href="/about/">About</a></div>
-    <div class="page-title">About</div>
-    <div>This is some page text about some stuff...</div>
+```html
+<div class="nav-link"><a href="/">Home</a></div>
+<div class="nav-link"><a href="/about/">About</a></div>
+<div class="page-title">About</div>
+<div>This is some page text about some stuff...</div>
+```
 
 ## Insensible code
 
 This code is perfectly semantic, it just uses some silly classes:
-
-    <div class="border">
-      <h2 class="red">This is a heading</h2>
-    </div>
+```html
+<div class="border">
+  <h2 class="red">This is a heading</h2>
+</div>
+```
 
 ## Semantics concerns itself with elements…
 
@@ -73,10 +75,8 @@ even when you’re not.
 
 ## Final word
 
-<blockquote>
-    <p>An ID/class should be as short as possible but as long as necessary.</p>
-    <b class="source"><a href="http://meiert.com/en/blog/20090617/maintainability-guide/">Jens Meiert</a></b>
-</blockquote>
+>   An ID/class should be as short as possible but as long as necessary.
+>>   Jens Meiert
 
 Semantics and sensibility are not the same. Anyone who tells you that
 `class="left"` is insemantic is wrong. Be semantic and be sensible. Pick names

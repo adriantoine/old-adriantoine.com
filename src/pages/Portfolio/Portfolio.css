@@ -2,5 +2,13 @@
 @import '../styles/variables.css';
 
 .Portfolio {
+  font-size: var(--h1-size);
+  text-align: center;
+  margin-bottom: 2em;
+  padding-top: 1em;
 
+  .Hero {
+    background-image: url(/img/london.jpg);
+    margin-bottom: 1em;
+  }
 }

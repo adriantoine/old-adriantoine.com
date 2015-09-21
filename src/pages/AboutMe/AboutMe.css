@@ -3,4 +3,8 @@
 
 .AboutMe {
 
+  .Hero {
+    background-image: url(/img/coding.jpg);
+  }
+
 }

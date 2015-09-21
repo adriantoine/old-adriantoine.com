@@ -1,22 +1,22 @@
 
 @import '../styles/variables.css';
 
-.App {
-  background-image: url(/img/hero-bg.jpg);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: auto;
+.PostList {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 2em;
 }
 
-.App--no-background-image {
-  background-image: none;
+.PostItem {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--lightgrey);
+
+  h2 {
+    margin: 0;
+  }
 }
 
-.Page {
-  width: 100%;
-  margin-bottom: 5em;
-  padding-top: var(--header-height);
+.PostItem-date {
+  color: var(--grey);
 }

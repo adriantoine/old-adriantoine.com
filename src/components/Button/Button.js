@@ -8,7 +8,7 @@ export default class Button extends Component {
 
   render() {
     return (
-      <Link className="Button" href={this.props.to}>
+      <Link className="Button" to={this.props.to}>
         {this.props.children}
       </Link>
     );

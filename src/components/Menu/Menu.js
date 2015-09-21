@@ -20,7 +20,6 @@ export default class Menu extends Component {
           <li className="Menu-item"><a className="Menu-link" href="/">About Me</a></li>
           <li className="Menu-item"><a className="Menu-link" href="/">Portfolio</a></li>
           <li className="Menu-item"><a className="Menu-link" href="/">Blog</a></li>
-          <li className="Menu-item"><a className="Menu-link" href="/">CV</a></li>
         </ul>
       </nav>
     );
