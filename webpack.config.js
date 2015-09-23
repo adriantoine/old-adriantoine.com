@@ -15,6 +15,9 @@ module.exports = {
   },
 
   module: {
+    preLoaders: [
+      { test: /\.json$/, loader: 'json'},
+    ],
     loaders: [
       {
         test: /\.js$/,
@@ -53,7 +56,7 @@ module.exports = {
     require('postcss-calc'),
     require('postcss-custom-media'),
     require('postcss-extend'),
-    require('postcss-svg')({paths: ['./src/icons', './node_modules/material-design-icons'], defaults: '[fill]: #1F1F1F'}),
+    require('postcss-svg')({paths: ['./public/img/icons', './public/img/icons/logos']}),
     require('lost'),
     require('postcss-responsive-type'),
     require('cssnano'),

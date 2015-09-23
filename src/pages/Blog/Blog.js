@@ -1,7 +1,10 @@
 
 import React, { Component } from 'react';
+import cn from 'classnames';
+
 import PostList from '../../components/PostList/PostList';
 import PostComponent from '../../components/Post/Post';
+import Page from '../Page/Page';
 
 import './Blog.css';
 
@@ -16,23 +19,9 @@ export class Post extends Component {
 export class Blog extends Component {
   render() {
     return (
-      <div className="Blog Page">
-        {this.props.children || (
-
-          <div className="Blog-home">
-
-            <div className="Hero">
-              <h1>Blog</h1>
-            </div>
-
-            <div className="u-site-width">
-              <PostList/>
-            </div>
-
-          </div>
-
-        )}
-      </div>
+      <Page className={cn('Blog', {'Page--no-hero': !!this.props.children})} title="Blog">
+        {this.props.children || <PostList/>}
+      </Page>
     );
   }
 }

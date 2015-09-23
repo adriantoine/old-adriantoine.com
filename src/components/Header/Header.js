@@ -24,7 +24,7 @@ export default class Header extends Component {
   };
 
   render() {
-    const isHome = this.context.location.pathname === '/home';
+    const isHome = this.context.location.pathname === '/';
 
     return (
       <header className={cn('Header', {'Header--no-background': isHome})}>
@@ -36,7 +36,6 @@ export default class Header extends Component {
 
           <nav className="Header-menu">
             <ul className="Header-menu-list">
-              <HeaderMenuLink to="/home">Home</HeaderMenuLink>
               <HeaderMenuLink to="/about-me">About Me</HeaderMenuLink>
               <HeaderMenuLink to="/portfolio">Portfolio</HeaderMenuLink>
               <HeaderMenuLink to="/blog">Blog</HeaderMenuLink>

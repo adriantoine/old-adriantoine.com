@@ -2,7 +2,7 @@
 @import '../styles/variables.css';
 
 .Blog {
-  .Hero {
+  .Page-hero {
     background-image: url(/img/writing.jpg);
   }
 }

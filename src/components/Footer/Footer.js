@@ -13,7 +13,7 @@ export default class Footer extends Component {
   };
 
   render() {
-    const isHome = this.context.location.pathname === '/home';
+    const isHome = this.context.location.pathname === '/';
     return (
       <footer className={cn('Footer', {'Footer--fixed': isHome})}>
         <div className="Footer-socialLinks">
@@ -28,7 +28,8 @@ export default class Footer extends Component {
         </div>
 
         <div className="Footer-credits">
-          Website entirely made by myself, you can look at the code on <a href="https://github.com/adriantoine/adriantoine.com">GitHub</a>, by the way, it is responsive :)
+          <p>Website entirely made by myself (design and code), you can look at the code on <a href="https://github.com/adriantoine/adriantoine.com">GitHub</a></p>
+          <p>Background images are from <a href="https://unsplash.com/" target="_blank">Unsplash</a>, icons are from <a href="http://evil-icons.io/" target="_blank">Evil Icons</a>, fonts are from <a href="https://www.google.com/fonts" target="_blank">Google Web Fonts</a></p>
         </div>
       </footer>
     );

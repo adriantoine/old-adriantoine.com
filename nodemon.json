@@ -8,5 +8,8 @@
   "watch": [
     "*.*",
     "../bloql/dist/server/"
-  ]
+  ],
+  "execMap": {
+    "js": "babel-node"
+  }
 }

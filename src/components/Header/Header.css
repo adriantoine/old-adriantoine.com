@@ -10,7 +10,7 @@
   height: var(--header-height);
   color: var(--blue);
   overflow: hidden;
-  padding: 0 2em;
+  padding: 0 2rem;
   background-color: var(--black);
   border-bottom: var(--header-border-height) solid var(--blue);
 

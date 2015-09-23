@@ -1,0 +1,35 @@
+
+@import '../styles/variables.css';
+
+.Page {
+  width: 100%;
+  margin-bottom: 5em;
+  padding-top: var(--header-height);
+}
+
+.Page-hero {
+  color: var(--white);
+  background: url(/img/coding.jpg) no-repeat center center fixed;
+  background-size: cover;
+  font-family: var(--big-font);
+  letter-spacing: -0.01em;
+  padding: 0.01em;
+  text-align: center;
+
+  h1 {
+    font-weight: var(--font-heavy);
+    text-transform: uppercase;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+    font-size: var(--h2-size);
+  }
+}
+
+.Page-content {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.Page--no-hero .Page-hero {
+  display: none;
+}

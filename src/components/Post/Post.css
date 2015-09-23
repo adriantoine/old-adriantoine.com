@@ -24,10 +24,6 @@
 .Post-content {
   text-align: justify;
 
-  h1, h2, h3, h4 {
-    margin-bottom: 0.5em;
-  }
-
   p, ul {
     font-family: var(--serif-font);
     line-height: 1.5;
