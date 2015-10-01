@@ -4,4 +4,4 @@ Link: http://adriantoine.com/
 
 ## Technical stack
 
-To be defined
+See my blog post [New version of adriantoine.com](http://adriantoine.herokuapp.com/#/blog/new-version-of-adriantoine-com)
