@@ -1,0 +1,16 @@
+
+@import '../styles/variables.css';
+
+.Portfolio {
+  text-align: center;
+  margin-bottom: 10em;
+
+  .Page-hero {
+    background-image: url(/img/london.jpg);
+    margin-bottom: 5em;
+  }
+}
+
+.Portfolio-comingSoon {
+  font-size: var(--h1-size);
+}

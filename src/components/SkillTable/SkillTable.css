@@ -1,0 +1,108 @@
+
+@import '../styles/variables.css';
+
+.SkillTable {
+  margin-top: 1em;
+}
+
+.SkillTable-title {
+  font-weight: var(--font-bold);
+  border-bottom: 1px solid var(--lightgrey);
+  padding: .2em .5em;
+  margin-bottom: .5em;
+}
+
+.SkillTable-content {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.SkillTable-item {
+  overflow: hidden;
+  margin-bottom: .5em;
+  &:before {
+    content: '';
+    float: left;
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: .5em;
+    border-radius: 50%;
+    background-color: var(--lightgrey);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: svg("ei#arrow-right", "[fill]: var(--blue)");
+  }
+
+  &.backbone:before {
+    background-image: svg("backbone");
+  }
+  &.jquery:before {
+    background-image: url(/img/icons/logos/jquery.svg);
+  }
+  &.marionette:before {
+    background-image: svg("marionette");
+  }
+  &.browserify:before {
+    background-image: svg("browserify");
+  }
+  &.requirejs:before {
+    background-image: svg("requirejs");
+  }
+  &.bower:before {
+    background-image: svg("bower");
+  }
+  &.karma:before {
+    background-image: url(/img/icons/logos/karma.svg);
+  }
+  &.mocha:before {
+    background-image: svg("mocha");
+  }
+  &.jasmine:before {
+    background-image: svg("jasmine");
+  }
+  &.sass:before {
+    background-image: svg("sass");
+  }
+  &.less:before {
+    background-image: url(/img/icons/logos/less.svg);
+  }
+  &.handlebars:before {
+    background-image: svg("handlebars");
+  }
+  &.mustache:before {
+    background-image: url(/img/icons/logos/mustache.svg);
+  }
+  &.gulp:before {
+    background-image: svg("gulp");
+  }
+  &.grunt:before {
+    background-image: svg("grunt");
+  }
+  &.git:before {
+    background-image: url(/img/icons/logos/git.svg);
+  }
+  &.react:before {
+    background-image: svg("react");
+  }
+  &.flux:before {
+    background-image: svg("flux");
+  }
+  &.relay:before {
+    background-image: svg("relay");
+  }
+  &.webpack:before {
+    background-image: svg("webpack");
+  }
+  &.cssmodules:before {
+    background-image: url(/img/icons/logos/cssmodules.png);
+  }
+  &.postcss:before {
+    background-image: svg("postcss");
+  }
+  &.babel:before {
+    background-image: svg("babel");
+  }
+}
+

@@ -1,0 +1,112 @@
+
+@import "../styles/variables.css";
+
+/*Header of the site */
+
+.Header {
+
+  z-index: 100;
+  width: 100%;
+  height: var(--header-height);
+  color: var(--blue);
+  overflow: hidden;
+  padding: 0 2rem;
+  background-color: var(--black);
+  border-bottom: var(--header-border-height) solid var(--blue);
+
+  .u-site-width {
+    position: relative;
+    height: calc(var(--header-height) - var(--header-border-height));
+  }
+
+  @media (--medium-up) {
+    position: fixed;
+  }
+
+}
+
+.Header--no-background {
+  @media (--medium-up) {
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+
+/* Title insite the header */
+
+.Header-title {
+
+  font-family: var(--big-font);
+  letter-spacing: -0.01em;
+  font-weight: var(--font-heavy);
+  font-size: var(--h3-size);
+  line-height: 2em;
+  text-decoration: none;
+  color: var(--white);
+  display: inline-block;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  margin-top: .3em;
+  @media (--medium-up) {
+    margin-top: .55em;
+  }
+
+}
+
+
+/* Subtitle inside the header */
+
+.Header-subtitle {
+
+  font-weight: var(--font-light);
+  margin-left: .5em;
+  font-size: var(--h4-size);
+
+  display: none;
+
+  @media (--large-up) {
+    display: inline;
+  }
+}
+
+
+/* Menu on the top right */
+
+.Header-menu {
+  font-weight: var(--font-bold);
+  font-size: var(--h4-size);
+  position: absolute;
+  bottom: 0;
+  right: 0;
+
+  display: none;
+  @media (--medium-up) {
+    display: inline;
+  }
+
+}
+
+.Header-menu-list {
+  margin: .4em .5em;
+  list-style-type: none;
+  padding: 0;
+}
+
+.Header-menu-item {
+  display: inline-block;
+  margin-right: .5em;
+}
+
+.Header-menu-link {
+  text-decoration: none;
+  color: var(--grey);
+
+  &.is-active, &:hover {
+    color: var(--white);
+    text-decoration: none;
+  }
+}

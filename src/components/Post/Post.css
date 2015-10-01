@@ -1,0 +1,46 @@
+
+@import '../styles/variables.css';
+
+.Post {
+  font-size: 1.2em;
+  max-width: 45em;
+  margin: 4em auto 0;
+}
+
+.Post-title {
+  margin-bottom: 0;
+}
+
+.Post-head {
+  margin-bottom: 2em;
+  border-bottom: 2px solid var(--lightgrey);
+  padding-bottom: 0.5em;
+}
+
+.Post-date {
+  color: var(--grey);
+}
+
+.Post-content {
+  text-align: justify;
+
+  p, ul {
+    font-family: var(--serif-font);
+    line-height: 1.5;
+  }
+
+  pre {
+    padding: 0.8em 1em 1em;
+    width: 100%;
+    background-color: var(--lightgrey);
+    code {
+      background-color: transparent;
+    }
+  }
+
+  code {
+    background-color: var(--lightgrey);
+    font-size: 0.8em;
+    padding: 0.2em 0.4em;
+  }
+}

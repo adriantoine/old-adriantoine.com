@@ -1,0 +1,36 @@
+
+@import '../styles/variables.css';
+
+.AboutMe {
+  .Page-hero {
+    background-image: url(/img/coding.jpg);
+  }
+
+  p, .SkillTable {
+    font-family: var(--serif-font);
+    line-height: 1.5;
+    font-size: 1.2em;
+  }
+}
+
+.AboutMe-content {
+  max-width: 45em;
+  margin: auto;
+}
+
+.AboutMe-skills--commercial {
+  lost-utility: clearfix;
+  margin-top: -0.5em;
+
+  .SkillTable {
+    @media (--small-only) {
+      lost-column: 1;
+    }
+    @media (--medium-up) {
+      lost-column: 1/2;
+    }
+    @media (--xlarge-up) {
+      lost-column: 1/3;
+    }
+  }
+}

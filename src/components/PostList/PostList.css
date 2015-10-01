@@ -1,0 +1,22 @@
+
+@import '../styles/variables.css';
+
+.PostList {
+  list-style-type: none;
+  padding: 0;
+  padding-top: 2em;
+}
+
+.PostItem {
+  margin-bottom: 2em;
+  padding-bottom: 1em;
+  border-bottom: 2px solid var(--lightgrey);
+
+  h2 {
+    margin: 0;
+  }
+}
+
+.PostItem-date {
+  color: var(--grey);
+}

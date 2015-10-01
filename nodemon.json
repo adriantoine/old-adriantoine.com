@@ -1,0 +1,15 @@
+{
+  "ignore": [
+    "node_modules/**/*",
+    "public/**/*",
+    "src/**/*",
+    "webpack.config.js"
+  ],
+  "watch": [
+    "*.*",
+    "../bloql/dist/server/"
+  ],
+  "execMap": {
+    "js": "babel-node --stage 0"
+  }
+}

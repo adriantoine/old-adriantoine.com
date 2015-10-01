@@ -1,0 +1,8 @@
+
+@import '../styles/variables.css';
+
+.Blog {
+  .Page-hero {
+    background-image: url(/img/writing.jpg);
+  }
+}

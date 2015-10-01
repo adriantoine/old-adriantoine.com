@@ -1,0 +1,41 @@
+
+@import "../styles/variables.css";
+
+.SocialLink {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  width: 1.7em;
+  height: 1.7em;
+  line-height: 1.7em;
+
+  + .SocialLink {
+    margin-left: .3em;
+  }
+}
+
+.SocialLink-facebook {
+  background-image: svg("ei#sc-facebook", "[fill]: white");
+  background-color: #3b5998;
+
+}
+.SocialLink-twitter {
+  background-image: svg("ei#sc-twitter", "[fill]: white");
+  background-color: #55acee;
+}
+.SocialLink-github {
+  background-image: svg("ei#sc-github", "[fill]: white");
+  background-color: #333;
+}
+.SocialLink-tumblr {
+  background-image: svg("ei#sc-tumblr", "[fill]: white");
+  background-color: #35465c;
+}
+.SocialLink-linkedin {
+  background-image: svg("ei#sc-linkedin", "[fill]: white");
+  background-color: #0976b4;
+}
+.SocialLink-google-plus {
+  background-image: svg("ei#sc-google-plus", "[fill]: white");
+  background-color: #dd4b39;
+}
