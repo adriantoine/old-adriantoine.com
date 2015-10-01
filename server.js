@@ -1,14 +1,14 @@
 
 // Very simple server to serve static files on Heroku
 
+delete process.env.BROWSER;
+
 import path from 'path';
 import express from 'express';
+import Handlebars from 'handlebars';
+import fs from 'fs';
 
-// import React from 'react';
-// import { RoutingContext, match } from 'react-router';
-// import createLocation from 'history/lib/createLocation';
-
-import { express as bloql } from 'bloql/server';
+import bloql from 'bloql/middleware/express';
 
 const app = express();
 
@@ -20,53 +20,31 @@ bloql(app, {
   database: require('bloql-markdown-file-database')
 });
 
+// Temporary fix
+const indexTpl = Handlebars.compile(fs.readFileSync(path.join(__dirname, 'src', 'index.hbs'), 'utf8'));
+fs.writeFileSync(path.join(__dirname, 'public', 'index.html'), indexTpl());
+
 app.use(express.static('public'));
 
-// app.use( (req, res) => {
+// import React from 'react';
+// import ReactDOMServer from 'react-dom/server';
+// import { RoutingContext, match } from 'react-router';
+// import createLocation from 'history/lib/createLocation';
+
+// import routes from './src/routes';
+// app.use((req, res) => {
 //   const location = createLocation(req.url);
 
 //   match({ routes, location }, (err, redirectLocation, renderProps) => {
-//     if(err) {
-//       console.error(err);
-//       return res.status(500).end('Internal server error');
-//     }
 
-//     if(!renderProps)
-//       return res.status(404).end('Not found');
+//     const componentHTML = ReactDOMServer.renderToString(<RoutingContext {...renderProps} />);
 
-//     function renderView() {
-//       const InitialView = (
-//         <RoutingContext {...renderProps} />
-//       );
+//     const html = indexTpl({
+//       body: componentHTML
+//     });
 
-//       const componentHTML = React.renderToString(InitialView);
+//     res.end(html);
 
-//       const initialState = store.getState();
-
-//       const HTML = `
-//       <!DOCTYPE html>
-//       <html>
-//         <head>
-//           <meta charset="utf-8">
-//           <title>Redux Demo</title>
-//           <script>
-//             window.__INITIAL_STATE__ = ${JSON.stringify(initialState)};
-//           </script>
-//         </head>
-//         <body>
-//           <div id="react-view">${componentHTML}</div>
-//           <script type="application/javascript" src="/bundle.js"></script>
-//         </body>
-//       </html>
-//       `;
-
-//       return HTML;
-//     }
-
-//     fetchComponentData(store.dispatch, renderProps.components, renderProps.params)
-//       .then(renderView)
-//       .then(html => res.end(html))
-//       .catch(err => res.end(err.message));
 //   });
 // });
 

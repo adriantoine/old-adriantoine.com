@@ -5,7 +5,7 @@
 
 .Header {
 
-  position: fixed;
+  z-index: 100;
   width: 100%;
   height: var(--header-height);
   color: var(--blue);
@@ -19,11 +19,17 @@
     height: calc(var(--header-height) - var(--header-border-height));
   }
 
+  @media (--medium-up) {
+    position: fixed;
+  }
+
 }
 
 .Header--no-background {
-  background-color: transparent;
-  border: 0;
+  @media (--medium-up) {
+    background-color: transparent;
+    border: 0;
+  }
 }
 
 
@@ -46,7 +52,7 @@
 
   margin-top: .3em;
   @media (--medium-up) {
-    margin-top: .1em;
+    margin-top: .55em;
   }
 
 }

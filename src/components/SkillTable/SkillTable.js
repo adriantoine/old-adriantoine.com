@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import cn from 'classnames';
 
-import './SkillTable.css';
+if (process.env.BROWSER) {
+  require('./SkillTable.css');
+}
 
 export class SkillTableItem extends Component {
   render() {

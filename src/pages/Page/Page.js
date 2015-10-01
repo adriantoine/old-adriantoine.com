@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import cn from 'classnames';
 
-import './Page.css';
+if (process.env.BROWSER) {
+  require('./Page.css');
+}
 
 export default class Page extends Component {
 

@@ -5,7 +5,10 @@ import { Link } from 'react-router';
 
 import Page from '../Page/Page';
 
-import './AboutMe.css';
+if (process.env.BROWSER) {
+  require('./AboutMe.css');
+}
+
 import { SkillTable, SkillTableItem } from '../../components/SkillTable/SkillTable';
 
 export default class AboutMe extends Component {

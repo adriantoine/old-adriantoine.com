@@ -6,7 +6,9 @@ import PostList from '../../components/PostList/PostList';
 import PostComponent from '../../components/Post/Post';
 import Page from '../Page/Page';
 
-import './Blog.css';
+if (process.env.BROWSER) {
+  require('./Blog.css');
+}
 
 export class Post extends Component {
   render() {

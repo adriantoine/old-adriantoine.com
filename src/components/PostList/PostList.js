@@ -4,7 +4,9 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import moment from 'moment';
 
-import './PostList.css';
+if (process.env.BROWSER) {
+  require('./PostList.css');
+}
 
 class PostList extends Component {
 

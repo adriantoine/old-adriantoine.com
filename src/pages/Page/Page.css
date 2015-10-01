@@ -4,7 +4,9 @@
 .Page {
   width: 100%;
   margin-bottom: 5em;
-  padding-top: var(--header-height);
+  @media (--medium-up) {
+    padding-top: var(--header-height);
+  }
 }
 
 .Page-hero {

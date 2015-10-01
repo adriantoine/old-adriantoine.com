@@ -10,6 +10,6 @@
     "../bloql/dist/server/"
   ],
   "execMap": {
-    "js": "babel-node"
+    "js": "babel-node --stage 0"
   }
 }

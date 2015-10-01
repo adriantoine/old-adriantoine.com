@@ -3,7 +3,9 @@ import { createPost } from 'bloql/client';
 import React, { Component } from 'react';
 import moment from 'moment';
 
-import './Post.css';
+if (process.env.BROWSER) {
+  require('./Post.css');
+}
 
 class Post extends Component {
 

@@ -10,6 +10,7 @@
   left: 0;
   right: 0;
   overflow: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .App--no-background-image {

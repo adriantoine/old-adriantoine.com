@@ -73,7 +73,15 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('style.css', { allChunks: true }),
     new webpack.ProvidePlugin({
-      fetch: 'imports?this=>global!exports?global.fetch!whatwg-fetch'
-    })
+      fetch: 'imports?this=>global!exports?global.fetch!isomorphic-fetch'
+    }),
+    new webpack.DefinePlugin({
+      'process.env': {
+        BROWSER: JSON.stringify(true)
+      }
+    }),
+    // new webpack.optimize.UglifyJsPlugin({minimize: true}),
+    // new webpack.optimize.OccurenceOrderPlugin(),
+    // new webpack.optimize.DedupePlugin()
   ]
 };
