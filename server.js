@@ -8,7 +8,7 @@ import express from 'express';
 import Handlebars from 'handlebars';
 import fs from 'fs';
 
-import bloql from 'bloql/middleware/express';
+import bloql from 'bloql/server/middleware/express';
 
 const app = express();
 
