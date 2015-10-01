@@ -6,6 +6,7 @@
   "scripts": {
     "build-dev": "webpack --progress --colors --watch",
     "dev": "npm run build-dev & nodemon index.js",
+    "start": "npm run build-dev & babel-node --state 0 index.js",
     "lint": "eslint src"
   },
   "repository": {
