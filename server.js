@@ -27,11 +27,12 @@ bloql(app, {
   database: require('bloql-markdown-file-database')
 });
 
+app.use(compression());
+
 app.use(express.static('public', {
   lastModified: true,
   maxAge: 31536000000
 }));
-app.use(compression());
 
 var assetsPaths = {
   js: 'index.js',
