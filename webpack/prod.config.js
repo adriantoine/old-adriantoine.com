@@ -1,23 +1,24 @@
 
-var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
+/* eslint no-var: 0, no-console: 0 */
 
 var path = require('path');
+var webpack = require('webpack');
+var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var AssetsPlugin = require('assets-webpack-plugin');
 
-module.exports = {
+const dist = path.resolve(__dirname, '../public');
+
+const config = {
   devtool: 'source-map',
   entry: './src/index',
 
   output: {
-    filename: 'index.js',
-    path: path.resolve('./public'),
-    libraryTarget: 'umd'
+    path: dist,
+    filename: '[name]-[hash].js',
+    chunkFilename: '[name]-[chunkhash].js',
+    publicPath: '/'
   },
-
   module: {
-    preLoaders: [
-      { test: /\.json$/, loader: 'json'},
-    ],
     loaders: [
       {
         test: /\.js$/,
@@ -42,13 +43,13 @@ module.exports = {
           'style-loader',
           'css-loader?sourceMap!postcss-loader'
         )
-      },
+      }
     ]
   },
 
   postcss: [
     require('postcss-import')({
-      path: ['components']
+      path: [ path.resolve(__dirname, '../src/components') ]
     }),
     require('postcss-nested'),
     require('postcss-css-variables'),
@@ -60,7 +61,7 @@ module.exports = {
     require('lost'),
     require('postcss-responsive-type'),
     require('cssnano'),
-    require('autoprefixer-core')
+    require('autoprefixer')
   ],
 
   resolve: {
@@ -71,17 +72,38 @@ module.exports = {
   },
 
   plugins: [
-    new ExtractTextPlugin('style.css', { allChunks: true }),
+
+    new ExtractTextPlugin('[name]-[chunkhash].css'),
+    new webpack.IgnorePlugin(/\.\/dev/, /\/config$/),
     new webpack.ProvidePlugin({
       fetch: 'imports?this=>global!exports?global.fetch!isomorphic-fetch'
     }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(),
+
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      },
+      output: {
+        comments: false
+      }
+    }),
+
     new webpack.DefinePlugin({
       'process.env': {
+        NODE_ENV: JSON.stringify('production'),
         BROWSER: JSON.stringify(true)
       }
     }),
-    new webpack.optimize.UglifyJsPlugin({compress: { warnings: false }}),
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin()
+
+    new AssetsPlugin({
+      filename: 'assets.json',
+      path: path.join(__dirname, '../public')
+    })
+
   ]
+
 };
+
+module.exports = config;

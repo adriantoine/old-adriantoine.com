@@ -1,7 +1,8 @@
 node_modules
-public/index.js
-public/index.js.map
-public/style.css
-public/style.css.map
+public/*.js
+public/*.js.map
+public/*.css
+public/*.css.map
+public/*.json
 posts_test/
 npm-debug.log

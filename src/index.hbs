@@ -7,23 +7,21 @@
     <title>Adrien Antoine, front end developer</title>
     <meta name="description" content="Personal website of Adrien Antoine">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{cssPath}}">
+
+    <script>
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-46010611-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <script async src='//www.google-analytics.com/analytics.js'></script>
+
   </head>
   <body>
 
     <div id="app">{{{ body }}}</div>
 
-    <script src="index.js"></script>
+    <script src="{{jsPath}}"></script>
 
-    <script type="text/javascript">
-      var _gaq = _gaq || [];
-      _gaq.push(['_setAccount', 'UA-46010611-1']);
-      _gaq.push(['_trackPageview']);
-      (function() {
-        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-      })();
-    </script>
   </body>
 </html>
