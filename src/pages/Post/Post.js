@@ -11,6 +11,13 @@ if (process.env.BROWSER) {
 
 class Post extends Component {
 
+  renderDisqus() {
+    // Render disqus only in production
+    if (process.env.NODE_ENV === 'production') {
+      return <ReactDisqusThread shortname="adriantoine" identifier={this.props.post.meta.slug} title={this.props.post.meta.title} />;
+    }
+  }
+
   render() {
     return (
       <article className="Post">
@@ -23,7 +30,7 @@ class Post extends Component {
 
         <div className="Post-content" dangerouslySetInnerHTML={{__html: this.props.post.content}}/>
 
-        <ReactDisqusThread shortname="adriantoine" identifier={this.props.post.meta.slug} title={this.props.post.meta.title} />
+        {this.renderDisqus()}
 
       </article>
 
@@ -32,4 +39,12 @@ class Post extends Component {
 
 }
 
-export default createPost(Post);
+var RelayPost = createPost(Post);
+
+export default class ReturnPost extends Component {
+  render() {
+    return (
+      <RelayPost slug={this.props.params.slug}/>
+    );
+  }
+}

@@ -6,7 +6,8 @@ import App from './pages/App';
 import Home from './pages/Home/Home';
 import AboutMe from './pages/AboutMe/AboutMe';
 import Portfolio from './pages/Portfolio/Portfolio';
-import { Blog, Post } from './pages/Blog/Blog';
+import Blog from './pages/Blog/Blog';
+import Post from './pages/Post/Post';
 
 export default (
   <Route path="/" component={App}>
