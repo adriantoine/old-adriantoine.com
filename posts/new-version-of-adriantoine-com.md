@@ -40,6 +40,6 @@ The build system needs a lot of refactoring. I am using [Webpack](https://webpac
 
 What's next?
 ------------
-Well I guess I now have to write tutorials and articles about all those things I learnt recently :) and I will obviously keep on working on [bloql](https://github.com/adriantoine/bloql) and refactor this website <progressively class=""></progressively>
+Well I guess I now have to write tutorials and articles about all those things I learnt recently :) and I will obviously keep on working on [bloql](https://github.com/adriantoine/bloql) and refactor this website progressively.
 
 By the way, I am **available to hire** in **London, UK** as a **front-end developer**, contractor or permanent. :)
