@@ -6,3 +6,4 @@ public/*.css.map
 public/*.json
 posts_test/
 npm-debug.log
+newrelic_agent.log
