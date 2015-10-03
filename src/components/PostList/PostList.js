@@ -17,7 +17,7 @@ class PostList extends Component {
       <li className="PostItem">
         <h2><Link className="PostItem-title" to={'/blog/' + meta.slug}>{ meta.title }</Link></h2>
         <div className="PostItem-meta">
-          <span className="PostItem-date">{moment(meta.date).format('DD/MM/YYYY')}</span>
+          <span className="PostItem-date">{moment(new Date(meta.date)).format('DD/MM/YYYY')}</span>
         </div>
       </li>
     );

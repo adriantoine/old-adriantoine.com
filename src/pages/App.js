@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import DocumentTitle from 'react-document-title';
 import cn from 'classnames';
 
 import Menu from '../components/Menu/Menu';
@@ -18,9 +19,13 @@ export default class App extends Component {
 
     return (
       <div className={cn('App', {'App--no-background-image': !isHome})}>
+
+
         <Menu/>
         <Header/>
-        {this.props.children}
+        <DocumentTitle title='Adrien Antoine, front-end developer'>
+          {this.props.children}
+        </DocumentTitle>
         <Footer/>
       </div>
     );
