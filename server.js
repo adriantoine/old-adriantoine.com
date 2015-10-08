@@ -10,7 +10,7 @@ import express from 'express';
 import compression from 'compression';
 import morgan from 'morgan';
 import Handlebars from 'handlebars';
-import bloql from 'bloql/server/middleware/express';
+import bloql from 'bloql/middleware/express';
 
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';

@@ -1,5 +1,5 @@
 
-import { createPostList } from 'bloql/client';
+import { createComponent } from 'bloql/PostList';
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 import moment from 'moment';
@@ -35,4 +35,4 @@ class PostList extends Component {
 
 }
 
-export default createPostList(PostList);
+export default createComponent(PostList);
