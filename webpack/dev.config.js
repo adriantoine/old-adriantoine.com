@@ -71,10 +71,6 @@ const config = {
 
     new ExtractTextPlugin('style.css', { allChunks: true }),
 
-    new webpack.ProvidePlugin({
-      fetch: 'imports?this=>global!exports?global.fetch!isomorphic-fetch'
-    }),
-
     new webpack.HotModuleReplacementPlugin(),
 
     new webpack.DefinePlugin({
@@ -84,12 +80,7 @@ const config = {
       }
     }),
 
-    new WebpackErrorNotificationPlugin(),
-
-    new AssetsPlugin({
-      filename: 'assets.json',
-      path: path.join(__dirname, '../public')
-    })
+    new WebpackErrorNotificationPlugin()
 
   ]
 

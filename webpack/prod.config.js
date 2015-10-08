@@ -75,9 +75,6 @@ const config = {
 
     new ExtractTextPlugin('[name]-[chunkhash].css'),
     new webpack.IgnorePlugin(/\.\/dev/, /\/config$/),
-    new webpack.ProvidePlugin({
-      fetch: 'imports?this=>global!exports?global.fetch!isomorphic-fetch'
-    }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(),
 
