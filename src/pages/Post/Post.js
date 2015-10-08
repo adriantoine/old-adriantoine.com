@@ -1,5 +1,5 @@
 
-import { createPost } from 'bloql/client';
+import { createComponent } from 'bloql/Post';
 import React, { Component } from 'react';
 import ReactDisqusThread from 'react-disqus-thread';
 import DocumentTitle from 'react-document-title';
@@ -11,6 +11,11 @@ if (process.env.BROWSER) {
 
 class Post extends Component {
 
+  componentDidMount() {
+    // Once the component is mounted, we can update the slug
+    this.props.bloql.setSlug(this.props.params.slug);
+  }
+
   renderDisqus() {
     // Render disqus only in production
     if (process.env.NODE_ENV === 'production') {
@@ -19,6 +24,12 @@ class Post extends Component {
   }
 
   render() {
+
+    // If no post is in props, it means the component hasn't been initialised, so we should return an empty component
+    if (!this.props.post) {
+      return <article className="Post"/>;
+    }
+
     return (
       <article className="Post">
         <DocumentTitle title={this.props.post.meta.title}/>
@@ -33,18 +44,10 @@ class Post extends Component {
         {this.renderDisqus()}
 
       </article>
-
     );
+
   }
 
 }
 
-var RelayPost = createPost(Post);
-
-export default class ReturnPost extends Component {
-  render() {
-    return (
-      <RelayPost slug={this.props.params.slug}/>
-    );
-  }
-}
+export default createComponent(Post);

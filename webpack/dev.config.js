@@ -5,7 +5,6 @@ import path from 'path';
 import webpack from 'webpack';
 import WebpackErrorNotificationPlugin from 'webpack-error-notification';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
-import AssetsPlugin from 'assets-webpack-plugin';
 
 const config = {
   devtool: 'source-map',
@@ -61,10 +60,10 @@ const config = {
   ],
 
   resolve: {
-    fallback: path.join(__dirname, 'node_modules'),
+    fallback: path.join(__dirname, '../node_modules'),
   },
   resolveLoader: {
-    fallback: path.join(__dirname, 'node_modules')
+    fallback: path.join(__dirname, '../node_modules')
   },
 
   plugins: [
