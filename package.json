@@ -4,7 +4,8 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --stats --config ./webpack/prod.config.js",
+    "clean": "rm public/main*",
+    "build": "npm run clean && webpack --stats --config ./webpack/prod.config.js",
     "postinstall": "npm run build",
     "dev": "NODE_ENV=development nodemon index.js",
     "start": "NODE_ENV=production node --harmony index.js",
