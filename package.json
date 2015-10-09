@@ -16,8 +16,8 @@
     "url": "git@github.com:adriantoine/adriantoine.com.git"
   },
   "engines": {
-    "node": "4.1.1",
-    "npm": "3.3.5"
+    "node": "4.x.x",
+    "npm": "3.x.x"
   },
   "author": "Adrien Antoine",
   "license": "ISC",
