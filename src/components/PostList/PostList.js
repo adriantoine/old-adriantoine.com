@@ -26,8 +26,8 @@ class PostList extends Component {
   render() {
     return (
       <ul className="PostList">
-        {this.props.posts.edges.map(edge =>
-          this.renderPostItem(edge.node.meta)
+        {this.props.bloql.posts.map(post =>
+          this.renderPostItem(post.meta)
         )}
       </ul>
     );

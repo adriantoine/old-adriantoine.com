@@ -19,27 +19,27 @@ class Post extends Component {
   renderDisqus() {
     // Render disqus only in production
     if (process.env.NODE_ENV === 'production') {
-      return <ReactDisqusThread shortname="adriantoine" identifier={this.props.post.meta.slug} title={this.props.post.meta.title} />;
+      return <ReactDisqusThread shortname="adriantoine" identifier={this.props.bloql.post.meta.slug} title={this.props.bloql.post.meta.title} />;
     }
   }
 
   render() {
 
     // If no post is in props, it means the component hasn't been initialised, so we should return an empty component
-    if (!this.props.post) {
+    if (!this.props.bloql || !this.props.bloql.post) {
       return <article className="Post"/>;
     }
 
     return (
       <article className="Post">
-        <DocumentTitle title={this.props.post.meta.title}/>
+        <DocumentTitle title={this.props.bloql.post.meta.title}/>
 
         <header className="Post-head">
-          <h1 className="Post-title">{this.props.post.meta.title}</h1>
-          <div className="Post-date">{moment(new Date(this.props.post.meta.date)).format('DD/MM/YYYY')}</div>
+          <h1 className="Post-title">{this.props.bloql.post.meta.title}</h1>
+          <div className="Post-date">{moment(new Date(this.props.bloql.post.meta.date)).format('DD/MM/YYYY')}</div>
         </header>
 
-        <div className="Post-content" dangerouslySetInnerHTML={{__html: this.props.post.content}}/>
+        <div className="Post-content" dangerouslySetInnerHTML={{__html: this.props.bloql.post.content}}/>
 
         {this.renderDisqus()}
 
