@@ -81,30 +81,10 @@ if (process.env.NODE_ENV === 'development') {
 
 }
 
-// import React from 'react';
-// import ReactDOMServer from 'react-dom/server';
-// import { RoutingContext, match } from 'react-router';
-// import createLocation from 'history/lib/createLocation';
-// import routes from './src/routes';
-
 app.use((req, res) => {
 
   // Generate Handlebars templates
   const indexTpl = Handlebars.compile(fs.readFileSync(path.join(__dirname, 'src', 'index.hbs'), 'utf8'));
-
-//   const location = createLocation(req.url);
-
-//   match({ routes, location }, (err, redirectLocation, renderProps) => {
-
-//     const componentHTML = ReactDOMServer.renderToString(<RoutingContext {...renderProps} />);
-
-//     const html = indexTpl({
-//       body: componentHTML
-//     });
-
-//     res.end(html);
-
-//   });
 
   // Respond to all request by the index
   res.end(indexTpl({
