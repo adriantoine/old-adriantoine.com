@@ -9,13 +9,8 @@ if (process.env.BROWSER) {
 }
 
 export default class Footer extends Component {
-
-  static contextTypes = {
-    location: React.PropTypes.object
-  };
-
   render() {
-    const isHome = this.context.location.pathname === '/';
+    const isHome = this.props.location.pathname === '/';
     return (
       <footer className={cn('Footer', {'Footer--fixed': isHome})}>
         <div className="Footer-socialLinks">

@@ -6,10 +6,9 @@
     "webpack/**/*"
   ],
   "watch": [
-    "*.*",
-    "../bloql/dist/server/"
+    "*.*"
   ],
   "execMap": {
-    "js": "babel-node --stage 0"
+    "js": "babel-node"
   }
 }

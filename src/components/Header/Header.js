@@ -20,13 +20,8 @@ class HeaderMenuLink extends Component {
 }
 
 export default class Header extends Component {
-
-  static contextTypes = {
-    location: React.PropTypes.object
-  };
-
   render() {
-    const isHome = this.context.location.pathname === '/';
+    const isHome = this.props.location.pathname === '/';
 
     return (
       <header className={cn('Header', {'Header--no-background': isHome})}>
@@ -40,7 +35,6 @@ export default class Header extends Component {
             <ul className="Header-menu-list">
               <HeaderMenuLink to="/about-me">About Me</HeaderMenuLink>
               <HeaderMenuLink to="/portfolio">Portfolio</HeaderMenuLink>
-              <HeaderMenuLink to="/blog">Blog</HeaderMenuLink>
             </ul>
           </nav>
 

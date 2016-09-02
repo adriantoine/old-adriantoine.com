@@ -10,7 +10,6 @@ import express from 'express';
 import compression from 'compression';
 import morgan from 'morgan';
 import Handlebars from 'handlebars';
-import bloql from 'bloql/middleware/express';
 
 import webpack from 'webpack';
 import webpackMiddleware from 'webpack-dev-middleware';
@@ -21,12 +20,6 @@ import config from './webpack/dev.config';
 const app = express();
 
 let port = process.env.PORT || 3000;
-
-bloql(app, {
-  pretty: true,
-  postsPath: path.join(__dirname, 'posts'),
-  database: require('bloql-markdown-file-database')
-});
 
 // Enable Gzip
 app.use(compression());

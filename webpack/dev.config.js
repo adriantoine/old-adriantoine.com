@@ -20,19 +20,8 @@ const config = {
   module: {
     loaders: [{
       test: /\.js$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-      query: {
-        stage: 0,
-        optional: [
-          'optimisation.react.constantElements',
-          'optimisation.react.inlineElements'
-        ]
-      }
-    }, {
-      test: /\.js$/,
-      loader: 'eslint-loader',
-      exclude: [/node_modules/, /bloql/]
+      loader: 'babel',
+      exclude: /node_modules/
     }, {
       test: /\.css$/,
       loader: ExtractTextPlugin.extract(

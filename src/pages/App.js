@@ -22,11 +22,11 @@ export default class App extends Component {
 
 
         <Menu/>
-        <Header/>
+        <Header location={this.props.location}/>
         <DocumentTitle title='Adrien Antoine, front-end developer'>
           {this.props.children}
         </DocumentTitle>
-        <Footer/>
+        <Footer location={this.props.location}/>
       </div>
     );
   }

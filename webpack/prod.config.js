@@ -19,32 +19,17 @@ const config = {
     publicPath: '/'
   },
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        loader: 'babel-loader',
-        query: {
-          stage: 0,
-          optional: [
-            'optimisation.react.constantElements',
-            'optimisation.react.inlineElements'
-          ]
-        },
-        exclude: /node_modules/
-      },
-      {
-        test: /\.js$/,
-        loader: 'eslint-loader',
-        exclude: [/node_modules/, /bloql/]
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract(
-          'style-loader',
-          'css-loader?sourceMap!postcss-loader'
-        )
-      }
-    ]
+    loaders: [{
+      test: /\.js$/,
+      loader: 'babel',
+      exclude: /node_modules/
+    }, {
+      test: /\.css$/,
+      loader: ExtractTextPlugin.extract(
+        'style-loader',
+        'css-loader?sourceMap!postcss-loader'
+      )
+    }]
   },
 
   postcss: [
