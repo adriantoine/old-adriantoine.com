@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf public/bundle*",
-    "build": "npm run clean && NODE_ENV=production node build",
+    "build": "npm run clean && NODE_ENV=production node build && BABEL_ENV=server babel server.js --out-file server.built.js",
     "postinstall": "npm run build",
     "dev": "NODE_ENV=development BABEL_ENV=server nodemon index.js",
-    "start": "NODE_ENV=production node index.js",
+    "start": "NODE_ENV=production node server.built.js",
     "lint": "eslint src"
   },
   "repository": {
