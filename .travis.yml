@@ -1,17 +1,22 @@
 language: node_js
+node_js: 6
 
 cache:
   directories:
-    - node_modules
-
-node_js: 6
+  - node_modules
 
 before_install:
-  - npm i -g npm@latest
+- npm i -g npm@latest
 
 before_script:
-  - npm prune
+- npm prune
 
 script:
-  - npm run build
-  - npm prune --production
+- npm run build
+- npm prune --production
+
+deploy:
+  provider: heroku
+  skip_cleanup: true
+  api_key:
+    secure: acuU62SeB2UlmH4ws02mS+uj3d4fVi7hLPwOuwrqyhBup8HbymU9oP6XQQuS2CMpGPnPbEsgEy62VBpNKVfRYR0G6fh/ZybseiYL9NokBE1B0YOPEggMZgKPpuht3XwEmzvloiAq1k9tW6hF6E+izI1qBk5XjD5TPzEgLS2NAuSHdFTjEoByKIqv4AUdfj4hs0+daDt3Z7rljuq6Yct1aYTNltaD2LMoXej5bEZ2HbIp2nxAtAljC2dcpmNtk+xSD173j0ehKu0QKvHpREJH7RxjGj/yK3/EzWYUubf5mwdG/SQF7mxmLlC37X8MzLtXlZk/TM4qCz2zN4d3l3QzHnsgZEC3kcR1sh5H7z8O1dpAWZUoa6QX6mk2UR1Gaz8FMymdysnSUcrHGlIychlPyiPmCI0epQrPXSHDlB/EDYwjlb4DT1JoVU4MgyN5wLYp5U4lXG3hi1qYnKhsEX1UPGMEQhs/N+2BGZyl+vR6S+uf5boF7RYdZWjxfWCVjRpEJR6/ZNDRNWR+19khsANdKbE7KN2cKowfrID5SJd++htyF1nh6qIjFcNwa0rsM6I/LeedoIhkT3G1fvBURDSyKrrAMKo0faogTm7iBvYvEn2hnuCB1H9K9wGr6FYo2vGLh3p+DuRxR2Jk2EHLNgixPMSyWcA4SQZjjF5fyFjOyng=
