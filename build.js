@@ -1,6 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+const fileSize = require('filesize');
+const gzip = require('gzip-size');
+const chalk = require('chalk');
+
 const rollup = require('rollup');
 const babel = require('rollup-plugin-babel');
 const commonjs = require('rollup-plugin-commonjs');
@@ -80,16 +84,22 @@ rollup.rollup({
   ],
 })
 .then(bundle => {
-  const file = bundle.generate({
+  const { code, map } = bundle.generate({
     format: 'umd',
     sourceMap: true,
   });
 
-  const hashValue = hash.update(file.code).digest('hex');
+  const hashValue = hash.update(code).digest('hex');
   const jsFileName = `bundle.${hashValue}.js`;
 
-  fs.writeFileSync(path.join(__dirname, `public/${jsFileName}`), file.code);
-  fs.writeFileSync(path.join(__dirname, `public/${jsFileName}.map`), file.map);
+  let size = fileSize(Buffer.byteLength(code));
+  let gzipSize = fileSize(gzip.sync(code));
+
+  console.log(chalk.blue('\nsize: '), size);
+  console.log(chalk.blue('gzip: '), gzipSize);
+
+  fs.writeFileSync(path.join(__dirname, `public/${jsFileName}`), code);
+  fs.writeFileSync(path.join(__dirname, `public/${jsFileName}.map`), map);
 
   fs.writeFileSync(path.join(__dirname, 'public/assets.json'), `{"jsPath": "${jsFileName}"}`);
 })

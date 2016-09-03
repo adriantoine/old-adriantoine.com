@@ -22,7 +22,7 @@
   "author": "Adrien Antoine",
   "license": "ISC",
   "homepage": "https://github.com/adriantoine/adriantoine.com#readme",
-  "dependencies": {
+  "devDependencies": {
     "autoprefixer": "^6.0.3",
     "babel-cli": "^6.14.0",
     "babel-eslint": "^6.1.2",
@@ -38,6 +38,8 @@
     "eslint": "^3.4.0",
     "eslint-plugin-react": "^6.2.0",
     "express": "^4.13.3",
+    "filesize": "^3.3.0",
+    "gzip-size": "^3.0.0",
     "handlebars": "^4.0.2",
     "lost": "^7.1.0",
     "moment": "^2.10.6",
@@ -69,5 +71,8 @@
     "rollup-plugin-replace": "^1.1.1",
     "rollup-plugin-uglify": "^1.0.1",
     "twemoji": "^2.1.5"
+  },
+  "dependencies": {
+    "chalk": "^1.1.3"
   }
 }
