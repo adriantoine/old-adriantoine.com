@@ -7,10 +7,8 @@ import Menu from '../components/Menu/Menu';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
 
-if (process.env.BROWSER) {
-  require('../styles/base.css');
-  require('./App.css');
-}
+import '../styles/base.css';
+import './App.css';
 
 export default class App extends Component {
 

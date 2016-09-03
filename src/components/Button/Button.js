@@ -2,9 +2,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
-if (process.env.BROWSER) {
-  require('./Button.css');
-}
+import './Button.css';
 
 export default class Button extends Component {
 

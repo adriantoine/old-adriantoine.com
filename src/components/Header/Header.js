@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router';
 import cn from 'classnames';
 
-if (process.env.BROWSER) {
-  require('./Header.css');
-}
+import './Header.css';
 
 class HeaderMenuLink extends Component {
   render() {

@@ -8,16 +8,16 @@ var AssetsPlugin = require('assets-webpack-plugin');
 
 const dist = path.resolve(__dirname, '../public');
 
-const config = {
+module.exports = {
   devtool: 'source-map',
-  entry: './src/index',
+  entry: path.resolve(__dirname, '../src/index'),
 
   output: {
     path: dist,
     filename: '[name]-[hash].js',
-    chunkFilename: '[name]-[chunkhash].js',
     publicPath: '/'
   },
+
   module: {
     loaders: [{
       test: /\.js$/,
@@ -25,10 +25,10 @@ const config = {
       exclude: /node_modules/
     }, {
       test: /\.css$/,
-      loader: ExtractTextPlugin.extract(
-        'style-loader',
-        'css-loader?sourceMap!postcss-loader'
-      )
+      loader: ExtractTextPlugin.extract({
+        fallbackLoader: 'style-loader',
+        loader: 'css-loader?sourceMap!postcss-loader'
+      })
     }]
   },
 
@@ -49,19 +49,9 @@ const config = {
     require('autoprefixer')
   ],
 
-  resolve: {
-    fallback: path.join(__dirname, 'node_modules'),
-  },
-  resolveLoader: {
-    fallback: path.join(__dirname, 'node_modules')
-  },
-
   plugins: [
-
     new ExtractTextPlugin('[name]-[chunkhash].css'),
-    new webpack.IgnorePlugin(/\.\/dev/, /\/config$/),
     new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.OccurenceOrderPlugin(),
 
     new webpack.optimize.UglifyJsPlugin({
       compress: {
@@ -83,9 +73,6 @@ const config = {
       filename: 'assets.json',
       path: path.join(__dirname, '../public')
     })
-
   ]
 
 };
-
-module.exports = config;

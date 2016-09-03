@@ -5,9 +5,7 @@ import { Link } from 'react-router';
 
 import Page from '../Page/Page';
 
-if (process.env.BROWSER) {
-  require('./AboutMe.css');
-}
+import './AboutMe.css';
 
 import { SkillTable, SkillTableItem } from '../../components/SkillTable/SkillTable';
 

@@ -4,9 +4,7 @@ import cn from 'classnames';
 
 import SocialLink from '../SocialLink/SocialLink';
 
-if (process.env.BROWSER) {
-  require('./Footer.css');
-}
+import './Footer.css';
 
 export default class Footer extends Component {
   render() {

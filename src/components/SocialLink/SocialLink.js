@@ -1,9 +1,7 @@
 
 import React, { Component } from 'react';
 
-if (process.env.BROWSER) {
-  require('./SocialLink.css');
-}
+import './SocialLink.css';
 
 export default class SocialLink extends Component {
 

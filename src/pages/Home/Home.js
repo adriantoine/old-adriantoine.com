@@ -2,9 +2,7 @@
 import React, { Component } from 'react';
 import Button from '../../components/Button/Button';
 
-if (process.env.BROWSER) {
-  require('./Home.css');
-}
+import './Home.css';
 
 export default class Body extends Component {
 

@@ -2,9 +2,7 @@
 import React, { Component } from 'react';
 import Page from '../Page/Page';
 
-if (process.env.BROWSER) {
-  require('./Portfolio.css');
-}
+import './Portfolio.css';
 
 export default class Portfolio extends Component {
 

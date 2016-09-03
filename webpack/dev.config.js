@@ -48,15 +48,7 @@ const config = {
     require('autoprefixer')
   ],
 
-  resolve: {
-    fallback: path.join(__dirname, '../node_modules'),
-  },
-  resolveLoader: {
-    fallback: path.join(__dirname, '../node_modules')
-  },
-
   plugins: [
-
     new ExtractTextPlugin('style.css', { allChunks: true }),
 
     new webpack.HotModuleReplacementPlugin(),
@@ -69,7 +61,6 @@ const config = {
     }),
 
     new WebpackErrorNotificationPlugin()
-
   ]
 
 };

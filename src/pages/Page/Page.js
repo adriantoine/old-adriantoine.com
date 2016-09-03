@@ -3,9 +3,7 @@ import React, { Component } from 'react';
 import DocumentTitle from 'react-document-title';
 import cn from 'classnames';
 
-if (process.env.BROWSER) {
-  require('./Page.css');
-}
+import './Page.css';
 
 export default class Page extends Component {
 

@@ -4,9 +4,7 @@ import ReactDOM from 'react-dom';
 import { Link } from 'react-router';
 import cn from 'classnames';
 
-if (process.env.BROWSER) {
-  require('./Menu.css');
-}
+import './Menu.css';
 
 export default class Menu extends Component {
 
