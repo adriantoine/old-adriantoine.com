@@ -43,7 +43,10 @@ const plugins = [
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
   }),
 
-  buble({jsx: 'h'}),
+  buble({
+    jsx: 'h',
+    objectAssign: 'Object.assign',
+  }),
 ];
 
 if (process.env.NODE_ENV === 'production') {
