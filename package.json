@@ -4,7 +4,7 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf public/bundle* && rm public/assets.json && rm server.built.js",
+    "clean": "rm -rf public/bundle* && rm -f public/assets.json && rm -f server.built.js",
     "build": "npm run clean && npm run build-client && npm run build-server",
     "build-client": "NODE_ENV=production node build",
     "build-server": "NODE_ENV=production BABEL_ENV=server babel server.js --out-file server.built.js",
