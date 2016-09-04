@@ -15,7 +15,7 @@ export default function Footer(props) {
           <SocialLink icon="github" link="https://github.com/adriantoine"/>
           <SocialLink icon="tumblr" link="http://photo.adriantoine.com/"/>
           <SocialLink icon="linkedin" link="http://uk.linkedin.com/in/adriantoine/en"/>
-          <SocialLink icon="google-plus"link="https://plus.google.com/+AdrienAntoine/"/>
+          <SocialLink icon="google-plus" link="https://plus.google.com/+AdrienAntoine/"/>
         </div>
       </div>
 

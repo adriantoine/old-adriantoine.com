@@ -2,13 +2,13 @@
 
 delete process.env.BROWSER;
 
-import path from 'path';
-import fs from 'fs';
+const path = require('path');
+const fs = require('fs');
 
-import express from 'express';
-import compression from 'compression';
-import morgan from 'morgan';
-import Handlebars from 'handlebars';
+const express = require('express');
+const compression = require('compression');
+const morgan = require('morgan');
+const Handlebars = require('handlebars');
 
 const app = express();
 

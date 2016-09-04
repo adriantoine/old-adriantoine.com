@@ -1,5 +1,5 @@
 const path = require('path');
-const babel = require('rollup-plugin-babel');
+const buble = require('rollup-plugin-buble');
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('rollup-plugin-node-resolve');
 const uglify = require('rollup-plugin-uglify');
@@ -43,17 +43,7 @@ const plugins = [
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
   }),
 
-  babel({
-    sourceMap: true,
-    babelrc: false,
-    compact: process.env.NODE_ENV === 'production',
-    exclude: ['node_modules/**', '**/*.css'],
-    presets: [ ['es2015', { loose: true, modules: false }], 'react' ],
-    plugins: [
-      ['transform-react-jsx', { pragma:'h' }],
-      'external-helpers'
-    ]
-  })
+  buble({jsx: 'h'}),
 ];
 
 if (process.env.NODE_ENV === 'production') {
