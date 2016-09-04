@@ -1,12 +1,15 @@
 ---
-parser: babel-eslint
-
 plugins:
   - react
 
 env:
   browser: true
   es6: true
+
+parserOptions:
+  sourceType: module
+  ecmaFeatures:
+    jsx: true
 
 settings:
   react:
