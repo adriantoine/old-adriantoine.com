@@ -1,45 +1,40 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import { Link } from 'react-router';
 import cn from 'classnames';
 
 import './Header.css';
 
-class HeaderMenuLink extends Component {
-  render() {
-    return (
-      <li className="Header-menu-item">
-        <Link className="Header-menu-link" activeClassName="is-active" to={this.props.to}>
-          {this.props.children}
-        </Link>
-      </li>
-    );
-  }
+function HeaderMenuLink(props) {
+  return (
+    <li className="Header-menu-item">
+      <Link className="Header-menu-link" activeClassName="is-active" to={props.to}>
+        {props.children}
+      </Link>
+    </li>
+  );
 }
 
-export default class Header extends Component {
-  render() {
-    const isHome = this.props.location.pathname === '/';
+export default function Header(props) {
+  const isHome = props.location.pathname === '/';
 
-    return (
-      <header className={cn('Header', {'Header--no-background': isHome})}>
+  return (
+    <header className={cn('Header', {'Header--no-background': isHome})}>
 
-        <div className="u-site-width">
+      <div className="u-site-width">
 
-          <Link className="Header-title" to="/">Adrien Antoine</Link>
-          <span className="Header-subtitle">front end developer</span>
+        <Link className="Header-title" to="/">Adrien Antoine</Link>
+        <span className="Header-subtitle">front end developer</span>
 
-          <nav className="Header-menu">
-            <ul className="Header-menu-list">
-              <HeaderMenuLink to="/about-me">About Me</HeaderMenuLink>
-              <HeaderMenuLink to="/portfolio">Portfolio</HeaderMenuLink>
-            </ul>
-          </nav>
+        <nav className="Header-menu">
+          <ul className="Header-menu-list">
+            <HeaderMenuLink to="/about-me">About Me</HeaderMenuLink>
+            <HeaderMenuLink to="/portfolio">Portfolio</HeaderMenuLink>
+          </ul>
+        </nav>
 
-        </div>
+      </div>
 
-      </header>
-    );
-  }
-
+    </header>
+  );
 }

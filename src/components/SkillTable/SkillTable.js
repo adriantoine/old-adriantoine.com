@@ -1,39 +1,34 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import cn from 'classnames';
 
 import './SkillTable.css';
 
-export class SkillTableItem extends Component {
-  render() {
+export function SkillTableItem(props) {
+  return (
+    <li className={cn('SkillTable-item', props.icon)}>
+      {props.children}
+    </li>
+  );
+}
+
+function renderTitle(title) {
+  if (title) {
     return (
-      <li className={cn('SkillTable-item', this.props.icon)}>
-        {this.props.children}
-      </li>
+      <div className="SkillTable-title">
+        {title}
+      </div>
     );
   }
 }
 
-export class SkillTable extends Component {
-
-  renderTitle() {
-    if (this.props.title) {
-      return (
-        <div className="SkillTable-title">
-          {this.props.title}
-        </div>
-      );
-    }
-  }
-
-  render() {
-    return (
-      <div className="SkillTable">
-        {this.renderTitle()}
-        <ul className="SkillTable-content">
-          {this.props.children}
-        </ul>
-      </div>
-    );
-  }
+export function SkillTable(props) {
+  return (
+    <div className="SkillTable">
+      {renderTitle(props.title)}
+      <ul className="SkillTable-content">
+        {props.children}
+      </ul>
+    </div>
+  );
 }

@@ -1,30 +1,26 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import DocumentTitle from 'react-document-title';
 import cn from 'classnames';
 
 import './Page.css';
 
-export default class Page extends Component {
+export default function Page(props) {
+  return (
+    <div className={cn('Page', props.className)}>
 
-  render() {
-    return (
-      <div className={cn('Page', this.props.className)}>
-
-        <div className="Page-hero">
-          <h1>{this.props.title}</h1>
-        </div>
-
-        <DocumentTitle title={this.props.title}>
-          <div className="Page-content">
-            <div className="u-site-width">
-              {this.props.children}
-            </div>
-          </div>
-        </DocumentTitle>
-
+      <div className="Page-hero">
+        <h1>{props.title}</h1>
       </div>
-    );
-  }
 
+      <DocumentTitle title={props.title}>
+        <div className="Page-content">
+          <div className="u-site-width">
+            {props.children}
+          </div>
+        </div>
+      </DocumentTitle>
+
+    </div>
+  );
 }

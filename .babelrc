@@ -1,11 +1,4 @@
 {
-    "compact": true,
-    "sourceMaps": true,
-    "comments": false,
-    "presets": [
-        ["es2015", {"loose": true, "modules": false}],
-        "react"
-    ],
     "env": {
         "server": {
             "presets": ["es2015"],
