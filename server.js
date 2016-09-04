@@ -19,7 +19,7 @@ app.use(compression());
 
 // Serve static cache with the expiry header
 app.use(express.static('public', {
-  maxAge: 365 * 24 * 60 * 60
+  maxAge: 365 * 24 * 60 * 60 * 1000
 }));
 
 // Set default paths to assets
