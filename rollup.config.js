@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 const path = require('path');
 const buble = require('rollup-plugin-buble');
 const commonjs = require('rollup-plugin-commonjs');

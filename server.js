@@ -1,5 +1,4 @@
-// Very simple server to serve static files on Heroku
-
+/* eslint-env node */
 delete process.env.BROWSER;
 
 const path = require('path');
