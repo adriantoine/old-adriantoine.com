@@ -37,9 +37,6 @@ const plugins = [
 
   commonjs({
     include: 'node_modules/**',
-    namedExports: {
-      './node_modules/react/react.js': ['Component', 'PropTypes', 'createElement'],
-    },
   }),
 
   replace({
@@ -52,7 +49,10 @@ const plugins = [
     compact: process.env.NODE_ENV === 'production',
     exclude: ['node_modules/**', '**/*.css'],
     presets: [ ['es2015', { loose: true, modules: false }], 'react' ],
-    plugins: [ 'external-helpers' ]
+    plugins: [
+      ['transform-react-jsx', { pragma:'h' }],
+      'external-helpers'
+    ]
   })
 ];
 

@@ -8,6 +8,10 @@ env:
   browser: true
   es6: true
 
+settings:
+  react:
+    pragma: h
+
 globals:
   document: false
 
@@ -125,7 +129,7 @@ rules:
   react/prefer-stateless-function: 2
   react/no-direct-mutation-state: 2
   react/no-string-refs: 2
-  react/no-unknown-property: 2
+  react/no-unknown-property: [2, { ignore: [class] }]
   react/prefer-es6-class: 1
   react/react-in-jsx-scope: 2
   react/require-render-return: 2

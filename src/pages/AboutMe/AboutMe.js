@@ -1,5 +1,5 @@
 
-import React from 'react';
+import { h } from 'preact';
 import twemoji from 'twemoji';
 
 import Link from '../../components/Link';
@@ -11,14 +11,14 @@ import './AboutMe.css';
 import { SkillTable, SkillTableItem } from '../../components/SkillTable/SkillTable';
 
 function emoji(code) {
-  return <span className="u-emoji" dangerouslySetInnerHTML={{__html: twemoji.parse(code)}}/>;
+  return <span class="u-emoji" dangerouslySetInnerHTML={{__html: twemoji.parse(code)}}/>;
 }
 
 export default function AboutMe() {
   return (
-    <Page className="AboutMe" title="About Me">
+    <Page class="AboutMe" title="About Me">
 
-      <div className="AboutMe-content">
+      <div class="AboutMe-content">
         <h2>Who am I?</h2>
         <p>My name is Adrien Antoine, I am a front-end developer living in London (UK) with 3 years of experience using various tools and frameworks.</p>
         <p>I am passionate about web technologies and I love to experient things on my free time, trying out new frameworks, methods, tools, libraries and even languages sometimes. I am <a href="https://github.com/adriantoine" target="_blank" rel="noopener noreferrer">active on Github</a> and trying to contribute as much as I can as well as to maintain my own repos.</p>
@@ -31,7 +31,7 @@ export default function AboutMe() {
         <p>I have commercial experience in these technologies:</p>
       </div>
 
-      <div className="AboutMe-skills AboutMe-skills--commercial">
+      <div class="AboutMe-skills AboutMe-skills--commercial">
 
         <SkillTable title="Javascript libs and frameworks">
           <SkillTableItem icon="backbone">Backbone</SkillTableItem>
@@ -70,7 +70,7 @@ export default function AboutMe() {
 
       </div>
 
-      <div className="AboutMe-content">
+      <div class="AboutMe-content">
         <p>And I also have experience on personal projects using these tools, and I'm quite excited about them (more info about them on my <Link to="/portfolio">portfolio</Link>):</p>
 
         <SkillTable>

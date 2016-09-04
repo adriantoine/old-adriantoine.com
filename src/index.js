@@ -1,5 +1,10 @@
 
 import 'babel-polyfill';
-import { render } from './router';
 
-render();
+import { h, render } from 'preact';
+import Site from './site';
+
+render(
+  <Site />,
+  document.body
+);

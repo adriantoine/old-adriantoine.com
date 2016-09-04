@@ -1,25 +1,23 @@
 
-import React from 'react';
-import DocumentTitle from 'react-document-title';
+import { h } from 'preact';
 import cn from 'classnames';
 
 import './Page.css';
 
 export default function Page(props) {
+  document.title = props.title;
   return (
-    <div className={cn('Page', props.className)}>
+    <div class={cn('Page', props.class)}>
 
-      <div className="Page-hero">
+      <div class="Page-hero">
         <h1>{props.title}</h1>
       </div>
 
-      <DocumentTitle title={props.title}>
-        <div className="Page-content">
-          <div className="u-site-width">
-            {props.children}
-          </div>
+      <div class="Page-content">
+        <div class="u-site-width">
+          {props.children}
         </div>
-      </DocumentTitle>
+      </div>
 
     </div>
   );

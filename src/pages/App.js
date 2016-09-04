@@ -1,6 +1,5 @@
 
-import React from 'react';
-import DocumentTitle from 'react-document-title';
+import { h } from 'preact';
 import cn from 'classnames';
 
 import Menu from '../components/Menu/Menu';
@@ -12,14 +11,13 @@ import './App.css';
 
 export default function App(props) {
   const isHome = window.location.pathname === '/';
+  document.title = 'Adrien Antoine, front-end developer';
 
   return (
-    <div className={cn('App', {'App--no-background-image': !isHome})}>
+    <div class={cn('App', {'App--no-background-image': !isHome})}>
       <Menu/>
       <Header isHome={isHome}/>
-      <DocumentTitle title='Adrien Antoine, front-end developer'>
-        {props.children}
-      </DocumentTitle>
+      {props.children}
       <Footer isHome={isHome}/>
     </div>
   );

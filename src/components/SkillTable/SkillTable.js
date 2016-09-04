@@ -1,12 +1,12 @@
 
-import React from 'react';
+import { h } from 'preact';
 import cn from 'classnames';
 
 import './SkillTable.css';
 
 export function SkillTableItem(props) {
   return (
-    <li className={cn('SkillTable-item', props.icon)}>
+    <li class={cn('SkillTable-item', props.icon)}>
       {props.children}
     </li>
   );
@@ -15,7 +15,7 @@ export function SkillTableItem(props) {
 function renderTitle(title) {
   if (title) {
     return (
-      <div className="SkillTable-title">
+      <div class="SkillTable-title">
         {title}
       </div>
     );
@@ -24,9 +24,9 @@ function renderTitle(title) {
 
 export function SkillTable(props) {
   return (
-    <div className="SkillTable">
+    <div class="SkillTable">
       {renderTitle(props.title)}
-      <ul className="SkillTable-content">
+      <ul class="SkillTable-content">
         {props.children}
       </ul>
     </div>

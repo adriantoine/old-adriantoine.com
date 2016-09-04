@@ -1,6 +1,5 @@
 
-import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+import { h, Component } from 'preact';
 
 import Link from '../Link';
 import cn from 'classnames';
@@ -22,7 +21,7 @@ export default class Menu extends Component {
   }
 
   handleDocumentClick(ev) {
-    if (this.state.isOpen && !ReactDOM.findDOMNode(this).contains(ev.target)) {
+    if (this.state.isOpen && !this.base.contains(ev.target)) {
       this.close();
     }
   }
@@ -37,13 +36,13 @@ export default class Menu extends Component {
 
   render() {
     return (
-      <nav className={cn('Menu', {'is-open': this.state.isOpen})}>
+      <nav class={cn('Menu', {'is-open': this.state.isOpen})}>
 
-        <div className="Menu-icon" onClick={this.onIconClick.bind(this)}></div>
+        <div class="Menu-icon" onClick={this.onIconClick.bind(this)}></div>
 
-        <ul className="Menu-list">
-          <li className="Menu-item"><Link className="Menu-link" onClick={this.close.bind(this)} to="/about-me">About Me</Link></li>
-          <li className="Menu-item"><Link className="Menu-link" onClick={this.close.bind(this)} to="/portfolio">Portfolio</Link></li>
+        <ul class="Menu-list">
+          <li class="Menu-item"><Link class="Menu-link" onClick={this.close.bind(this)} to="/about-me">About Me</Link></li>
+          <li class="Menu-item"><Link class="Menu-link" onClick={this.close.bind(this)} to="/portfolio">Portfolio</Link></li>
         </ul>
       </nav>
     );
