@@ -1,7 +1,8 @@
 
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Link } from 'react-router';
+
+import Link from '../Link';
 import cn from 'classnames';
 
 import './Menu.css';

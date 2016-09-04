@@ -11,16 +11,16 @@ import '../styles/base.css';
 import './App.css';
 
 export default function App(props) {
-  const isHome = props.location.pathname === '/';
+  const isHome = window.location.pathname === '/';
 
   return (
     <div className={cn('App', {'App--no-background-image': !isHome})}>
       <Menu/>
-      <Header location={props.location}/>
+      <Header isHome={isHome}/>
       <DocumentTitle title='Adrien Antoine, front-end developer'>
         {props.children}
       </DocumentTitle>
-      <Footer location={props.location}/>
+      <Footer isHome={isHome}/>
     </div>
   );
 }

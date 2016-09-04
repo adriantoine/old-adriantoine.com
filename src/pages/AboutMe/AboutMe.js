@@ -1,7 +1,8 @@
 
 import React from 'react';
 import twemoji from 'twemoji';
-import { Link } from 'react-router';
+
+import Link from '../../components/Link';
 
 import Page from '../Page/Page';
 

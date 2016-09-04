@@ -6,9 +6,8 @@ import './Footer.css';
 import SocialLink from '../SocialLink/SocialLink';
 
 export default function Footer(props) {
-  const isHome = props.location.pathname === '/';
   return (
-    <footer className={cn('Footer', {'Footer--fixed': isHome})}>
+    <footer className={cn('Footer', {'Footer--fixed': props.isHome})}>
       <div className="Footer-socialLinks">
         <div className="u-site-width">
           <SocialLink icon="facebook" link="https://www.facebook.com/alshten"/>

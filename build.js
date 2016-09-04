@@ -30,7 +30,7 @@ rollup.rollup(config)
   fs.writeFileSync(path.join(__dirname, `public/${jsFileName}`), code);
   fs.writeFileSync(path.join(__dirname, `public/${jsFileName}.map`), map);
 
-  fs.writeFileSync(path.join(__dirname, 'public/assets.json'), `{"jsPath": "${jsFileName}"}`);
+  fs.writeFileSync(path.join(__dirname, 'public/assets.json'), `{"js": "${jsFileName}"}`);
 })
 .catch(err => {
   console.error(err);

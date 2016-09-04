@@ -1,6 +1,7 @@
 
 import React from 'react';
-import { Link } from 'react-router';
+
+import Link from '../Link';
 import cn from 'classnames';
 
 import './Header.css';
@@ -16,10 +17,8 @@ function HeaderMenuLink(props) {
 }
 
 export default function Header(props) {
-  const isHome = props.location.pathname === '/';
-
   return (
-    <header className={cn('Header', {'Header--no-background': isHome})}>
+    <header className={cn('Header', {'Header--no-background': props.isHome})}>
 
       <div className="u-site-width">
 
