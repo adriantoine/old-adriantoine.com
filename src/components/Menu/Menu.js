@@ -43,7 +43,6 @@ export default class Menu extends Component {
         <ul className="Menu-list">
           <li className="Menu-item"><Link className="Menu-link" onClick={this.close.bind(this)} to="/about-me">About Me</Link></li>
           <li className="Menu-item"><Link className="Menu-link" onClick={this.close.bind(this)} to="/portfolio">Portfolio</Link></li>
-          <li className="Menu-item"><Link className="Menu-link" onClick={this.close.bind(this)} to="/blog">Blog</Link></li>
         </ul>
       </nav>
     );

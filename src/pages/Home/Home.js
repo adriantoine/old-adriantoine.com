@@ -18,7 +18,6 @@ export default function Home() {
         <div className="Home-buttons">
           <Button to="/about-me">About Me</Button>
           <Button to="/portfolio">Portfolio</Button>
-          <Button to="/blog">Blog</Button>
         </div>
 
       </div>

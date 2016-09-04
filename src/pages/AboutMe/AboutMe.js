@@ -75,7 +75,7 @@ export default function AboutMe() {
         <SkillTable>
           <SkillTableItem icon="react">React (this website is actually built using it)</SkillTableItem>
           <SkillTableItem icon="flux">Flux (especially using <a href="http://rackt.github.io/redux/" target="_blank" rel="noopener noreferrer">Redux</a>)</SkillTableItem>
-          <SkillTableItem icon="relay">Relay and GraphQL (the <Link to="/blog">blog</Link> is built with it)</SkillTableItem>
+          <SkillTableItem icon="relay">Relay and GraphQL</SkillTableItem>
           <SkillTableItem icon="webpack">Webpack</SkillTableItem>
           <SkillTableItem icon="cssmodules"><a href="https://github.com/css-modules/css-modules" target="_blank" rel="noopener noreferrer">CSS Modules</a></SkillTableItem>
           <SkillTableItem icon="postcss">PostCSS</SkillTableItem>
