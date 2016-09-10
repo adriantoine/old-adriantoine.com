@@ -6,5 +6,5 @@ cache:
 script: bash ./deploy.sh
 env:
   global:
-  - ENCRYPTION_LABEL: "afb9ac7f970b"
+  - ENCRYPTION_LABEL: "0da1089acc71"
   - COMMIT_AUTHOR_EMAIL: "adriantoine@gmail.com"
