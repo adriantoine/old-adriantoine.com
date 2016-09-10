@@ -34,6 +34,7 @@ cd out
 rm -rf *
 rm -f .gitignore
 rm -f .eslintrc
+rm -f .travis.yml
 cd ..
 
 # Run our compile script
