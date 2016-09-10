@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 const fs = require('fs');
 const path = require('path');
 
@@ -30,7 +32,9 @@ rollup.rollup(config)
   fs.writeFileSync(path.join(__dirname, `public/${jsFileName}`), code);
   fs.writeFileSync(path.join(__dirname, `public/${jsFileName}.map`), map);
 
-  fs.writeFileSync(path.join(__dirname, 'public/assets.json'), `{"js": "${jsFileName}"}`);
+  let index = fs.readFileSync(path.join(__dirname, 'src/index.hbs'), 'utf8');
+  index = index.replace('{{jsPath}}', `/${jsFileName}`);
+  fs.writeFileSync(path.join(__dirname, 'public/index.html'), index);
 })
 .catch(err => {
   console.error(err);

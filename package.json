@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "clean": "rm -rf public/bundle* && rm -f public/assets.json",
-    "build": "npm run clean && npm run build-client",
-    "build-client": "NODE_ENV=production node build",
+    "build": "npm run clean && NODE_ENV=production node build",
     "dev": "rollup -cw --input src/index.js --output public/bundle.js | node server.js",
     "start": "node server.js",
     "lint": "eslint src"

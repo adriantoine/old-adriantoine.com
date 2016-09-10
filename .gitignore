@@ -3,8 +3,9 @@ public/*.js
 public/*.js.map
 public/*.css
 public/*.css.map
-public/*.json
+public/*.html
 posts_test/
 npm-debug.log
 newrelic_agent.log
 server.built.js
+out
