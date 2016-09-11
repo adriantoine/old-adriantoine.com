@@ -1,7 +1,7 @@
-import { h, render } from 'preact';
+import {h, render} from 'preact';
 import Site from './site';
 
 render(
-  <Site />,
+  <Site/>,
   document.body
 );

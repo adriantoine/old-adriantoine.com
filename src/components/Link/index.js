@@ -1,5 +1,5 @@
 
-import { h } from 'preact';
+import {h} from 'preact';
 
 export default function Link(props, {navigate}) {
   function click(e) {

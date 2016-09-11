@@ -1,5 +1,5 @@
 
-import { h } from 'preact';
+import {h} from 'preact';
 import Button from '../../components/Button/Button';
 import './Home.css';
 

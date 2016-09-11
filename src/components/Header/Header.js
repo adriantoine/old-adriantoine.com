@@ -1,8 +1,8 @@
 
-import { h } from 'preact';
+import {h} from 'preact';
+import cn from 'classnames';
 
 import Link from '../Link';
-import cn from 'classnames';
 
 import './Header.css';
 

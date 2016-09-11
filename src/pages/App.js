@@ -1,5 +1,5 @@
 
-import { h } from 'preact';
+import {h} from 'preact';
 import cn from 'classnames';
 
 import Menu from '../components/Menu/Menu';

@@ -2,6 +2,7 @@
 
 const fs = require('fs');
 const path = require('path');
+const crypto = require('crypto');
 
 const fileSize = require('filesize');
 const gzip = require('gzip-size');
@@ -10,12 +11,11 @@ const chalk = require('chalk');
 const rollup = require('rollup');
 const config = require('./rollup.config');
 
-var crypto = require('crypto');
 var hash = crypto.createHash('sha256');
 
 rollup.rollup(config)
 .then(bundle => {
-  const { code, map } = bundle.generate({
+  const {code, map} = bundle.generate({
     format: 'umd',
     sourceMap: true,
   });

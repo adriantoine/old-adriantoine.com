@@ -1,5 +1,5 @@
 
-import { h } from 'preact';
+import {h} from 'preact';
 import twemoji from 'twemoji';
 
 import Link from '../../components/Link';
@@ -8,10 +8,10 @@ import Page from '../Page/Page';
 
 import './AboutMe.css';
 
-import { SkillTable, SkillTableItem } from '../../components/SkillTable/SkillTable';
+import {SkillTable, SkillTableItem} from '../../components/SkillTable/SkillTable';
 
 function emoji(code) {
-  return <span class="u-emoji" dangerouslySetInnerHTML={{__html: twemoji.parse(code)}}/>;
+  return <span class="u-emoji" dangerouslySetInnerHTML={{__html: twemoji.parse(code)}}/>; // eslint-disable-line react/no-danger
 }
 
 export default function AboutMe() {

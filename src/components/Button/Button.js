@@ -1,5 +1,5 @@
 
-import { h } from 'preact';
+import {h} from 'preact';
 import Link from '../Link';
 import './Button.css';
 

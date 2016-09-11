@@ -14,7 +14,7 @@ const plugins = [
     sourceMap: true,
     plugins: [
       require('postcss-import')({
-        path: [ path.resolve(__dirname, 'src/components') ]
+        path: [path.resolve(__dirname, 'src/components')],
       }),
       require('postcss-nested'),
       require('postcss-css-variables'),
@@ -55,11 +55,11 @@ if (process.env.NODE_ENV === 'production') {
   plugins.push(uglify({
     sourceMap: true,
     compress: {
-      screw_ie8: true,
-      hoist_vars: true,
-      collapse_vars: true,
-      pure_getters: true,
-      keep_fargs: false,
+      screw_ie8: true, // eslint-disable-line camelcase
+      hoist_vars: true, // eslint-disable-line camelcase
+      collapse_vars: true, // eslint-disable-line camelcase
+      pure_getters: true, // eslint-disable-line camelcase
+      keep_fargs: false, // eslint-disable-line camelcase
       warnings: false,
     },
     output: {

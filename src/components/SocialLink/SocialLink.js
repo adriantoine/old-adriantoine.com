@@ -1,12 +1,12 @@
 
-import { h } from 'preact';
+import {h} from 'preact';
 
 import './SocialLink.css';
 
 export default function SocialLink(props) {
   return (
     <a class={'SocialLink SocialLink-' + props.icon} href={props.link} target="_blank" rel="noopener noreferrer">
-      <i class={'icon icon-' + props.icon}></i>
+      <i class={'icon icon-' + props.icon}/>
     </a>
   );
 }

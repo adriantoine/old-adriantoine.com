@@ -1,4 +1,4 @@
-import { h } from 'preact';
+import {h} from 'preact';
 import Page from '../Page/Page';
 
 import './Portfolio.css';

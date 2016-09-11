@@ -1,6 +1,5 @@
-
-import { h, Component } from 'preact';
-import Router from 'enroute';
+import {h, Component} from 'preact';
+import router from 'enroute';
 
 import App from './pages/App';
 import Home from './pages/Home/Home';
@@ -26,7 +25,7 @@ export default class Site extends Component {
   constructor() {
     super();
     this.state = {
-      location: window.location.pathname
+      location: window.location.pathname,
     };
   }
 
@@ -37,14 +36,14 @@ export default class Site extends Component {
   }
 
   getChildContext() {
-    return { navigate: path => this.setState({location: path}) };
+    return {navigate: path => this.setState({location: path})};
   }
 
   render(props) {
-    return Router({
-      '/': params => <AppHome {...params} {...props} />,
-      '/about-me': params => <AppAboutMe {...params} {...props} />,
-      '/portfolio': params => <AppPortfolio {...params} {...props} />,
+    return router({
+      '/': params => <AppHome {...params} {...props}/>,
+      '/about-me': params => <AppAboutMe {...params} {...props}/>,
+      '/portfolio': params => <AppPortfolio {...params} {...props}/>,
     })(this.state.location);
   }
 }
