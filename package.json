@@ -6,8 +6,7 @@
   "scripts": {
     "clean": "rm -rf public/bundle* && rm -f public/assets.json",
     "build": "npm run clean && NODE_ENV=production node build",
-    "dev": "rollup -cw --input src/index.js --output public/bundle.js | node server.js",
-    "start": "node server.js",
+    "dev": "rollup -cw --input src/index.js --output public/bundle.js | firebase serve",
     "test": "xo"
   },
   "repository": {
@@ -80,11 +79,5 @@
     "rollup-watch": "^2.5.0",
     "twemoji": "^2.1.5",
     "xo": "^0.16.0"
-  },
-  "dependencies": {
-    "compression": "^1.6.0",
-    "express": "^4.13.3",
-    "handlebars": "^4.0.2",
-    "morgan": "^1.6.1"
   }
 }

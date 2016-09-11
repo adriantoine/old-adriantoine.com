@@ -6,6 +6,22 @@
         "source": "**",
         "destination": "/index.html"
       }
-    ]
+    ],
+    "ignore": [
+      "firebase.json",
+      "build.js",
+      "package.json",
+      "rollup.config.js",
+      "**/.*",
+      "**/node_modules/**",
+      "src/**"
+    ],
+    "headers": [{
+      "source" : "**/*.@(js|css|jpg|jpeg|gif|png)",
+      "headers" : [{
+        "key" : "Cache-Control",
+        "value" : "max-age=31556952"
+      }]
+    }]
   }
 }
