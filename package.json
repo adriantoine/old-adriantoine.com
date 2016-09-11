@@ -55,7 +55,7 @@
     "enroute": "^1.0.1",
     "eslint-config-xo-preact": "^1.0.0",
     "filesize": "^3.3.0",
-    "firebase-cli": "^1.2.0",
+    "firebase-tools": "^3.0.7",
     "gzip-size": "^3.0.0",
     "lost": "^7.1.0",
     "normalize.css": "^4.2.0",
