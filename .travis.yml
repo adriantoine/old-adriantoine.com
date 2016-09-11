@@ -3,3 +3,11 @@ node_js: 6
 cache:
   directories:
   - node_modules
+script:
+script: |
+  npm run test
+  npm run build
+  ./node_modules/.bin/firebase deploy --token "$FIREBASE_TOKEN"
+env:
+  global:
+    secure: ezxqt6LEYuE2N/W9w6WIIZyk7SvN17C/f19U3ChNFbrjGlxlJ424ku9nXrn8OvITm2qUriN/lBIqZe5uxh5pI+jdqvSFI3g2EqmmRIowKTmn2tap/9S2WzwlW7ElDCwv0pNnn7PuBZ/C2GsKRz54T+ZVwVNJfXUktbJ81pYVIeUOC9KLNcMzUqgX5KDi2B8RQ/g2YnJMvRSAgiNCPLFxijfRUgWkGc+DAlG6iYeVrkcHnrpvYdUt1XqGYqIu/3IeKdyhV7EAMbcfWs5sGpuiGtyBA7POBk7J5atOkrvjzxPuPJXoZw6yotkjlXolM+6U2cuQt7t2OD1GHu7skCdr3T4CsXhGxD1IH09Ei4bmw51R6tztFwcUyx9VZ3jxonKPvthOipKx6OGkOr4TyLSXF9J7+qMMAMNbL0jr1TwY7MOD6Kma+a5IcRoE24OIzzxoGVSUW1l48O1beBRxJNTyIkljhosm6vjNHPpFEBr0hoid6ckmwKrPAwbSswnQWRWvAkFRHs7PDXw91E6sx9Yx/QuPo2e/N706YRTubXv+n+h/qdItoQqnLCojixP0C0YpwUiyCGuaqV8ElFuBJ6/a3A6e1dGWtT3Bq1JZ5UfheEZ4YPgJ9snhZgoBzxrtQtnM5mOLGOiG7Hl75lnYvavSGY/P2x6bJbFbTisjuu9WNF0=
