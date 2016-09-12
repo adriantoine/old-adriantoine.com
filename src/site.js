@@ -1,5 +1,5 @@
 import {h, Component} from 'preact';
-import router from 'enroute';
+import {Router, Route} from 'preact-enroute';
 
 import App from './pages/App';
 import Home from './pages/Home/Home';
@@ -39,11 +39,13 @@ export default class Site extends Component {
     return {navigate: path => this.setState({location: path})};
   }
 
-  render(props) {
-    return router({
-      '/': params => <AppHome {...params} {...props}/>,
-      '/about-me': params => <AppAboutMe {...params} {...props}/>,
-      '/portfolio': params => <AppPortfolio {...params} {...props}/>,
-    })(this.state.location);
+  render(props, state) {
+    return (
+      <Router {...state}>
+        <Route path="/" component={AppHome}/>
+        <Route path="/about-me" component={AppAboutMe}/>
+        <Route path="/portfolio" component={AppPortfolio}/>
+      </Router>
+    );
   }
 }

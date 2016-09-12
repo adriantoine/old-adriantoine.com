@@ -20,6 +20,8 @@
 
 .AboutMe-skills--commercial {
   lost-utility: clearfix;
+  max-width: 45em;
+  margin: auto;
   margin-top: -0.5em;
 
   .SkillTable {
@@ -28,9 +30,6 @@
     }
     @media (--medium-up) {
       lost-column: 1/2;
-    }
-    @media (--xlarge-up) {
-      lost-column: 1/3;
     }
   }
 }

@@ -4,6 +4,7 @@ const path = require('path');
 const buble = require('rollup-plugin-buble');
 const commonjs = require('rollup-plugin-commonjs');
 const nodeResolve = require('rollup-plugin-node-resolve');
+const nodeGlobals = require('rollup-plugin-node-globals');
 const uglify = require('rollup-plugin-uglify');
 const replace = require('rollup-plugin-replace');
 const postcss = require('rollup-plugin-postcss');
@@ -30,6 +31,12 @@ const plugins = [
     ],
   }),
 
+  replace({
+    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
+    'process.env.CONTENTFUL_KEY': JSON.stringify(process.env.CONTENTFUL_KEY),
+    'process.env.CONTENTFUL_SPACE': JSON.stringify(process.env.CONTENTFUL_SPACE),
+  }),
+
   nodeResolve({
     jsnext: true,
     main: true,
@@ -39,11 +46,10 @@ const plugins = [
 
   commonjs({
     include: 'node_modules/**',
+    ignoreGlobal: true,
   }),
 
-  replace({
-    'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-  }),
+  nodeGlobals(),
 
   buble({
     jsx: 'h',

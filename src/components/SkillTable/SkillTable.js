@@ -1,12 +1,11 @@
-
 import {h} from 'preact';
-import cn from 'classnames';
 
 import './SkillTable.css';
 
 export function SkillTableItem(props) {
   return (
-    <li class={cn('SkillTable-item', props.icon)}>
+    <li class="SkillTable-item">
+      <span class="SkillTable-item-icon" style={{backgroundImage: `url(${props.icon})`}}/>
       {props.children}
     </li>
   );
