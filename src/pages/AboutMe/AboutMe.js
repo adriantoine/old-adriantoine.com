@@ -32,7 +32,6 @@ export default class AboutMe extends Component {
   }
 
   render(props, state) {
-    console.log(state.skills);
     return (
       <Page class="AboutMe" title="About Me">
         <div class="AboutMe-content">
