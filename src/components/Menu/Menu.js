@@ -1,4 +1,3 @@
-
 import {h, Component} from 'preact';
 import cn from 'classnames';
 
@@ -12,9 +11,7 @@ export default class Menu extends Component {
     super(props);
     this.handleIconClick = this.handleIconClick.bind(this);
     this.handleClose = this.handleClose.bind(this);
-    this.state = {
-      isOpen: false,
-    };
+    this.state = {isOpen: false};
   }
 
   shouldComponentUpdate(props, state) {
@@ -43,15 +40,20 @@ export default class Menu extends Component {
   render() {
     return (
       <nav class={cn('Menu', {'is-open': this.state.isOpen})}>
-
-        <div class="Menu-icon" onClick={this.handleIconClick}/>
-
+        <div class="Menu-icon" onClick={this.handleIconClick} />
         <ul class="Menu-list">
-          <li class="Menu-item"><Link class="Menu-link" onClick={this.handleClose} to="/about-me">About Me</Link></li>
-          <li class="Menu-item"><Link class="Menu-link" onClick={this.handleClose} to="/portfolio">Portfolio</Link></li>
+          <li class="Menu-item">
+            <Link class="Menu-link" onClick={this.handleClose} to="/about-me">
+              About Me
+            </Link>
+          </li>
+          <li class="Menu-item">
+            <Link class="Menu-link" onClick={this.handleClose} to="/portfolio">
+              Portfolio
+            </Link>
+          </li>
         </ul>
       </nav>
     );
   }
-
 }

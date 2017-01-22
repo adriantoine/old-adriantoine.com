@@ -5,7 +5,7 @@ import './SkillTable.css';
 export function SkillTableItem(props) {
   return (
     <li class="SkillTable-item">
-      <span class="SkillTable-item-icon" style={{backgroundImage: `url(${props.icon})`}}/>
+      <span class="SkillTable-item-icon" style={{backgroundImage: `url(${props.icon})`}} />
       {props.children}
     </li>
   );

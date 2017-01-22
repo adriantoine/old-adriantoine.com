@@ -1,4 +1,3 @@
-
 import {h} from 'preact';
 import cn from 'classnames';
 
@@ -15,10 +14,10 @@ export default function App(props) {
 
   return (
     <div class={cn('App', {'App--no-background-image': !isHome})}>
-      <Menu/>
-      <Header isHome={isHome}/>
+      <Menu />
+      <Header isHome={isHome} />
       {props.children}
-      <Footer isHome={isHome}/>
+      <Footer isHome={isHome} />
     </div>
   );
 }

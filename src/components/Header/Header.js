@@ -1,4 +1,3 @@
-
 import {h} from 'preact';
 import cn from 'classnames';
 
@@ -19,21 +18,16 @@ function HeaderMenuLink(props) {
 export default function Header(props) {
   return (
     <header class={cn('Header', {'Header--no-background': props.isHome})}>
-
       <div class="u-site-width">
-
         <Link class="Header-title" to="/">Adrien Antoine</Link>
         <span class="Header-subtitle">front end developer</span>
-
         <nav class="Header-menu">
           <ul class="Header-menu-list">
             <HeaderMenuLink to="/about-me">About Me</HeaderMenuLink>
             <HeaderMenuLink to="/portfolio">Portfolio</HeaderMenuLink>
           </ul>
         </nav>
-
       </div>
-
     </header>
   );
 }

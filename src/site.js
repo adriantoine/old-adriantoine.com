@@ -10,7 +10,7 @@ const decorate = Decorator => Comp => {
   const Decorated = props => {
     return (
       <Decorator {...props}>
-        <Comp {...props}/>
+        <Comp {...props} />
       </Decorator>
     );
   };
@@ -24,9 +24,7 @@ const AppPortfolio = decorate(App)(Portfolio);
 export default class Site extends Component {
   constructor() {
     super();
-    this.state = {
-      location: window.location.pathname,
-    };
+    this.state = {location: window.location.pathname};
   }
 
   componentDidMount() {
@@ -42,9 +40,9 @@ export default class Site extends Component {
   render(props, state) {
     return (
       <Router {...state}>
-        <Route path="/" component={AppHome}/>
-        <Route path="/about-me" component={AppAboutMe}/>
-        <Route path="/portfolio" component={AppPortfolio}/>
+        <Route path="/" component={AppHome} />
+        <Route path="/about-me" component={AppAboutMe} />
+        <Route path="/portfolio" component={AppPortfolio} />
       </Router>
     );
   }
