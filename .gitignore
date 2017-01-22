@@ -4,7 +4,6 @@ public/*.js.map
 public/*.css
 public/*.css.map
 public/*.html
-posts_test/
 npm-debug.log
 newrelic_agent.log
 server.built.js
