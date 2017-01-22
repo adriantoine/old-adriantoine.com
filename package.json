@@ -6,6 +6,7 @@
   "scripts": {
     "clean": "rm -rf public/bundle* && rm -f public/assets.json",
     "build": "npm run clean && NODE_ENV=production node build",
+    "precommit": "prettier --write src/**/*.js --print-width 100 --single-quote=true --trailing-comma true --bracket-spacing false",
     "dev": "rollup -cw --input src/index.js --output public/bundle.js | firebase serve"
   },
   "repository": {
@@ -28,6 +29,7 @@
     "filesize": "^3.3.0",
     "firebase-tools": "^3.0.7",
     "gzip-size": "^3.0.0",
+    "husky": "~0.13.0",
     "lost": "^7.1.0",
     "normalize.css": "^4.2.0",
     "postcss-calc": "^5.0.0",
