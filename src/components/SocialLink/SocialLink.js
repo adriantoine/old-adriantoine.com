@@ -11,6 +11,7 @@ export default function SocialLink(props) {
       rel="noopener noreferrer"
     >
       <i class={'icon icon-' + props.icon} />
+      <span class="SocialLink-text">{props.children}</span>
     </a>
   );
 }

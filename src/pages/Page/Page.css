@@ -11,7 +11,7 @@
 
 .Page-hero {
   color: var(--white);
-  background: url(/img/coding.jpg) no-repeat center center fixed;
+  background: url(/img/coding.jpg) no-repeat center center fixed var(--black);
   background-size: cover;
   font-family: var(--big-font);
   letter-spacing: -0.01em;

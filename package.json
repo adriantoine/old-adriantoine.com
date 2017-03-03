@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "format": "prettier src/**/*.js --write --print-width=100 --single-quote --trailing-comma --no-bracket-spacing",
-    "clean": "rm -rf public/bundle* && rm -f public/index.html",
+    "clean": "rm -rf public/bundle* && rm -rf public/appcache && rm -rf public/sw.js && rm -rf public/style* && rm -f public/index.html",
     "build": "webpack --config webpack/prod.config.js",
     "start": "firebase serve | webpack --watch --config webpack/dev.config.js",
     "lint": "eslint src"

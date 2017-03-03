@@ -9,12 +9,12 @@ export default function Footer(props) {
     <footer class={cn('Footer', {'Footer--fixed': props.isHome})}>
       <div class="Footer-socialLinks">
         <div class="u-site-width">
-          <SocialLink icon="facebook" link="https://www.facebook.com/alshten" />
-          <SocialLink icon="twitter" link="https://twitter.com/adriantoine" />
-          <SocialLink icon="github" link="https://github.com/adriantoine" />
-          <SocialLink icon="tumblr" link="http://photo.adriantoine.com/" />
-          <SocialLink icon="linkedin" link="http://uk.linkedin.com/in/adriantoine/en" />
-          <SocialLink icon="google-plus" link="https://plus.google.com/+AdrienAntoine/" />
+          <SocialLink icon="facebook" link="https://www.facebook.com/alshten">Facebook</SocialLink>
+          <SocialLink icon="twitter" link="https://twitter.com/adriantoine">Twitter</SocialLink>
+          <SocialLink icon="github" link="https://github.com/adriantoine">GitHub</SocialLink>
+          <SocialLink icon="tumblr" link="http://photo.adriantoine.com/">Tumblr</SocialLink>
+          <SocialLink icon="linkedin" link="http://uk.linkedin.com/in/adriantoine/en">LinkedIn</SocialLink>
+          <SocialLink icon="google-plus" link="https://plus.google.com/+AdrienAntoine/">Google Plus</SocialLink>
         </div>
       </div>
       <div class="Footer-credits">

@@ -2,7 +2,7 @@
 @import '../styles/variables.css';
 
 .App {
-  background: url(/img/home.jpg) no-repeat center center fixed;
+  background: url(/img/home.jpg) no-repeat center center fixed var(--black);
   background-size: cover;
   position: absolute;
   top: 0;
@@ -15,4 +15,5 @@
 
 .App--no-background-image {
   background-image: none;
+  background-color: var(--white);
 }
