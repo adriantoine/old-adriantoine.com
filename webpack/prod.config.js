@@ -93,7 +93,12 @@ module.exports = merge(base, {
       filename: 'style.[contenthash:8].css',
     }),
 
-    new OfflinePlugin(),
+    new OfflinePlugin({
+      excludes: ['**/*.map'],
+      caches: {
+        main: ['style*.css', 'bundle*.js'],
+      },
+    }),
   ],
 
   devtool: 'cheap-module-source-map',
