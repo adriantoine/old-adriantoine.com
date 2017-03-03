@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const merge = require('webpack-merge');
+const OfflinePlugin = require('offline-plugin');
 
 const base = require('./base.config');
 const root = path.join(__dirname, '..');
@@ -91,6 +92,8 @@ module.exports = merge(base, {
     new ExtractTextPlugin({
       filename: 'style.[contenthash:8].css',
     }),
+
+    new OfflinePlugin(),
   ],
 
   devtool: 'cheap-module-source-map',
