@@ -40,15 +40,29 @@ export default class Menu extends Component {
   render() {
     return (
       <nav class={cn('Menu', {'is-open': this.state.isOpen})}>
-        <div class="Menu-icon" onClick={this.handleIconClick} />
+        <button
+          class="Menu-icon"
+          onKeyPress={this.handleIconClick}
+          onClick={this.handleIconClick}
+        />
         <ul class="Menu-list">
           <li class="Menu-item">
-            <Link class="Menu-link" onClick={this.handleClose} to="/about-me">
+            <Link
+              class="Menu-link"
+              onKeyPress={this.handleClose}
+              onClick={this.handleClose}
+              to="/about-me"
+            >
               About Me
             </Link>
           </li>
           <li class="Menu-item">
-            <Link class="Menu-link" onClick={this.handleClose} to="/portfolio">
+            <Link
+              class="Menu-link"
+              onKeyPress={this.handleClose}
+              onClick={this.handleClose}
+              to="/portfolio"
+            >
               Portfolio
             </Link>
           </li>
