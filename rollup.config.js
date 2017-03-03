@@ -33,8 +33,6 @@ const plugins = [
 
   replace({
     'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development'),
-    'process.env.CONTENTFUL_KEY': JSON.stringify(process.env.CONTENTFUL_KEY),
-    'process.env.CONTENTFUL_SPACE': JSON.stringify(process.env.CONTENTFUL_SPACE),
   }),
 
   nodeResolve({
@@ -58,20 +56,22 @@ const plugins = [
 ];
 
 if (process.env.NODE_ENV === 'production') {
-  plugins.push(uglify({
-    sourceMap: true,
-    compress: {
-      screw_ie8: true, // eslint-disable-line camelcase
-      hoist_vars: true, // eslint-disable-line camelcase
-      collapse_vars: true, // eslint-disable-line camelcase
-      pure_getters: true, // eslint-disable-line camelcase
-      keep_fargs: false, // eslint-disable-line camelcase
-      warnings: false,
-    },
-    output: {
-      comments: false,
-    },
-  }));
+  plugins.push(
+    uglify({
+      sourceMap: true,
+      compress: {
+        screw_ie8: true, // eslint-disable-line camelcase
+        hoist_vars: true, // eslint-disable-line camelcase
+        collapse_vars: true, // eslint-disable-line camelcase
+        pure_getters: true, // eslint-disable-line camelcase
+        keep_fargs: false, // eslint-disable-line camelcase
+        warnings: false,
+      },
+      output: {
+        comments: false,
+      },
+    })
+  );
 }
 
 module.exports = {

@@ -1,6 +1,5 @@
 import {h, Component} from 'preact';
 import twemoji from 'twemoji';
-import {getClient} from '../../contentful';
 
 import Link from '../../components/Link';
 
@@ -8,29 +7,11 @@ import Page from '../Page/Page';
 
 import './AboutMe.css';
 
-import {SkillTable, SkillTableItem} from '../../components/SkillTable/SkillTable';
-
 function emoji(code) {
-  return (
-    <span class="u-emoji" dangerouslySetInnerHTML={{__html: twemoji.parse(code)}} />
-  ); // eslint-disable-line react/no-danger
+  return <span class="u-emoji" dangerouslySetInnerHTML={{__html: twemoji.parse(code)}} />; // eslint-disable-line react/no-danger
 }
 
 export default class AboutMe extends Component {
-  componentWillMount() {
-    getClient().getEntries({content_type: 'skillTable'}).then(entries => {
-      this.setState({
-        skills: entries.items.map(item => ({
-          title: item.fields.title,
-          skills: item.fields.skills.map(skill => ({
-            name: skill.fields.name,
-            image: skill.fields.image.fields.file.url,
-          })),
-        })),
-      });
-    });
-  }
-
   render(props, state) {
     return (
       <Page class="AboutMe" title="About Me">
@@ -68,25 +49,7 @@ export default class AboutMe extends Component {
           <p>
             As a front-end developer, I am good at writing clean and structured code, refactoring old code and setting up an architecture for a new project. I am usually appreciated for my clean, organised and well-documented code.
           </p>
-          <p>I have commercial experience in these technologies:</p>
         </div>
-        {
-          state.skills && (
-              <div class="AboutMe-skills AboutMe-skills--commercial">
-                {state.skills.map(skillTable => (
-                  <SkillTable key={skillTable.title} title={skillTable.title}>
-                    {
-                      skillTable.skills && skillTable.skills.map(skill => (
-                          <SkillTableItem key={skill.name} icon={skill.image}>
-                            {skill.name}
-                          </SkillTableItem>
-                        ))
-                    }
-                  </SkillTable>
-                ))}
-              </div>
-            )
-        }
         <div class="AboutMe-content">
           <p>
             And I also have experience on personal projects using these tools, and I'm quite excited about them (more info on my

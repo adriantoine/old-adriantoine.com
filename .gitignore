@@ -11,3 +11,4 @@ out
 deploy_key
 deploy_key.pub
 firebase-debug.log
+.DS_Store
