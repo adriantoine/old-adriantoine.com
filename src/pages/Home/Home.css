@@ -12,7 +12,6 @@
 }
 
 .Home-hero {
-  font-family: var(--big-font);
   letter-spacing: -0.01em;
   width: 100%;
   text-transform: uppercase;
@@ -35,7 +34,7 @@
   font-size: var(--h3-size);
   line-height: 1.4;
   margin-top: 1em;
-  b, a {
+  strong, a {
     font-weight: var(--font-bold);
   }
 }

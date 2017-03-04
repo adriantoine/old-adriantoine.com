@@ -37,7 +37,6 @@
 
 .Header-title {
 
-  font-family: var(--big-font);
   letter-spacing: -0.01em;
   font-weight: var(--font-heavy);
   font-size: var(--h3-size);

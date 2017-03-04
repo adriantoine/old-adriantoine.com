@@ -7,7 +7,6 @@
   }
 
   p, .SkillTable {
-    font-family: var(--serif-font);
     line-height: 1.5;
     font-size: 1.2em;
   }

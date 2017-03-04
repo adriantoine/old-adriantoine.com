@@ -12,9 +12,9 @@ export default function Home() {
           </div>
           <div class="Home-hero-description">
             I am a{' '}
-            <b>front end developer</b>
+            <strong>front end developer</strong>
             {' '}with{' '}
-            <b>3 years of experience</b>
+            <strong>6 years of experience</strong>
             .{' '}
             <a
               class="u-blue"
@@ -25,9 +25,9 @@ export default function Home() {
               Active on Github
             </a>
             {' '}and{' '}
-            <b>passionate about technologies</b>
+            <strong>passionate about technologies</strong>
             , I also have{' '}
-            <b>commercial experience in various technologies</b>
+            <strong>commercial experience in various technologies</strong>
             .
           </div>
         </div>

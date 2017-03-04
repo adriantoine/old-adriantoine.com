@@ -1,6 +1,3 @@
-
-@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Raleway:400,700,900|Andada:400,700|Roboto+Mono:400,700);
-
 @import "normalize.css";
 @import "../styles/github.css";
 @import "../styles/variables.css";
@@ -23,7 +20,7 @@ html {
 html, body {
 
   -webkit-font-smoothing: subpixel-antialiased;
-  font-family: var(--body-font);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   color: var(--black);
   background-color: var(--white);
   background-size: cover;
@@ -76,10 +73,6 @@ hr {
   border: 1px solid var(--lightgrey);
   margin: 2em 0;
   border-bottom-width: 0;
-}
-
-pre, code {
-  font-family: var(--monospace-font);
 }
 
 .emoji {
