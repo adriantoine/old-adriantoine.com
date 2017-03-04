@@ -101,5 +101,5 @@ module.exports = merge(base, {
     }),
   ],
 
-  devtool: 'cheap-module-source-map',
+  devtool: 'source-map',
 });
