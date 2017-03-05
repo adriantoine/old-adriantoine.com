@@ -18,7 +18,7 @@ export default class AboutMe extends Component {
         <div class="AboutMe-content">
           <h2>Who am I?</h2>
           <p>
-            My name is Adrien Antoine, I am a front-end developer living in London (UK) with 3 years of experience using various tools and frameworks.
+            My name is Adrien Antoine, I am a front-end developer living in London (UK) with 6 years of experience using various tools and frameworks.
           </p>
           <p>
             I am passionate about web technologies and I love to experient things on my free time, trying out new frameworks, methods, tools, libraries and even languages sometimes. I am
