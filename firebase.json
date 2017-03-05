@@ -17,7 +17,13 @@
       "src/**"
     ],
     "headers": [{
-      "source" : "**/*.@(js|css|jpg|jpeg|gif|png)",
+      "source" : "**/*.@(css|jpg|jpeg|gif|png)",
+      "headers" : [{
+        "key" : "Cache-Control",
+        "value" : "max-age=31556952"
+      }]
+    }, {
+      "source" : "bundle*.js",
       "headers" : [{
         "key" : "Cache-Control",
         "value" : "max-age=31556952"

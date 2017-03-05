@@ -95,8 +95,9 @@ module.exports = merge(base, {
 
     new OfflinePlugin({
       excludes: ['**/*.map'],
-      caches: {
-        main: ['style*.css', 'bundle*.js'],
+      externals: ['img/coding.jpg', 'img/home.jpg', 'img/london.jpg'],
+      ServiceWorker: {
+        events: true,
       },
     }),
   ],
