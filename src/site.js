@@ -4,7 +4,7 @@ import {Router, Route} from 'preact-enroute';
 import App from './pages/App';
 import Home from './pages/Home/Home';
 import AboutMe from './pages/AboutMe/AboutMe';
-import Portfolio from './pages/Portfolio/Portfolio';
+import Projects from './pages/Projects/Projects';
 
 const decorate = Decorator => Comp => {
   const Decorated = props => {
@@ -19,7 +19,7 @@ const decorate = Decorator => Comp => {
 
 const AppHome = decorate(App)(Home);
 const AppAboutMe = decorate(App)(AboutMe);
-const AppPortfolio = decorate(App)(Portfolio);
+const AppProjects = decorate(App)(Projects);
 
 export default class Site extends Component {
   constructor() {
@@ -42,7 +42,7 @@ export default class Site extends Component {
       <Router {...state}>
         <Route path="/" component={AppHome} />
         <Route path="/about-me" component={AppAboutMe} />
-        <Route path="/portfolio" component={AppPortfolio} />
+        <Route path="/projects" component={AppProjects} />
       </Router>
     );
   }

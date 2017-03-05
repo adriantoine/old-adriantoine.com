@@ -32,8 +32,8 @@ export default function Home() {
           </div>
         </div>
         <div class="Home-buttons">
-          <Button to="/about-me">About Me</Button>
-          <Button to="/portfolio">Portfolio</Button>
+          <Button to="/about-me">About</Button>
+          <Button to="/projects">Projects</Button>
         </div>
       </div>
     </div>

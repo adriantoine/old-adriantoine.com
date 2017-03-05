@@ -23,8 +23,8 @@ export default function Header(props) {
         <span class="Header-subtitle">front end developer</span>
         <nav class="Header-menu">
           <ul class="Header-menu-list">
-            <HeaderMenuLink to="/about-me">About Me</HeaderMenuLink>
-            <HeaderMenuLink to="/portfolio">Portfolio</HeaderMenuLink>
+            <HeaderMenuLink to="/about-me">About</HeaderMenuLink>
+            <HeaderMenuLink to="/projects">Projects</HeaderMenuLink>
           </ul>
         </nav>
       </div>

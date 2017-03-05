@@ -1,7 +1,7 @@
 
 @import '../../styles/variables.css';
 
-.Portfolio {
+.Projects {
   text-align: center;
   margin-bottom: 10em;
 
@@ -11,6 +11,6 @@
   }
 }
 
-.Portfolio-comingSoon {
+.Projects-comingSoon {
   font-size: var(--h1-size);
 }

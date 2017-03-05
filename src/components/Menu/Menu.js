@@ -53,7 +53,7 @@ export default class Menu extends Component {
               onClick={this.handleClose}
               to="/about-me"
             >
-              About Me
+              About
             </Link>
           </li>
           <li class="Menu-item">
@@ -61,9 +61,9 @@ export default class Menu extends Component {
               class="Menu-link"
               onKeyPress={this.handleClose}
               onClick={this.handleClose}
-              to="/portfolio"
+              to="/projects"
             >
-              Portfolio
+              Projects
             </Link>
           </li>
         </ul>

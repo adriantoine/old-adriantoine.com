@@ -14,7 +14,7 @@ function emoji(code) {
 export default class AboutMe extends Component {
   render(props, state) {
     return (
-      <Page class="AboutMe" title="About Me">
+      <Page class="AboutMe" title="About">
         <div class="AboutMe-content">
           <h2>Who am I?</h2>
           <p>
@@ -54,7 +54,7 @@ export default class AboutMe extends Component {
           <p>
             And I also have experience on personal projects using these tools, and I'm quite excited about them (more info on my
             {' '}
-            <Link to="/portfolio">portfolio</Link>
+            <Link to="/projects">projects</Link>
             ).
           </p>
           <h2>What else should you know about me?</h2>
@@ -69,8 +69,9 @@ export default class AboutMe extends Component {
             {emoji('\uD83D\uDE0A')}
             .
           </p>
+          <h2>How to contact me?</h2>
           <p>
-            If you want to contact me for a job, I prefer that you{' '}
+            If you want to get in touch for a job, I prefer if you{' '}
             <a
               href="http://uk.linkedin.com/in/adriantoine/en"
               target="_blank"
@@ -78,11 +79,11 @@ export default class AboutMe extends Component {
             >
               send me a message on LinkedIn
             </a>
-            , and for everything else, you can contact me{' '}
+            . For anything else, please contact me{' '}
             <a href="mailto:adriantoine@gmail.com">on my personal email</a>
             {' '}or{' '}
             <a href="https://twitter.com/adriantoine" target="_blank" rel="noopener noreferrer">
-              my Twitter profile
+              send me a tweet
             </a>
             .
           </p>
