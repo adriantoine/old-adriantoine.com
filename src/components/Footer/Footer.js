@@ -13,8 +13,12 @@ export default function Footer(props) {
           <SocialLink icon="twitter" link="https://twitter.com/adriantoine">Twitter</SocialLink>
           <SocialLink icon="github" link="https://github.com/adriantoine">GitHub</SocialLink>
           <SocialLink icon="tumblr" link="http://photo.adriantoine.com/">Tumblr</SocialLink>
-          <SocialLink icon="linkedin" link="http://uk.linkedin.com/in/adriantoine/en">LinkedIn</SocialLink>
-          <SocialLink icon="google-plus" link="https://plus.google.com/+AdrienAntoine/">Google Plus</SocialLink>
+          <SocialLink icon="linkedin" link="http://uk.linkedin.com/in/adriantoine/en">
+            LinkedIn
+          </SocialLink>
+          <SocialLink icon="google-plus" link="https://plus.google.com/+AdrienAntoine/">
+            Google Plus
+          </SocialLink>
         </div>
       </div>
       <div class="Footer-credits">
@@ -30,10 +34,6 @@ export default function Footer(props) {
           , icons are from{' '}
           <a href="http://evil-icons.io/" target="_blank" rel="noopener noreferrer">
             Evil Icons
-          </a>
-          , fonts are from{' '}
-          <a href="https://www.google.com/fonts" target="_blank" rel="noopener noreferrer">
-            Google Web Fonts
           </a>
         </p>
       </div>
