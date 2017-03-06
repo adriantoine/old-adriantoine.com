@@ -98,6 +98,7 @@ module.exports = merge(base, {
       externals: ['img/coding.jpg', 'img/home.jpg', 'img/london.jpg'],
       ServiceWorker: {
         events: true,
+        entry: path.join(root, 'src/sw.js'),
       },
     }),
   ],
