@@ -17,7 +17,7 @@
       "src/**"
     ],
     "headers": [{
-      "source" : "**/*.@(css|jpg|jpeg|gif|png)",
+      "source" : "**/*.@(css|jpg|jpeg|gif|png|ico)",
       "headers" : [{
         "key" : "Cache-Control",
         "value" : "max-age=31536000"
