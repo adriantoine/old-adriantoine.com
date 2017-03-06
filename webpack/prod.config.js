@@ -95,7 +95,7 @@ module.exports = merge(base, {
 
     new OfflinePlugin({
       excludes: ['**/*.map'],
-      externals: ['img/coding.jpg', 'img/home.jpg', 'img/london.jpg'],
+      externals: ['https://s3.eu-west-2.amazonaws.com/adriantoine/background/coding.jpg', 'https://s3.eu-west-2.amazonaws.com/adriantoine/background/home.jpg', 'https://s3.eu-west-2.amazonaws.com/adriantoine/background/london.jpg'],
       ServiceWorker: {
         events: true,
         entry: path.join(root, 'src/sw.js'),

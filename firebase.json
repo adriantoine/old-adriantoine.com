@@ -20,13 +20,13 @@
       "source" : "**/*.@(css|jpg|jpeg|gif|png)",
       "headers" : [{
         "key" : "Cache-Control",
-        "value" : "max-age=31556952"
+        "value" : "max-age=31536000"
       }]
     }, {
       "source" : "bundle*.js",
       "headers" : [{
         "key" : "Cache-Control",
-        "value" : "max-age=31556952"
+        "value" : "max-age=31536000"
       }]
     }, {
       "source" : "sw.js",
