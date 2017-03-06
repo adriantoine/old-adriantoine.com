@@ -1,0 +1,8 @@
+{
+  "short_name": "adriantoine",
+  "name": "Adrien's personal website",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#009ed3",
+  "background_color": "#1f1f1f"
+}
