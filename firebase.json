@@ -17,16 +17,22 @@
       "src/**"
     ],
     "headers": [{
-      "source" : "**/*.@(css|jpg|jpeg|gif|png)",
+      "source" : "**/*.@(css|jpg|jpeg|gif|png|ico)",
       "headers" : [{
         "key" : "Cache-Control",
-        "value" : "max-age=31556952"
+        "value" : "max-age=31536000"
       }]
     }, {
       "source" : "bundle*.js",
       "headers" : [{
         "key" : "Cache-Control",
-        "value" : "max-age=31556952"
+        "value" : "max-age=31536000"
+      }]
+    }, {
+      "source" : "sw.js",
+      "headers" : [{
+        "key" : "Cache-Control",
+        "value" : "no-store, must-revalidate"
       }]
     }]
   }

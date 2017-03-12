@@ -6,7 +6,7 @@
   margin-bottom: 10em;
 
   .Page-hero {
-    background-image: url(/img/london.jpg);
+    background-image: url(https://s3.eu-west-2.amazonaws.com/adriantoine-backup/background/london.jpg);
     margin-bottom: 5em;
   }
 }

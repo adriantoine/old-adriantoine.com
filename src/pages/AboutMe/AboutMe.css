@@ -3,7 +3,7 @@
 
 .AboutMe {
   .Page-hero {
-    background-image: url(/img/coding.jpg);
+    background-image: url(https://s3.eu-west-2.amazonaws.com/adriantoine-backup/background/coding.jpg);
   }
 
   p, .SkillTable {

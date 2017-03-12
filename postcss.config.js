@@ -12,7 +12,7 @@ module.exports = {
     require('postcss-calc'),
     require('postcss-custom-media'),
     require('postcss-extend'),
-    require('postcss-svg')({paths: ['./public/img/icons', './public/img/icons/logos']}),
+    require('postcss-svg')(),
     require('lost'),
     require('postcss-responsive-type'),
     require('cssnano'),
