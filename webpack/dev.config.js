@@ -31,5 +31,10 @@ module.exports = merge(base, {
     }),
   ],
 
+  devServer: {
+    contentBase: path.join(root, 'public'),
+    port: 9000
+  },
+
   devtool: 'cheap-module-source-map',
 });

@@ -7,7 +7,7 @@
     "format": "prettier src/**/*.js --write --print-width=100 --single-quote --trailing-comma --no-bracket-spacing",
     "clean": "rm -rf public/bundle* && rm -rf public/appcache && rm -rf public/sw.js && rm -rf public/style* && rm -f public/index.html",
     "build": "webpack --config webpack/prod.config.js",
-    "start": "firebase serve | webpack --watch --config webpack/dev.config.js",
+    "start": "webpack-dev-server --config webpack/dev.config.js",
     "lint": "eslint src"
   },
   "repository": {
@@ -58,6 +58,7 @@
     "twemoji": "^2.2.5",
     "url-loader": "^0.5.8",
     "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.4.1",
     "webpack-merge": "^3.0.0"
   }
 }
