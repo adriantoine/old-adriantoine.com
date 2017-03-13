@@ -9,15 +9,15 @@ import '../styles/base.css';
 import './App.css';
 
 export default function App(props) {
-  const isHome = window.location.pathname === '/';
+  const isMain = window.location.pathname === '/';
   document.title = 'Adrien Antoine, front-end developer';
 
   return (
-    <div class={cn('App', {'App--no-background-image': !isHome})}>
+    <div class={cn('App', {'App--no-background-image': !isMain})}>
       <Menu />
-      <Header isHome={isHome} />
+      <Header transparent={isMain} />
       {props.children}
-      <Footer isHome={isHome} />
+      <Footer transparent={isMain} />
     </div>
   );
 }

@@ -6,7 +6,7 @@ import SocialLink from '../SocialLink/SocialLink';
 
 export default function Footer(props) {
   return (
-    <footer class={cn('Footer', {'Footer--fixed': props.isHome})}>
+    <footer class={cn('Footer', {'Footer--fixed': props.transparent})}>
       <div class="Footer-socialLinks">
         <div class="u-site-width">
           <SocialLink icon="facebook" link="https://www.facebook.com/alshten">Facebook</SocialLink>

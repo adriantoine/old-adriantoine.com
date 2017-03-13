@@ -17,7 +17,7 @@ function HeaderMenuLink(props) {
 
 export default function Header(props) {
   return (
-    <header class={cn('Header', {'Header--no-background': props.isHome})}>
+    <header class={cn('Header', {'Header--no-background': props.transparent})}>
       <div class="u-site-width">
         <Link class="Header-title" to="/">Adrien Antoine</Link>
         <span class="Header-subtitle">front end developer</span>
