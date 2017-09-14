@@ -57,17 +57,17 @@ export default function Home({onScrollToMore}) {
             />
           </div>
         </div>
+        <div
+          role="button"
+          class="Home-moreAbout"
+          onClick={onScrollToMore}
+          onKeyPress={onScrollToMore}
+          tabIndex={0}
+        >
+          <span class="Home-moreAbout-text">About me</span>
+          <div class="Home-moreAbout-arrow" />
+        </div>
       </SiteWidth>
-      <div
-        role="button"
-        class="Home-moreAbout"
-        onClick={onScrollToMore}
-        onKeyPress={onScrollToMore}
-        tabIndex={0}
-      >
-        <span class="Home-moreAbout-text">About me</span>
-        <div class="Home-moreAbout-arrow" />
-      </div>
     </div>
   );
 }

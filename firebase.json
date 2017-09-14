@@ -14,26 +14,37 @@
       "rollup.config.js",
       "**/.*",
       "**/node_modules/**",
-      "src/**"
+      "src/**",
+      "webpack/**"
     ],
-    "headers": [{
-      "source" : "**/*.@(css|jpg|jpeg|gif|png|ico)",
-      "headers" : [{
-        "key" : "Cache-Control",
-        "value" : "max-age=31536000"
-      }]
-    }, {
-      "source" : "bundle*.js",
-      "headers" : [{
-        "key" : "Cache-Control",
-        "value" : "max-age=31536000"
-      }]
-    }, {
-      "source" : "sw.js",
-      "headers" : [{
-        "key" : "Cache-Control",
-        "value" : "no-store, must-revalidate"
-      }]
-    }]
+    "headers": [
+      {
+        "source": "**/*.@(css|jpg|jpeg|gif|png|ico|svg)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "bundle*.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "max-age=31536000"
+          }
+        ]
+      },
+      {
+        "source": "sw.js",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "no-store, must-revalidate"
+          }
+        ]
+      }
+    ]
   }
 }

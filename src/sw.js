@@ -1,4 +1,4 @@
 /* eslint-disable */
 
-importScripts('offline-google-analytics-import.min.js');
+importScripts('sw-offline-google-analytics.prod.v0.0.25.js');
 goog.offlineGoogleAnalytics.initialize();

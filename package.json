@@ -4,9 +4,12 @@
   "description": "Personal website",
   "main": "index.js",
   "scripts": {
-    "clean": "rm -rf public/bundle* && rm -rf public/appcache && rm -rf public/offline-google-analytics-import.min.js* && rm -rf public/sw.js && rm -rf public/style* && rm -f public/index.html",
-    "build": "npm run clean && npm run copy-google-sw && webpack --config webpack/prod.config.js",
-    "copy-google-sw": "cp node_modules/sw-offline-google-analytics/build/offline-google-analytics-import.min.js* public/",
+    "clean":
+      "rm -rf public/bundle* && rm -rf public/appcache && rm -rf public/sw-offline-google-analytics.prod.* && rm -rf public/sw.js && rm -rf public/style* && rm -f public/index.html",
+    "build":
+      "npm run clean && npm run copy-google-sw && webpack --config webpack/prod.config.js",
+    "copy-google-sw":
+      "cp node_modules/sw-offline-google-analytics/build/importScripts/sw-offline-google-analytics.prod.* public/",
     "start": "webpack-dev-server --config webpack/dev.config.js",
     "lint": "eslint src"
   },
