@@ -1,23 +1,31 @@
-import {h} from 'preact';
-import cn from 'classnames';
-
-import Menu from '../components/Menu/Menu';
-import Header from '../components/Header/Header';
-import Footer from '../components/Footer/Footer';
+import {h, Component} from 'preact';
 
 import '../styles/base.css';
 import './App.css';
+import scroll from 'scroll';
+import Home from './Home/Home';
+import AboutMe from './AboutMe/AboutMe';
 
-export default function App(props) {
-  const isMain = window.location.pathname === '/';
-  document.title = 'Adrien Antoine, front-end developer';
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+    this.scrollToMore = this.scrollToMore.bind(this);
+  }
 
-  return (
-    <div class={cn('App', {'App--no-background-image': !isMain})}>
-      <Menu />
-      <Header transparent={isMain} />
-      {props.children}
-      <Footer transparent={isMain} />
-    </div>
-  );
+  scrollToMore() {
+    scroll.top(this.app, this.about.getBoundingClientRect().top);
+  }
+
+  render() {
+    document.title = 'Adrien Antoine, front-end developer';
+
+    return (
+      <div class="App" ref={c => (this.app = c)}>
+        <Home onScrollToMore={this.scrollToMore} />
+        <div ref={c => (this.about = c)}>
+          <AboutMe />
+        </div>
+      </div>
+    );
+  }
 }

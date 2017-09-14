@@ -1,5 +1,5 @@
 import {h, render} from 'preact';
-import Site from './site';
+import App from './pages/App';
 
 if (process.env.NODE_ENV === 'production') {
   require('offline-plugin/runtime').install();
@@ -8,4 +8,4 @@ if (process.env.NODE_ENV === 'production') {
 var defaultEl = document.getElementById('default');
 defaultEl.innerHTML = '';
 
-render(<Site />, document.body);
+render(<App />, document.body);

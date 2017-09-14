@@ -32,21 +32,6 @@ module.exports = merge(base, {
           ],
         }),
       },
-      {
-        exclude: [/\.html$/, /\.(js|jsx)$/, /\.css$/, /\.json$/, /\.svg$/],
-        loader: 'url-loader',
-        options: {
-          limit: 10000,
-          name: '[name].[hash:8].[ext]',
-        },
-      },
-      {
-        test: /\.svg$/,
-        loader: 'file-loader',
-        options: {
-          name: '[name].[hash:8].[ext]',
-        },
-      },
     ],
   },
 
@@ -95,7 +80,6 @@ module.exports = merge(base, {
 
     new OfflinePlugin({
       excludes: ['**/*.map'],
-      externals: ['https://s3.eu-west-2.amazonaws.com/adriantoine-backup/background/coding.jpg', 'https://s3.eu-west-2.amazonaws.com/adriantoine-backup/background/home.jpg', 'https://s3.eu-west-2.amazonaws.com/adriantoine-backup/background/london.jpg'],
       ServiceWorker: {
         events: true,
         entry: path.join(root, 'src/sw.js'),

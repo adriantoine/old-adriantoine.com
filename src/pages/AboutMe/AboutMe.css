@@ -1,12 +1,13 @@
-
 @import '../../styles/variables.css';
 
 .AboutMe {
-  .Page-hero {
-    background-image: url(https://s3.eu-west-2.amazonaws.com/adriantoine-backup/background/coding.jpg);
-  }
+  margin-top: 6em;
+  margin-bottom: 10em;
+  padding: 0 3em;
+  position: relative;
+  overflow: hidden;
 
-  p, .SkillTable {
+  p {
     line-height: 1.5;
     font-size: 1.2em;
   }
@@ -15,20 +16,4 @@
 .AboutMe-content {
   max-width: 45em;
   margin: auto;
-}
-
-.AboutMe-skills--commercial {
-  lost-utility: clearfix;
-  max-width: 45em;
-  margin: auto;
-  margin-top: -0.5em;
-
-  .SkillTable {
-    @media (--small-only) {
-      lost-column: 1;
-    }
-    @media (--medium-up) {
-      lost-column: 1/2;
-    }
-  }
 }

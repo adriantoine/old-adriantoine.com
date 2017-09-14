@@ -1,32 +1,30 @@
-
 @import '../../styles/variables.css';
 
 .Home {
-  @media (--medium-up) {
-    position: absolute;
-    width: 100%;
-    top: 50%;
-    transform: translateY(-60%);
-    padding: 0 2em;
-  }
+  background-color: var(--black);
+  width: 100%;
+  height: 100%;
+  padding: 0 3em;
+  position: relative;
+  overflow: hidden;
 }
 
 .Home-hero {
   letter-spacing: -0.01em;
   width: 100%;
+  margin: auto;
   text-transform: uppercase;
   padding: 0 0 1em;
   text-align: center;
   background-size: cover;
   color: var(--white);
-
-  @media (--small-only) {
-    padding: 5em 2em 0;
-  }
+  position: absolute;
+  top: 50%;
+  transform: translateY(-60%);
 }
 
 .Home-hero-title {
-  font-weight: var(--font-heavy);
+  font-weight: 900;
   font-size: var(--h2-size);
 }
 
@@ -34,36 +32,71 @@
   font-size: var(--h3-size);
   line-height: 1.4;
   margin-top: 1em;
-  strong, a {
-    font-weight: var(--font-bold);
+
+  strong,
+  a {
+    font-weight: 700;
   }
 }
 
+.Home-socialLinks {
+  display: flex;
+  width: 15em;
+  margin: 2em auto;
+  justify-content: space-between;
+}
 
-.Home-buttons {
-  font-size: 1.5em;
-  font-weight: var(--font-thick);
-  text-align: center;
-  margin-top: 1em;
-  lost-utility: clearfix;
-  padding: 0 2em;
+.Home-socialLink {
+  width: 4em;
+  height: 4em;
+  border-radius: 50%;
+  background-color: var(--black);
+  padding: .7em;
 
-  .Button {
-    min-width: auto;
-    margin-bottom: 1em;
-
-    @media (--small-only) {
-      lost-column: 1;
-    }
-
-    @media (--medium-only) {
-      lost-column: 1/3;
-    }
-    @media (--large-up) {
-      padding: 1em 3em;
-      + .Button {
-        margin-left: 1em;
-      }
-    }
+  path {
+    fill: #fff;
   }
+}
+
+.Home-socialLink--twitter {
+  background-color: #55acee;
+}
+
+.Home-socialLink--github {
+  background-color: #fff;
+  padding: .1em;
+
+  path {
+    fill: var(--black);
+  }
+}
+
+.Home-socialLink--linkedin {
+  background-color: #0976b4;
+}
+
+.Home-moreAbout {
+  cursor: pointer;
+  opacity: .6;
+  position: absolute;
+  bottom: 2em;
+  letter-spacing: -0.01em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.Home-moreAbout-arrow {
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transform: rotate(-45deg);
+  height: 1em;
+  width: 1em;
 }

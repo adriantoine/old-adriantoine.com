@@ -1,9 +1,7 @@
-
 @import '../styles/variables.css';
 
 .App {
-  background: url(https://s3.eu-west-2.amazonaws.com/adriantoine-backup/background/home.jpg) no-repeat center center fixed var(--black);
-  background-size: cover;
+  background-color: var(--white);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -11,9 +9,4 @@
   right: 0;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-.App--no-background-image {
-  background-image: none;
-  background-color: var(--white);
 }

@@ -1,0 +1,8 @@
+@import "../../styles/variables.css";
+
+.SiteWidth {
+  lost-center: 65rem;
+  lost-utility: clearfix;
+  position: relative;
+  height: 100%;
+}

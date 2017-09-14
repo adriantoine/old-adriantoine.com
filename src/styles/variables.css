@@ -1,46 +1,15 @@
-
 :root {
-
   /* Font sizes */
   --h1-size: 3.998rem;
   --h2-size: 2.827rem;
   --h3-size: 1.999rem;
   --h4-size: 1.414rem;
 
-  /* Font weights */
-  --font-light: 300;
-  --font-normal: 400;
-  --font-thick: 500;
-  --font-bold: 700;
-  --font-heavy: 900;
-
   /* Colors */
-  --black: #1F1F1F;
-  --grey: #8A8A8A;
-  --lightgrey: #F3F3F3;
+  --black: #272823;
   --white: #fff;
-  --beige: #EDF0E1;
-  --blue:  #009ED3;
-  --orange: #E95C0D;
-  --red: #e74c3c;
-  --green: #48A770;
-
-  /* Layout sizes */
-  --header-height: 5em;
-  --header-border-height: 0.313em;
-  --site-max-width: 65rem;
-
+  --blue: #199fd1;
+  --orange: #fd971f;
+  --purple: #f92672;
+  --green: #a6e22e;
 }
-
-@custom-media --small-only only screen and (max-width: 40em);
-
-@custom-media --medium-up   only screen and (min-width: 40.063em);
-@custom-media --medium-only only screen and (min-width: 40.063em) and (max-width: 45em);
-
-@custom-media --large-up   only screen and (min-width: 45.063em);
-@custom-media --large-only only screen and (min-width: 45.063em) and (max-width: 64em);
-
-@custom-media --xlarge-up   only screen and (min-width: 64.063em);
-@custom-media --xlarge-only only screen and (min-width: 64.063em) and (max-width: 78em);
-
-@custom-media --xxlarge-up   only screen and (min-width: 78.063em);
