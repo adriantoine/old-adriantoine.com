@@ -50,7 +50,7 @@ export default function Home({onScrollToMore}) {
             />
             <a
               class="Home-socialLink Home-socialLink--linkedin"
-              href="https://www.linkedin.com/in/adriantoine"
+              href="https://www.linkedin.com/in/adriantoine/en"
               target="_blank"
               rel="noopener noreferrer"
               dangerouslySetInnerHTML={{__html: LinkInLogo}}

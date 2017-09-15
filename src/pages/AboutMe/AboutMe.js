@@ -40,7 +40,7 @@ export default function AboutMe() {
           I have worked on several different projects, you can find more info
           about my commercial experience on{' '}
           <a
-            href="http://uk.linkedin.com/in/adriantoine/en"
+            href="https://www.linkedin.com/in/adriantoine/en"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -90,7 +90,7 @@ export default function AboutMe() {
         <p>
           If you want to get in touch for a job, I prefer if you{' '}
           <a
-            href="http://uk.linkedin.com/in/adriantoine/en"
+            href="https://www.linkedin.com/in/adriantoine/en"
             target="_blank"
             rel="noopener noreferrer"
           >
