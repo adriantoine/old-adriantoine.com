@@ -76,7 +76,7 @@ export default function AboutMe() {
           {emoji('\uD83D\uDE0B')} so I obviously like cheese and wine. Then I
           love travelling and{' '}
           <a
-            href="https://500px.com/adriantoine"
+            href="https://www.flickr.com/people/adriantoine/"
             target="_blank"
             rel="noopener noreferrer"
           >
