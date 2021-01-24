@@ -1,3 +1,0 @@
----
-plugins: [jsx-a11y]
-extends: [standard, standard-preact, prettier, prettier/react, plugin:jsx-a11y/recommended]
