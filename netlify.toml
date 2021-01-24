@@ -5,14 +5,6 @@
   package = "@netlify/plugin-nextjs"
 
 [[headers]]
-  for = "/img/*"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
-[[headers]]
-  for = "/*.js"
+  for = "/*.(svg|js|css|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)"
   [headers.values]
     Cache-Control = "public, s-max-age=604800"
