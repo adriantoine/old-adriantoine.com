@@ -1,4 +1,3 @@
-import Head from "next/head";
 import {
   Box,
   Text,
@@ -12,8 +11,12 @@ import {
   SimpleGrid,
   Stack,
 } from "@chakra-ui/react";
-import { FC, useRef } from "react";
+import React, { FC, useRef } from "react";
 import { ChevronDownIcon } from "@chakra-ui/icons";
+import genhPath from "./generationhome.svg";
+import githubPath from "./github.svg";
+import twitterPath from "./twitter.svg";
+import linkedinPath from "./linkedin.svg";
 
 const ColorText: FC<TextProps> = ({ color, ...props }) => {
   return <Text fontWeight="bold" as="span" color={`${color}.400`} {...props} />;
@@ -35,7 +38,7 @@ const SocialLink: FC<LinkProps> = (props) => {
 };
 
 export default function Home() {
-  const aboutRef = useRef<HTMLDivElement>();
+  const aboutRef = useRef<any>();
   const handleScrollToMore = () => {
     if (aboutRef.current) {
       window.scrollTo({
@@ -48,11 +51,6 @@ export default function Home() {
   return (
     <Box>
       <Box bg="gray.900" color="white" h="100vh">
-        <Head>
-          <title>Adrien Antoine, Front End Developer</title>
-          <link rel="icon" href="/favicon.ico" />
-        </Head>
-
         <Box h="100%">
           <Container h="100%" maxW="65rem">
             <Flex
@@ -93,7 +91,7 @@ export default function Home() {
                     <Img
                       display="inline"
                       h="1.8em"
-                      src="/generationhome.svg"
+                      src={genhPath}
                       alt="Generation Home Logo"
                     />
                   </a>
@@ -135,12 +133,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Img
-                      w="70%"
-                      h="70%"
-                      src="/twitter.svg"
-                      alt="Twitter Logo"
-                    />
+                    <Img w="70%" h="70%" src={twitterPath} alt="Twitter Logo" />
                   </SocialLink>
                   <SocialLink
                     flex={1}
@@ -149,12 +142,7 @@ export default function Home() {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <Img
-                      w="100%"
-                      h="100%"
-                      src="/github.svg"
-                      alt="GitHub Logo"
-                    />
+                    <Img w="100%" h="100%" src={githubPath} alt="GitHub Logo" />
                   </SocialLink>
                   <SocialLink
                     flex={1}
@@ -166,7 +154,7 @@ export default function Home() {
                     <Img
                       w="70%"
                       h="70%"
-                      src="/linkedin.svg"
+                      src={linkedinPath}
                       alt="LinkedIn Logo"
                     />
                   </SocialLink>
