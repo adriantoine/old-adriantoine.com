@@ -50,7 +50,7 @@ export default function Home() {
       <Box bg="gray.900" color="white" h="100vh">
         <Head>
           <title>Adrien Antoine, Front End Developer</title>
-          <link rel="icon" href="/favicon.ico" />
+          <link rel="icon" href="/img/favicon.ico" />
         </Head>
 
         <Box h="100%">
@@ -93,7 +93,7 @@ export default function Home() {
                     <Img
                       display="inline"
                       h="1.8em"
-                      src="/generationhome.svg"
+                      src="/img/generationhome.svg"
                       alt="Generation Home Logo"
                     />
                   </a>
@@ -138,7 +138,7 @@ export default function Home() {
                     <Img
                       w="70%"
                       h="70%"
-                      src="/twitter.svg"
+                      src="/img/twitter.svg"
                       alt="Twitter Logo"
                     />
                   </SocialLink>
@@ -152,7 +152,7 @@ export default function Home() {
                     <Img
                       w="100%"
                       h="100%"
-                      src="/github.svg"
+                      src="/img/github.svg"
                       alt="GitHub Logo"
                     />
                   </SocialLink>
@@ -166,7 +166,7 @@ export default function Home() {
                     <Img
                       w="70%"
                       h="70%"
-                      src="/linkedin.svg"
+                      src="/img/linkedin.svg"
                       alt="LinkedIn Logo"
                     />
                   </SocialLink>
