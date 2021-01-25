@@ -1,7 +1,0 @@
-[build]
-  command = "npm run build"
-
-[[headers]]
-  for = "/*.(svg|js|css|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)"
-  [headers.values]
-    Cache-Control = "public, s-max-age=604800"
