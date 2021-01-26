@@ -51,6 +51,10 @@ export default function Home() {
         <Head>
           <title>Adrien Antoine, Front End Developer</title>
           <link rel="icon" href="/favicon.ico" />
+          <meta
+            name="description"
+            content="Front end developer with 10 years of commercial experience, Adrien is a hard-working and open-minded, currently focused on solving customers problems in a clean and well documented way."
+          />
         </Head>
 
         <Box h="100%">

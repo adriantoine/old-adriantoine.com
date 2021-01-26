@@ -1,5 +1,6 @@
 [build]
   command = "npm run build"
+  publish = "out/"
 
 [[headers]]
   for = "/*.(svg|js|css|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)"
