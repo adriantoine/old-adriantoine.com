@@ -1,11 +1,11 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    /* ... */
+    // directory name: 'build directory'
+    public: "/",
+    src: "/dist",
   },
-  plugins: [
-    /* ... */
-  ],
+  plugins: ["@snowpack/plugin-typescript"],
   routes: [
     /* Enable an SPA Fallback in development: */
     // {"match": "routes", "src": ".*", "dest": "/index.html"},
@@ -15,7 +15,8 @@ module.exports = {
     // "bundle": true,
   },
   packageOptions: {
-    /* ... */
+    source: "remote",
+    types: true,
   },
   devOptions: {
     /* ... */

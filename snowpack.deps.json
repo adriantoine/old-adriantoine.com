@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "@chakra-ui/styled-system": "^1.5.0",
+    "@chakra-ui/icons": "^1.0.3",
+    "@chakra-ui/image": "^1.0.5",
+    "@chakra-ui/layout": "^1.2.0",
+    "@chakra-ui/react": "^1.1.6",
+    "@chakra-ui/system": "^1.1.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "lock": {
+    "@chakra-ui/styled-system#^1.5.0": "@chakra-ui/styled-system@v1.5.0-kDrZQ6Px5Jgea2xTYGpx",
+    "@chakra-ui/icons#^1.0.3": "@chakra-ui/icons@v1.0.3-c0y4WlO1WVNi71BMjr8D",
+    "@chakra-ui/image#^1.0.5": "@chakra-ui/image@v1.0.5-wrJZSZ2wF732XxhNB76T",
+    "@chakra-ui/layout#^1.2.0": "@chakra-ui/layout@v1.2.0-pd7QhkVORx8KWtiZOC4s",
+    "@chakra-ui/react#^1.1.6": "@chakra-ui/react@v1.1.6-BLuf4yWGYXNHJ2cFAKF8",
+    "@chakra-ui/system#^1.1.7": "@chakra-ui/system@v1.1.7-7mYCAMlkyScdWZYnRzkW",
+    "react#^17.0.1": "react@v17.0.1-tOtrZxBRexARODgO0jli",
+    "react-dom#^17.0.1": "react-dom@v17.0.1-DtIXT56q6U8PbgLMrBhE"
+  }
+}
