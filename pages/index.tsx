@@ -224,7 +224,8 @@ export default function Home() {
                 I have worked on several different projects, you can find more
                 info about my commercial experience on{" "}
                 <Link
-                  color="blue.400"
+                  color="blue.600"
+                  textDecoration="underline"
                   href="https://www.linkedin.com/in/adriantoine/en"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -234,7 +235,8 @@ export default function Home() {
                 and about my personal projects and involvment in open source
                 projects on{" "}
                 <Link
-                  color="blue.400"
+                  color="blue.600"
+                  textDecoration="underline"
                   href="https://github.com/adriantoine"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -265,7 +267,8 @@ export default function Home() {
                 A good thing to know about me is that I am French so I obviously
                 like cheese and wine. Then I love travelling and{" "}
                 <Link
-                  color="blue.400"
+                  color="blue.600"
+                  textDecoration="underline"
                   href="https://www.flickr.com/people/adriantoine/"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -282,7 +285,8 @@ export default function Home() {
               <Text>
                 If you want to get in touch for a job, I prefer if you{" "}
                 <Link
-                  color="blue.400"
+                  color="blue.600"
+                  textDecoration="underline"
                   href="https://www.linkedin.com/in/adriantoine/en"
                   target="_blank"
                   rel="noopener noreferrer"
@@ -290,12 +294,17 @@ export default function Home() {
                   send me a message on LinkedIn
                 </Link>
                 . For anything else, please contact me{" "}
-                <Link color="blue.400" href="mailto:adriantoine@gmail.com">
+                <Link
+                  color="blue.600"
+                  textDecoration="underline"
+                  href="mailto:adriantoine@gmail.com"
+                >
                   on my personal email
                 </Link>{" "}
                 or{" "}
                 <Link
-                  color="blue.400"
+                  color="blue.600"
+                  textDecoration="underline"
                   href="https://twitter.com/adriantoine"
                   target="_blank"
                   rel="noopener noreferrer"
