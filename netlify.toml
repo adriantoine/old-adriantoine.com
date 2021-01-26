@@ -1,9 +1,6 @@
 [build]
   command = "npm run build"
 
-[[plugins]]
-  package = "@netlify/plugin-nextjs"
-
 [[headers]]
   for = "/*.(svg|js|css|jpg|jpeg|gif|png|ico|cur|gz|svg|svgz|mp4|ogg|ogv|webm|htc)"
   [headers.values]

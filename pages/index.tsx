@@ -62,6 +62,7 @@ export default function Home() {
               transform="translateY(-5%)"
             >
               <Text
+                as="div"
                 fontSize={["xl", "2xl", "3xl", "4xl"]}
                 color="gray.400"
                 textTransform="uppercase"
